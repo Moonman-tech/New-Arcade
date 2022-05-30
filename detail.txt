@@ -1,1 +1,3 @@
 Background:
+.left-container
+.fabricated-body-div

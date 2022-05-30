@@ -76,6 +76,7 @@ body{
     border-radius: 10px;
 }
 .desktop-sidebar-nav-a:hover {
+    background-color: blue;
     border-radius: 10px;
 }
 .desktop-sidebar-nav-a:active {
@@ -258,8 +259,6 @@ canvas{
     margin-right: auto;
     border-style: solid;
     border-color: #18191a;
-}
-.charts-img{
 }
 
 
