@@ -1,0 +1,143 @@
+
+.tiles-layer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.sides-container{
+
+}
+
+
+
+
+
+.tiles-posts {
+    flex: 100%;
+    width: 95%;
+    border-radius: 10px;
+    background-color: #e54d42;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: #18191a;
+    color:#fff;
+    padding:10px;
+}
+.tiles-posts h5{
+    text-decoration: underline;
+}
+.tiles-posts-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding:10px;
+}
+.tiles-posts-container img{
+    width: 100%;
+    border-radius:10px;
+    box-shadow: 0px 5px 8px #18191a;
+}
+.company-information-container{
+    padding:10px;
+    line-height:0.4;
+    padding-bottom:10px;
+}
+.company-information{
+    text-align:left;
+}
+
+
+
+
+#business-link-div {
+    background-color: #3791CD;
+    padding: 15px; 
+    border-radius: 10px; 
+    color: #fff;
+}
+#business-link-div p{
+    text-size-adjust: 110%;
+}
+#business-link-div b h5{
+    text-shadow: 7px 7px 7px #242526
+}
+
+.name-main{
+    background-color:#18191a;
+    font-size: 14px;
+}
+.name-main a{
+    font-size:25px;
+    padding: 10px;
+    background-color:#242526;
+    border-radius: 10px;
+}
+.name-main a:hover{
+    color:#fff;
+}
+
+.header-belt{
+    position:fixed;
+    top: 0;
+}
+.stats-sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #242526;
+    overflow-x: hidden;
+    padding:0px 2px;
+}
+
+.stats-sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+}
+  
+.stats-sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+@media only screen and (min-width:450px) {
+    .tiles-posts {
+        flex: 40%;
+    }
+}
+@media only screen and (min-width:768px) {
+    .tiles-layer {
+        width: 100%;
+    }
+    .tiles-posts {
+        flex: 28%;
+    }
+}
+@media only screen and (min-width:900px) {
+
+}
+@media only screen and (min-width:1024px) {
+    .tiles-posts {
+        flex: 25%;
+    }
+    .service-tiles-posts{
+        flex: 28%;
+    }
+}
+
+

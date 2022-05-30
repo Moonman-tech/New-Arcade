@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="css/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="external_java.js"></script>
+    <script src="vegetables.js"></script>
+    <script src="charts.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Products</title>
+</head>
+<body class="main-body-container">
+
+    <div align="center" class="fabricated-body-div">
+        
+        <div class="loader">
+            <img src="css\icons\91.gif" alt="loading...">
+        </div>
+
+        <div class="mobile-navigation" align="center">
+            <a href="#home" class="logo-link">
+                <img class="mobile-logo-img" src="css\icons\logo.png" alt="homepage">
+            </a>
+        </div>
+
+        <div class="sides-container-two" align="center">
+            <div class="left-container">
+                <div>
+                    <nav class="main-sidebar-container">
+                        <div class="desktop-sidebar-div">
+                            <img src="css/icons/logo.png" alt="homepage">
+                        </div>
+
+                        <div class="link-box-active">
+                            <a class="desktop-sidebar-nav-a" href="#" onclick="dropdownBlockDiv()">
+                                <img class="desktop-sidebar-icons" src="css\icons\charts.png">
+                                <p class="desktop-sidebar-nav-p">Products</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box-active">
+                            <a class="desktop-sidebar-nav-a" href="products">
+                                <img class="desktop-sidebar-icons" src="css\icons\basket.png">
+                                <p class="desktop-sidebar-nav-p">Products</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="all-products">
+                                <img class="desktop-sidebar-icons" src="css\icons\process.png">
+                                <p class="desktop-sidebar-nav-p">Services</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="carrier">
+                                <img class="desktop-sidebar-icons" src="css\icons\van.png">
+                                <p class="desktop-sidebar-nav-p">Carrier</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="alert">
+                                <img class="desktop-sidebar-icons" src="css\icons\alert.png">
+                                <p class="desktop-sidebar-nav-p">Alert</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="Infographics">
+                                <img class="desktop-sidebar-icons" src="css\icons\podcast.png">
+                                <p class="desktop-sidebar-nav-p">Infographics</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="Consultation">
+                                <img class="desktop-sidebar-icons" src="css\icons\consultation.png">
+                                <p class="desktop-sidebar-nav-p">Consultation</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="learn">
+                                <img class="desktop-sidebar-icons" src="css\icons\reading.png">
+                                <p class="desktop-sidebar-nav-p">Learn</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="donate">
+                                <img class="desktop-sidebar-icons" src="css\icons\donation.png">
+                                <p class="desktop-sidebar-nav-p">Donate</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="about">
+                                <img class="desktop-sidebar-icons" src="css\icons\about.png">
+                                <p class="desktop-sidebar-nav-p">About</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="help">
+                                <img class="desktop-sidebar-icons" src="css\icons\help.png">
+                                <p class="desktop-sidebar-nav-p">help</p>
+                            </a>
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+
+            <div class="right-container">
+
+                <div class="top-right" align="center">
+
+                    <a href="projects" class="desktop-sticky-icons">
+                        Projects
+                    </a>
+
+                    <a href="associates" class="desktop-sticky-icons">
+                        Associates
+                    </a>
+
+                    <a href="stakeholders" class="desktop-sticky-icons">
+                        Stakeholders
+                    </a>
+
+                    <a href="#" class="desktop-sticky-icons">
+                        Contact Us
+                    </a>
+
+                </div>
+
+                <div class="bottom-right">
+
+                    <div class="list-container" align="center">
+
+                        <div class="tiles-layer">
+
+                            <div class="tiles-posts">
+                                <div class="tiles-posts-container">
+                                    <img class="main-image" alt="Apple Image" src="fruits&vege/apple.jpg" data-toggle="modal" data-target="#mainModal"><!--data-toggle="modal" data-target="#appleModal"-->
+                                </div>
+
+                                <h5 align="center" class="company-name">
+                                    <strong>
+                                        Arcaderand Block 12
+                                    </strong>
+                                </h5>
+
+                                <div class="company-information-container">
+                                    <div class="company-information">
+                                        <p><strong>Province: Gauteng</strong></p>
+                                        <p>Location:</p>
+                                        <div class="only-flex-div">
+                                            <p>Active:</p>
+                                            <p class="active-balls-yellow">⬤ ⬤ ⬤</p>
+                                        </div>
+                                        <p>Last Verified: 12/05/2022</p>
+                                        <div class="flex-box">
+                                            <p>Rating: </p>
+                                            <p class="bronze">Bronze</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="tiles-posts">
+                                <div class="tiles-posts-container">
+                                    <img class="main-image" alt="Vegetable Image" src="fruits&vege/apple.jpg" data-toggle="modal" data-target="#mainModal"><!--data-toggle="modal" data-target="#appleModal"-->
+                                </div>
+
+                                <h5 align="center" class="company-name">
+                                    <strong>
+                                        Arcaderand
+                                    </strong>
+                                </h5>
+
+                                <div class="company-information-container">
+                                    <div class="company-information">
+                                        <p><strong>Province: Gauteng</strong></p>
+                                        <p>Location:</p>
+                                        <div class="only-flex-div">
+                                            <p>Active:</p>
+                                            <p class="active-balls-yellow">⬤ ⬤ ⬤</p>
+                                        </div>
+                                        <p>Last Verified: 12/05/2022</p>
+                                        <div class="flex-box">
+                                            <p>Rating: </p>
+                                            <p class="bronze">Bronze</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="tiles-posts">
+                                <div class="tiles-posts-container">
+                                    <img class="main-image" alt="Company Logo" src="fruits&vege/apple.jpg" data-toggle="modal" data-target="#egModal">
+                                </div>
+                                <h5 align="center" class="company-name">
+                                    <strong>
+                                        Tomato
+                                    </strong>
+                                </h5>
+
+                                <div class="company-information-container">
+                                    <div class="company-information">
+                                        <p><strong>Province: Gauteng</strong></p>
+                                        <p>Location:</p>
+                                        <div class="only-flex-div">
+                                            <p>Active:</p>
+                                            <p class="active-balls-yellow">⬤ ⬤ ⬤</p>
+                                        </div>
+                                        <p>Last Verified: 12/05/2022</p>
+                                        <div class="flex-box">
+                                            <p>Rating: </p>
+                                            <p class="bronze">Bronze</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal fade rounded" id="egModal" >
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+
+                                            <!-- Modal Header -->
+                                            <div class="modal-header bg-dark">
+                                                <h4 class="modal-title">Tomato market</h4>
+                                                <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+                                            </div>
+
+                                            <!-- Modal body -->
+                                            <div class="modal-body bg-dark">
+                                                <div class="modal-body-content">
+                                                    <div class="main-modal-content">
+
+                                                        <div class="modal-content-flex">
+                                                            <div class="content-img-container">
+                                                                <img class="main-modal-content-img" src="fruits&vege/asparagus.jpg" alt="Vegetable Image">
+                                                            </div>
+                                                            <div class="content-info">
+                                                                <ul>
+                                                                    <li>Valid Measurements: Crate/Kg</li>
+                                                                    <li>Harvest: (Unverified)</li>
+                                                                    <li>Availability: All Year</li>
+                                                                    <li>Major producer province: Many Regions</li>
+                                                                    <li>Production Volume (2018): (Mixed)</li>
+                                                                    <li>Gross Value (ton): (Mixed)</li>
+                                                                    <li>Average price (crate):</li>
+                                                                </ul>
+
+                                                            </div>
+                                                        </div>
+
+                                                        <hr style="background-color:#808080;">
+
+                                                        <div class="products-main-container">
+
+                                                            <div class="products-to-be-sold-flex">
+
+                                                                <div class="products-to-be-sold">
+                                                                    <div class="product-container">
+                                                                        <div class="product-template">
+                                                                            <p>Products</p>
+                                                                            <p>Size</p>
+                                                                            <p>Availability</p>
+                                                                            <p>Delivery</p>
+                                                                            <p>Price</p>
+                                                                        </div>
+                                                                        <div class="product-details">
+                                                                            <p>: Red Tomatoes</p>
+                                                                            <p>: 2Kg</p>
+                                                                            <p>: Moderate</p>
+                                                                            <p>: No</p>
+                                                                            <div class="price-bar">
+                                                                                <p>: R200</p>
+                                                                                <p>.00</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="products-to-be-sold">
+                                                                    <div class="product-container">
+                                                                        <div class="product-template">
+                                                                            <p>Products</p>
+                                                                            <p>Size</p>
+                                                                            <p>Availability</p>
+                                                                            <p>Delivery</p>
+                                                                            <p>Price</p>
+                                                                        </div>
+                                                                        <div class="product-details">
+                                                                            <p>: Red Tomatoes</p>
+                                                                            <p>: 2Kg</p>
+                                                                            <p>: Moderate</p>
+                                                                            <p>: No</p>
+                                                                            <div class="price-bar">
+                                                                                <p>: R200</p>
+                                                                                <p>.00</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="products-to-be-sold">
+                                                                    <div class="product-container">
+                                                                        <div class="product-template">
+                                                                            <p>Products</p>
+                                                                            <p>Size</p>
+                                                                            <p>Availability</p>
+                                                                            <p>Delivery</p>
+                                                                            <p>Price</p>
+                                                                        </div>
+                                                                        <div class="product-details">
+                                                                            <p>: Red Tomatoes</p>
+                                                                            <p>: 2Kg</p>
+                                                                            <p>: Moderate</p>
+                                                                            <p>: No</p>
+                                                                            <div class="price-bar">
+                                                                                <p>: R200</p>
+                                                                                <p>.00</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="products-to-be-sold-flex">
+
+                                                                <div class="products-to-be-sold">
+                                                                    <div class="product-container">
+                                                                        <div class="product-template">
+                                                                            <p>Products</p>
+                                                                            <p>Size</p>
+                                                                            <p>Availability</p>
+                                                                            <p>Delivery</p>
+                                                                            <p>Price</p>
+                                                                        </div>
+                                                                        <div class="product-details">
+                                                                            <p>: Red Tomatoes</p>
+                                                                            <p>: 2Kg</p>
+                                                                            <p>: Moderate</p>
+                                                                            <p>: No</p>
+                                                                            <div class="price-bar">
+                                                                                <p>: R200</p>
+                                                                                <p>.00</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="products-to-be-sold">
+                                                                    <div class="product-container">
+                                                                        <div class="product-template">
+                                                                            <p>Products</p>
+                                                                            <p>Size</p>
+                                                                            <p>Availability</p>
+                                                                            <p>Delivery</p>
+                                                                            <p>Price</p>
+                                                                        </div>
+                                                                        <div class="product-details">
+                                                                            <p>: Red Tomatoes</p>
+                                                                            <p>: 2Kg</p>
+                                                                            <p>: Moderate</p>
+                                                                            <p>: No</p>
+                                                                            <div class="price-bar">
+                                                                                <p>: R200</p>
+                                                                                <p>.00</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+
+                                                        <div class="vendor-contact-details">
+                                                            <a href="#">
+                                                                <img src="css/icons/call.png" alt="call">
+                                                            </a>
+                                                            <a href="#">
+                                                                <img src="css/icons/facebook.png" alt="facebook">
+                                                            </a>
+                                                            <a href="#">
+                                                                <img src="css/icons/email.png" alt="email">
+                                                            </a>
+                                                        </div>
+
+                                                        <hr>
+
+                                                        <div class="review-box">
+                                                            <div class="review-setting-box">
+                                                                <a href="#">
+                                                                    Write Review
+                                                                </a>
+                                                            </div>
+                                                            <div class="review-setting-box">
+                                                                <a href="#">
+                                                                    View Review
+                                                                </a>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Modal footer -->
+                                            <div class="modal-footer bg-dark">
+                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mobile-footer">
+            <div class="sticky-list">
+                <div class="a-tag">
+
+                    <a class="a-tags" href="help">
+                        <img class="a-tags-icon" alt="help" src="css\icons\help.png">
+                    </a>
+
+                    <a class="a-tags" href="#" onclick="openMedianav()">
+                        <img class="a-tags-icon" alt="menu" src="css\icons\connect_menu.png">
+                    </a>
+
+                         <div id="mediaNav" class="sidenavMain" >
+                             <p class="closebtn" onclick="closeMedianav()">&times;</p>
+
+                             <a href="https://discord.com/channels/@arcaderand">
+                                 <img src="css\icons\discord.png" alt="discord" class="media-icons">
+                                 <p class="media-texts">Discord</p>
+                             </a>
+
+                             <a href="mailto:admin@arcaderand.co.za">
+                                 <img src="css\icons\email.png" alt="mail" class="media-icons">
+                                 <p class="media-texts">Email</p>
+                             </a>
+
+                             <a href="https://www.facebook.com/Arcaderand-104749068675206">
+                                 <img src="css\icons\facebook.png" alt="facebook" class="media-icons">
+                                 <p class="media-texts">Facebook</p>
+                             </a>
+
+                             <a href="https://www.instagram.com/arcaderand_sa/">
+                                 <img src="css\icons\instagram.png" alt="instagram" class="media-icons">
+                                 <p class="media-texts">Instagram</p>
+                             </a>
+
+                             <a href="https://www.reddit.com/user/arcaderand">
+                                 <img src="css\icons\reddit.png" alt="reddit" class="media-icons">
+                                 <p class="media-texts">Reddit</p>
+                             </a>
+
+                             <a href="#">
+                                 <img src="css\icons\telegram.png" alt="telegram" class="media-icons">
+                                 <p class="media-texts">Telegram</p>
+                             </a>
+
+                             <a href="https://twitter.com/arcaderand">
+                                 <img src="css\icons\twitter.png" alt="twitter" class="media-icons">
+                                 <p class="media-texts">Twitter</p>
+                             </a>
+
+                             <a href="https://www.youtube.com/channel/UCV7uK-eTFK10oKq0hdeB__w">
+                                 <img src="css\icons\discord.png" alt="youtube" class="media-icons">
+                                 <p class="media-texts">YouTube</p>
+                             </a>
+
+                             <a href="about">
+                                 <img src="css\icons\about.png" alt="about" class="media-icons">
+                                 <p class="media-texts">About</p>
+                             </a>
+
+                         </div>
+
+                    <a class="a-tags" href="#" onclick="openController()">
+                        <img class="a-tags-icon" alt="menu" src="css\icons\drop_down.png">
+                    </a>
+
+                        <div id="controller" class="sidenavMain">
+                            <p class="closebtn" onclick="closeController()">&times;</p>
+
+                            <a href="#" onclick="mobileDropdownBlockDiv()">
+                                <img src="css\icons\buscket.png" alt="." class="media-icons">
+                                <p class="media-texts">Products</p>
+                            </a>
+
+                            <a href="service">
+                                <img src="css\icons\service.png" alt="." class="media-icons">
+                                <p class="media-texts">Services</p>
+                            </a>
+
+                            <a href="transport">
+                                <img src="css\icons\transport.png" alt="." class="media-icons">
+                                <p class="media-texts">Carrier</p>
+                            </a>
+
+                            <a href="Alert">
+                                <img src="css\icons\alert.png" alt="." class="media-icons">
+                                <p class="media-texts">Alert</p>
+                            </a>
+
+                            <a href="articles">
+                                <img src="css\icons\newspaper.png"  class="media-icons">
+                                <p class="media-texts">Infographic</p>
+                            </a>
+
+                            <a href="Consultation">
+                                <img src="css\icons\consultant.png"  class="media-icons">
+                                <p class="media-texts">Consultation</p>
+                            </a>
+
+                            <a href="learn">
+                                <img src="css\icons\learn.png"  class="media-icons">
+                                <p class="media-texts">Learn</p>
+                            </a>
+
+                            <a href="donate">
+                                <img src="css\icons\donate.png"  class="media-icons">
+                                <p class="media-texts">Donate</p>
+                            </a>
+
+                            <a href="about">
+                                <img src="css\icons\about.png"  class="media-icons">
+                                <p class="media-texts">About</p>
+                            </a>
+
+                            <a href="help">
+                                <img src="css\icons\help.png"  class="media-icons">
+                                <p class="media-texts">Help</p>
+                            </a>
+
+                        </div>
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="main-device-footer">
+
+            <div class="social-media-apps">
+
+                <a href="admin@arcaderand.co.za" class="social-media-app-link">
+                    <img src="css/icons/email.png" alt="email">
+                </a>
+
+                <a href="https://www.facebook.com/Arcaderand-104749068675206" class="social-media-app-link">
+                    <img src="css/icons/facebook.png" alt="facebook">
+                </a>
+
+                <a href="https://twitter.com/arcaderand" class="social-media-app-link">
+                    <img src="css/icons/twitter.png" alt="twitter">
+                </a>
+
+                <a href="https://www.instagram.com/arcaderand_sa/" class="social-media-app-link">
+                    <img src="css/icons/instagram.png" alt="instagram">
+                </a>
+
+                <a href="https://t.me/+FrrBEJ6Hzq8xZWM0" class="social-media-app-link">
+                    <img src="css/icons/telegram.png" alt="telegram">
+                </a>
+
+                <a href="https://www.youtube.com/channel/UCV7uK-eTFK10oKq0hdeB__w" class="social-media-app-link">
+                    <img src="css/icons/youtube.png" alt="youtube">
+                </a>
+
+            </div>
+
+            <hr style="background-color:#808080; width:70%;">
+
+            <div class="newsletter-subscription">
+
+                <form name="subscription-footer-form" method="POST" data-netlify="true" class="subscription-block">
+                    <p><strong>Sign up for our newsletter </strong></p>
+
+                    <div class="form-outline form-white" align="center">
+                        <input type="email" class="form-control" />
+                        <label class="form-label">Email address</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-outline-light mb-4">
+                        Sign Up
+                    </button>
+
+                </form>
+
+            </div>
+
+            <div class="last-footer-block">
+                <p>Join our communities across many social platforms and be up to date,
+                    you can also check some of our services or click the learn link to
+                    get yourself some lessons for free and be begin your journey with
+                    us. Ready to sell? find out what is required for you to be a
+                    vendor/seller on our site for free.
+                </p>
+
+                <div>
+                    <div>
+
+                        <div class="row">
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase">More From Us</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="application" class="text-white">Want to sell?</a>
+                                    </li>
+                                    <li>
+                                        <a href="consultation" class="text-white">Consult</a>
+                                    </li>
+                                    <li>
+                                        <a href="about" class="text-white">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="donate" class="text-white">Donate</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase">Community</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="#!" class="text-white">Official Facebook Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://t.me/+FrrBEJ6Hzq8xZWM0" class="text-white">Open Community</a>
+                                    </li>
+                                    <li>
+                                        <a href="Session" class="text-white">Session</a>
+                                    </li>
+                                    <li>
+                                        <a href="admin@arcaderand.co.za" class="text-white">Contact Us</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase">Our Services</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="advertise" class="text-white">Advertise</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/channel/UCV7uK-eTFK10oKq0hdeB__w" class="text-white">YouTube</a>
+                                    </li>
+                                    <li>
+                                        <a href="projects" class="text-white">Projects</a>
+                                    </li>
+                                    <li>
+                                </ul>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase">More</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="report" class="text-white">Report!</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-white">Testimonials</a>
+                                    </li>
+                                    <li>
+                                        <a href="help" class="text-white">Associates</a>
+                                    </li>
+                                    <li>
+                                        <a href="help" class="text-white">Stakeholders</a>
+                                    </li>
+                                    <li>
+                                        <a href="help" class="text-white">Help</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--Grid column-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright text-center" align="center">
+                <p>© 2022 Copyright:</p>
+                <a class="copyright-link" href="https://www.arcaderand.co.za/">Arcaderand.co.za</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+
+    </div>
+
+    <div class="bottom-balance">
+        <p>-</p>
+    </div>
+
+</body>
+
+</html>
