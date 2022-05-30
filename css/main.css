@@ -9,7 +9,7 @@
     margin-right:auto;
     left:0;
     right:0;
-    background-color: #242526;
+    background-color: red;
     border-radius: 10px;
     
 }
@@ -77,6 +77,7 @@
     display:none;
     width:160px ;
     height:100%;
+    background-color: orange;
 }
 .main-sidebar-container{
     color:#fff;
@@ -115,10 +116,12 @@
 .right-container{
     width:100%;
     border-radius: 10px;
-    background-color: orange;
+}
+.right-top-container{
+    background-color: blue;
 }
 .top-right{
-    color:#fff;
+    background-color: green;
 }
 .desktop-sticky-icons{
     color:white;
@@ -130,26 +133,20 @@
     color:#e54d42;
 }
 .bottom-right{
-    padding-top:30px;
+    padding-top:50px;
     width:100%;
     margin-left:auto;
     margin-right:auto;
+    background-color: #242526;
 }
 .bottom-right h4{
     color:#fff;
 }
-.list-container-label{
-    color:#fff;
-}
 .list-container{
-    margin-left:auto;
-    margin-right:auto;
-    padding-top:20px;
-    padding:5px;
     padding-top:30px;
-}
-.list-container-label{
-    color:#fff;
+    background-color: green;
+    margin: 5px;
+    border-radius: 10px;
 }
 
 
