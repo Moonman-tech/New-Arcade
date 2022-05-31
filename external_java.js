@@ -1,3 +1,12 @@
+function modernSidebar() {
+    var x = document.getElementById("modern-sidebar");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
 function groupOne() {
     var x = document.getElementById("group-one");
     if (x.style.display === "block") {

@@ -188,8 +188,8 @@
 }
 #mySidenav-tab a {
     padding: 5px 10px;
-    box-shadow: 0px 5px 8px #18191a;
-    border-right: 5px solid #18191a;
+    box-shadow: 0px 5px 8px #1E1F25;
+    border-right: 5px solid #1E1F25;
     border-radius: 10px;
 }
 */
@@ -209,21 +209,25 @@
   padding-top: 60px;
   margin: 0;
   background-color: #2B303C;
+  border-radius: 0px 10px 10px 0px;
+}
+.sidenav-liner{
+    border-right:solid 5px #0097ff;
+    
 }
 .sidenavMain a {
   color: white;
-  transition: 0.3s;
   display: flex;
-  padding-left: 25px;
+  padding-left: 15px;
   padding-top: 10px;
   border-radius: 10px;
-  box-shadow: 0 5px 5px #18191a;
+  box-shadow: 0 5px 5px #1E1F25;
 }
 .sidenavMain p {
     color: white;
 }
 .sidenavMain a:hover {
-    color: #18191a;
+    color: #1E1F25;
 }
 
 .sidenavMain .closebtn {
@@ -259,7 +263,7 @@
     justify-content: space-evenly;
 }
 .a-tags {
-    box-shadow: 0px 5px 5px #18191a;
+    box-shadow: 0px 5px 5px #1E1F25;
     border-radius:5px;
 }
 .a-tags-icon {
@@ -270,7 +274,6 @@
     width: 45px;
     height: 45px;
     padding: 5px;
-    box-shadow: 0px 5px 5px black;
     border-radius: 5px;
 }
 .media-texts {
