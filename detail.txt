@@ -5,4 +5,9 @@ Background:
 .sidenavMain
 
 Color:
-
+.desktop-sidebar-nav-p
+.newsletter-subscription
+.last-footer-block
+.copyright
+.copyright-link
+.tiles-posts

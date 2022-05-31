@@ -60,10 +60,6 @@
     width:135px;
 }
 
-.text-aligner{
-    color:#fff;
-}
-
 
 /*Main sides container*/
 .sides-container-two{
@@ -80,9 +76,6 @@
     height:100%;
     background-color: #2B303C;
 }
-.main-sidebar-container{
-    color:#fff;
-}
 .desktop-sidebar-div{
     padding:5px;
 }
@@ -90,14 +83,12 @@
     width:140px;
 }
 .link-box-active{
-    color:#fff;
     padding: 0px;
     background-color: #1E1F25;
     margin: 10px;
     border-radius:10px;
 }
 .link-box{
-    color:#fff;
     padding: 0px;
     margin: 10px;
     border-radius:10px;
@@ -128,13 +119,9 @@
     display: none;
 }
 .desktop-sticky-icons{
-    color:white;
     border-radius:10px;
     float: right;
     padding:10px;
-}
-.desktop-sticky-icons:hover{
-    color:#e54d42;
 }
 .bottom-right{
     padding-top:15px;
@@ -168,7 +155,6 @@
 .sidenav a {
     padding: 5px 5px 5px 5px;
     font-size: 25px;
-    color: #818181;
     display: block;
     transition: 0.2s;
 }
@@ -221,7 +207,7 @@
 }
 .sidenavMain a:hover {
     background-color: #1E1F25;
-  }
+}
 .sidenavMain p {
     color: white;
 }
@@ -277,9 +263,6 @@
     margin-right: auto;
     font-size: 20px;
     padding-top: 15px;
-}
-.media-texts:hover {
-    color: #3a99d9;
 }
 
 

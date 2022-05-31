@@ -4,21 +4,6 @@
 }
 
 
-.drop-icons {
-    width: 30%;
-    height: %
-}
-.dropbtn {
-    color: white;
-}
-.dropbtn a:hover{
-    color: white;
-}
-.dropdown {
-    display: none;
-}
-
-
 
 
 
@@ -77,7 +62,6 @@
 }
 .about-facebook:hover {
     border-style: solid;
-    border-color: red;
 }
 .about-instagram {
     padding: 5px;
@@ -87,7 +71,6 @@
 }
 .about-instagram:hover {
     border-style: solid;
-    border-color: red;
 }
 .about-twitter {
     padding: 5px;

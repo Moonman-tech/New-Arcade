@@ -19,11 +19,8 @@
     background-color:#e54d42;
     padding:5px;
     border-radius:10px;
-    color:#fff;
 }
-.all-time-button:hover{
-    color:#fff;
-}
+
 .company-name{
     color:#e54d42;
 }
@@ -35,15 +32,12 @@
 }
 .seller-div-container{
     border-radius:10px;
-    color:#343A40;
     width:100%;
 }
 .seller-div{
-    color:#fff;
     border-radius:10px;
 }
 .underlying-div{
-    color:#fff;
     border-radius:10px;
 }
 
@@ -56,15 +50,11 @@
 }
 .comments{
     padding:5px;
-    color:#fff;
     border-radius:10px;
     width:100%;
     padding-bottom:10px;
     background-color:#3a99d9;
     box-shadow: 0 5px 5px #18191a;
-}
-.comments:hover {
-    color:#fff;
 }
 .seller-div h5{
     text-align:left;
@@ -106,7 +96,6 @@
     padding-left:2px;
     padding-right:2px;
     border-radius:10px;
-    color:#fff
 }
 .flex-box{
     display:flex;
@@ -147,14 +136,12 @@
 .comment-viewer-div-container{
     padding:5px;
     border-radius:10px;
-    color:#343A40;
 }
 .sales-div-container{
     border-radius:0px 0px 10px 10px;
     width:100%;
 }
 .sales-div{
-    color:#fff;
     border-radius:10px;
 }
 .seller-info{
@@ -174,7 +161,6 @@
 }
 .sources{
     opacity: 0.2;
-    color:#fff;
     text-decorator:none;
     padding-left:20px;
     font-family: Arial, Helvetica, sans-serif;
@@ -188,7 +174,6 @@
     padding-left:10px;
     border-radius:10px;
     box-shadow: 0 5px 5px #18191a;
-    background-color:#e54d42;
 }
 .bottom-div-controller{
     padding-top:10px;
@@ -208,7 +193,6 @@
     border-radius:10px;
     padding-top:5px;
     padding-bottom:5px;
-    background-color:#e54d42;
 }
 .ways-to-contact a:hover{
     box-shadow: 0 5px 5px #18191a;
@@ -219,13 +203,11 @@
 }
 .timeline-button{
     width:100%;
-    color:#fff;
     padding:5px;
     border-radius:10px;
     box-shadow: 0 5px 5px #18191a;
 }
 .timeline-button:hover{
-    color:#fff;
     box-shadow: 0 0px 0px #18191a;
 }
 .pop-up-form-modal{
@@ -237,7 +219,6 @@
     text-align: justify;
 }
 .note{
-    color:#343A40;
     margin:0;
     padding:0px;
 }

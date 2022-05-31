@@ -58,7 +58,6 @@
     background-color: #3791CD;
     padding: 15px; 
     border-radius: 10px; 
-    color: #fff;
 }
 #business-link-div p{
     text-size-adjust: 110%;
@@ -75,9 +74,6 @@
     font-size:25px;
     padding: 10px;
     border-radius: 10px;
-}
-.name-main a:hover{
-    color:#fff;
 }
 
 .header-belt{
@@ -99,12 +95,7 @@
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 20px;
-    color: #fff;
     display: block;
-}
-  
-.stats-sidenav a:hover {
-    color: #f1f1f1;
 }
 
 @media only screen and (min-width:280px) {
