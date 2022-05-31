@@ -1,6 +1,7 @@
 Background:
 .left-container
 .fabricated-body-div
+.mobile-navigation
 
 Color:
 

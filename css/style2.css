@@ -18,16 +18,15 @@
 
 .tiles-posts {
     flex: 100%;
-    width: 95%;
+    width: 100%;
     border-radius: 10px;
     background-color: #e54d42;
     font-weight: bold;
     margin-left: auto;
     margin-right: auto;
-    border-style: solid;
-    border-color: #18191a;
     color:#fff;
-    padding:10px;
+    padding:0px;
+    margin: 5px;
 }
 .tiles-posts h5{
     text-decoration: underline;
@@ -111,8 +110,14 @@
     color: #f1f1f1;
 }
 
+@media only screen and (min-width:280px) {
+    .tiles-posts {
+        margin: 10px;
+        padding: 10px;
+    }
+}
 
-@media only screen and (min-width:450px) {
+@media only screen and (min-width:600px) {
     .tiles-posts {
         flex: 40%;
     }

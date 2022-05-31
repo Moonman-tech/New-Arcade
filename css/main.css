@@ -1,6 +1,6 @@
 /*Main body div*/
 .main-body-container{
-    background-color:green;
+    background-color:#181A29;
 }
 .fabricated-body-div{
     width:100%;
@@ -51,6 +51,7 @@
     position:fixed;
     width:100%;
     z-index: 1;
+    background-color: #181A29;
 }
 .logo-link{
     justify-content:center;
@@ -116,12 +117,12 @@
 .right-container{
     width:100%;
     border-radius: 10px;
+    margin: 0;
 }
 .right-top-container{
-    background-color: blue;
-}
-.top-right{
-    background-color: green;
+    background-color: yellow !important;
+    margin:0px;
+    display: none;
 }
 .desktop-sticky-icons{
     color:white;
@@ -133,18 +134,14 @@
     color:#e54d42;
 }
 .bottom-right{
-    padding-top:50px;
+    padding-top:15px;
+    padding-bottom: 3px;
     width:100%;
-    margin-left:auto;
-    margin-right:auto;
-    background-color: #242526;
-}
-.bottom-right h4{
-    color:#fff;
+    background-color: blue;
+    border-radius: 10px;
 }
 .list-container{
     padding-top:30px;
-    background-color: green;
     margin: 5px;
     border-radius: 10px;
 }
@@ -244,6 +241,7 @@
     border-top: 2px solid grey;
     border-bottom: 2px solid grey;
     z-index: 1;
+    background-color: #2A2C3C;
 }
 .a-tag-container {
     justify-content: center;
