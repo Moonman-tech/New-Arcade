@@ -208,6 +208,7 @@
   transition: 0.5s;
   padding-top: 60px;
   margin: 0;
+  background-color: #2B303C;
 }
 .sidenavMain a {
   color: white;
