@@ -210,25 +210,22 @@
   margin: 0;
   background-color: #2B303C;
   border-radius: 0px 10px 10px 0px;
-}
-.sidenav-liner{
-    border-right:solid 5px #0097ff;
-    
+  border-right:solid 2px #0097ff
 }
 .sidenavMain a {
-  color: white;
   display: flex;
-  padding-left: 15px;
-  padding-top: 10px;
   border-radius: 10px;
+  margin: 15px;
+  background-color: #2B303C;
   box-shadow: 0 5px 5px #1E1F25;
 }
+.sidenavMain a:hover {
+    background-color: #1E1F25;
+  }
 .sidenavMain p {
     color: white;
 }
-.sidenavMain a:hover {
-    color: #1E1F25;
-}
+
 
 .sidenavMain .closebtn {
     position: absolute;
@@ -271,10 +268,9 @@
     padding:5px;
 }
 .media-icons {
-    width: 45px;
     height: 45px;
     padding: 5px;
-    border-radius: 5px;
+    margin-left: 20px;
 }
 .media-texts {
     margin-left: auto;
