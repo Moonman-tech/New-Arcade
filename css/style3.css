@@ -25,7 +25,7 @@
     color:#fff;
 }
 .company-name{
-    color:#18191a;
+    color:#e54d42;
 }
 .universal-seller-container{
     display:block;
@@ -46,9 +46,6 @@
     color:#fff;
     border-radius:10px;
 }
-#review-writer-block(
-    display:none !important;
-)
 
 .button-flexing{
     border-radius:10px;
@@ -81,7 +78,7 @@
     border-radius:10px;
 }
 .group-details{
-    padding:left:5px;
+    padding-left:5px;
     line-height: 0.5;
     color:#242526;
 }
