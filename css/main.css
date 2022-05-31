@@ -1,6 +1,6 @@
 /*Main body div*/
 .main-body-container{
-    background-color:#181A29;
+    background-color:#1E1F25;
 }
 .fabricated-body-div{
     width:100%;
@@ -118,6 +118,8 @@
     width:100%;
     border-radius: 10px;
     margin: 0;
+    padding: 0px;
+    background-color: #2B303C;
 }
 .right-top-container{
     background-color: yellow !important;
@@ -139,6 +141,7 @@
     width:100%;
     background-color: #1E1F25;
     border-radius: 10px;
+    padding:5px;
 }
 .list-container{
     padding-top:30px;
@@ -336,10 +339,17 @@
 
 
 
-
+@media only screen and (min-width:200px) {
+    .right-container{
+        padding-right: 0px;
+    }
+}
 @media only screen and (min-width:768px) {
     .mobile-navigation{
         display:none;
+    }
+    .right-container{
+        padding-right: 10px;
     }
     .list-container{
         padding-top:0px;
