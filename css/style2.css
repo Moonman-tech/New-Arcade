@@ -113,7 +113,7 @@
 @media only screen and (min-width:768px) {
     .tiles-layer {
         width: 100%;
-        padding-top: 10px;
+        padding-top: 0px;
     }
     .tiles-posts {
         flex: 40%;

@@ -108,31 +108,39 @@
 .right-container{
     width:100%;
     border-radius: 10px;
-    margin: 0;
-    padding: 0px;
-    background-color: #2B303C;
+    background-color: orange;
     padding-right: 0px;
+    margin: 0px;
 }
 .right-top-container{
-    background-color: yellow !important;
-    margin:0px;
+    padding-right: 0px;
     display: none;
+    margin: 0;
+    background-color: #2B303C;
+    padding: 15px
 }
 .desktop-sticky-icons{
     border-radius:10px;
-    float: right;
-    padding:10px;
+    color: #fff;
+    margin: 10px;
+    background-color: #2B303C;
+    padding: 10px;
+    padding-bottom: 10px;
+}
+.desktop-sticky-icons:hover{
+    background-color: #1E1F25;
+    color: #fff;
+    text-decoration: none;
 }
 .bottom-right{
-    padding-top:15px;
+    padding-top:45px;
     padding-bottom: 3px;
     width:100%;
     background-color: #1E1F25;
     border-radius: 10px;
-    margin:0;
+    margin: 0;
 }
 .list-container{
-    padding-top:30px;
     margin: 5px;
     border-radius: 10px;
 }
@@ -330,6 +338,14 @@
     }
     .right-container{
         padding-right: 10px;
+        padding-top: 0px;
+        margin: 0;
+    }
+    .right-top-container{
+        display: block;
+    }
+    .bottom-right{
+        padding-top:1px;
     }
     .list-container{
         padding-top:0px;
@@ -339,9 +355,6 @@
     }
     .top-right{
         display:block;
-    }
-    .bottom-right{
-        padding-top:0px;
     }
     .mobile-footer {
         display: none;
