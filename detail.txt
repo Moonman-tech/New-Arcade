@@ -4,6 +4,7 @@ Background:
 .mobile-navigation
 .sidenavMain
 .right-top-container
+.main-body-container
 
 Color:
 .desktop-sidebar-nav-p
