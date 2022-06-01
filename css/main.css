@@ -116,6 +116,12 @@
     padding-top: 10px;
     display: none;
 }
+.mobile-dropdown-block{
+    background-color: #2B303C;
+    margin: 5px;
+    border-radius: 10px;
+    line-height: 0.6;
+}
 .dropdown-block-link{
     margin: 5px;
     display: flex;
@@ -247,12 +253,23 @@
   border-radius: 0px 10px 10px 0px;
   border-right:solid 2px #0097ff
 }
+.mobile-stats-dropdown{
+    display: flex;
+    border-radius: 10px;
+    margin: 15px;
+    background-color: #1E1F25;
+}
+.block-content{
+    display: flex;
+    border-radius: 10px;
+    margin: 15px;
+    background-color: #1E1F25;
+}
 .sidenavMain a {
   display: flex;
   border-radius: 10px;
   margin: 15px;
-  background-color: #2B303C;
-  box-shadow: 0 5px 5px #1E1F25;
+  background-color: #1E1F25;
 }
 .sidenavMain a:hover {
     background-color: #1E1F25;
@@ -304,7 +321,7 @@
 }
 .media-icons {
     height: 45px;
-    padding: 5px;
+    padding-top: 15px;
     margin-left: 20px;
 }
 .media-texts {

@@ -6,3 +6,12 @@ function dashboardDropDownDiv() {
         x.style.display = "block";
     }
 }
+
+function mobileDashboardDropDownDiv() {
+    var x = document.getElementById("controller");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}

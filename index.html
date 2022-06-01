@@ -1485,10 +1485,42 @@
                         <div id="controller" class="sidenavMain">
                             <p class="closebtn" onclick="closeController()">&times;</p>
 
-                            <a href="#" onclick="mobileDropdownBlockDiv()">
-                                <img src="css\icons\charts.png" alt="." class="media-icons">
-                                <p class="media-texts">Dashboard</p>
-                            </a>
+                            <div onclick="mobileDropdownBlockDiv()" class="mobile-stats-dropdown">
+                                <div class="block-content">
+                                    <img src="css\icons\charts.png" alt="." class="media-icons">
+                                    <p class="media-texts">Dashboard</p>
+                                </div>
+
+                                <div class="mobile-dropdown-block" id="mobile-sidebar-dropdown-block">
+
+                                    <a href="index.html" class="dropdown-block-link">
+                                        <img src="css/icons/charts.png" class="dropdown-block-link-img">
+                                        <p class="desktop-sidebar-dropdown">Overall</p>
+                                    </a>
+    
+                                    <a href="fuits" class="dropdown-block-link">
+                                        <img src="css/icons/fruit.png" class="dropdown-block-link-img">
+                                        <p class="desktop-sidebar-dropdown">Fruits</p>
+                                    </a>
+    
+                                    <a href="vegetables" class="dropdown-block-link">
+                                        <img src="css/icons/vegetable.png" class="dropdown-block-link-img">
+                                        <p class="desktop-sidebar-dropdown">Vegetables</p>
+                                    </a>
+    
+                                    <a href="meat" class="dropdown-block-link">
+                                        <img src="css/icons/meat.png" class="dropdown-block-link-img">
+                                        <p class="desktop-sidebar-dropdown">Meat</p>
+                                    </a>
+    
+    
+                                    <a href="other.js" class="dropdown-block-link">
+                                        <img src="css/icons/package.png" class="dropdown-block-link-img">
+                                        <p class="desktop-sidebar-dropdown">Other</p>
+                                    </a>
+    
+                                </div>
+                            </div>    
 
                             <a href="service">
                                 <img src="css\icons\services.png" alt="." class="media-icons">
