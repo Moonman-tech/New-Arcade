@@ -8,7 +8,7 @@ function dashboardDropDownDiv() {
 }
 
 function mobileDashboardDropDownDiv() {
-    var x = document.getElementById("controller");
+    var x = document.getElementById("mobile-sidebar-dropdown-block");
     if (x.style.display === "block") {
         x.style.display = "none";
     } else {
