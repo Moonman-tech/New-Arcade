@@ -82,7 +82,7 @@
     padding-left:5px;
 }
 .active-balls-yellow{
-    color:yellow;
+    color:#edef00;
     padding-left:5px;
 }
 .active-balls-red{
@@ -104,6 +104,9 @@
     border-radius:10px;
     text-align:center;
     padding-left:5px;
+}
+.supplies{
+    text-decoration: underline;
 }
 .only-flex-div{
     display:flex;
@@ -161,7 +164,7 @@
 }
 .sources{
     opacity: 0.2;
-    text-decorator:none;
+    text-decoration:none;
     padding-left:20px;
     font-family: Arial, Helvetica, sans-serif;
     padding-top:5px;

@@ -41,6 +41,7 @@
 .tiles-posts-container img{
     width: 100%;
     border-radius:10px;
+    border: solid #1E1F25 2px ;
 }
 .company-information-container{
     padding:10px;

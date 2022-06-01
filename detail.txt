@@ -3,6 +3,7 @@ Background:
 .fabricated-body-div
 .mobile-navigation
 .sidenavMain
+.right-top-container
 
 Color:
 .desktop-sidebar-nav-p
@@ -11,3 +12,4 @@ Color:
 .copyright
 .copyright-link
 .tiles-posts
+.desktop-sticky-icons,
