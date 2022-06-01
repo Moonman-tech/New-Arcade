@@ -130,6 +130,9 @@
     padding-left: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
+    background-color: #1E1F25;
+    margin: 10px;
+    border-radius: 10px;
 }
 .mobile-dropdown-block-link img{
     width:25px;
