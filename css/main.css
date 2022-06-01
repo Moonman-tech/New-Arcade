@@ -268,8 +268,9 @@
   padding-top: 60px;
   margin: 0;
   background-color: #2B303C;
-  border-radius: 0px 10px 10px 0px;
-  border-right:solid 2px #0097ff
+}
+.sidenav-cover{
+    border-right:solid 2px #3a99d9;
 }
 .mobile-stats-dropdown{
     border-radius: 10px;
@@ -291,7 +292,7 @@
     padding-bottom: 0px;
     margin: 0;
 }
-.sidenavMain a {
+.sidenavMain-a {
   display: flex;
   border-radius: 10px;
   margin: 15px;
