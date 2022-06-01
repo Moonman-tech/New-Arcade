@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="external_java.js"></script>
     <script src="vegetables.js"></script>
+    <script src="controls.js"></script>
     <script src="charts.js"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -54,11 +55,43 @@
                             <img src="css/icons/logo.png" alt="homepage">
                         </div>
 
-                        <div class="link-box">
-                            <a class="desktop-sidebar-nav-a" href="#" onclick="dropdownBlockDiv()">
+                        <div class="link-box-dropdown-active">
+
+                            <a class="desktop-sidebar-nav-a" href="#" onclick="dashboardDropDownDiv()">
                                 <img class="desktop-sidebar-icons" src="css\icons\charts.png">
                                 <p class="desktop-sidebar-nav-p">Dashbard</p>
                             </a>
+
+                            <div class="stats-dropdown-block" id="dashboard-dropdown-block">
+
+                                <a href="index.html" class="dropdown-block-link">
+                                    <img src="css/icons/charts.png" class="dropdown-block-link-img">
+                                    <p class="desktop-sidebar-dropdown">Overall</p>
+                                </a>
+
+                                <a href="fuits" class="dropdown-block-link">
+                                    <img src="css/icons/fruit.png" class="dropdown-block-link-img">
+                                    <p class="desktop-sidebar-dropdown">Fruits</p>
+                                </a>
+
+                                <a href="vegetables" class="dropdown-block-link">
+                                    <img src="css/icons/vegetable.png" class="dropdown-block-link-img">
+                                    <p class="desktop-sidebar-dropdown">Vegetables</p>
+                                </a>
+
+                                <a href="meat" class="dropdown-block-link">
+                                    <img src="css/icons/meat.png" class="dropdown-block-link-img">
+                                    <p class="desktop-sidebar-dropdown">Meat</p>
+                                </a>
+
+
+                                <a href="other.js" class="dropdown-block-link">
+                                    <img src="css/icons/package.png" class="dropdown-block-link-img">
+                                    <p class="desktop-sidebar-dropdown">Other</p>
+                                </a>
+
+                            </div>
+
                         </div>
 
                         <div class="link-box-active">

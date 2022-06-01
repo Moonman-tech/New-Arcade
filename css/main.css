@@ -88,6 +88,12 @@
     margin: 10px;
     border-radius:10px;
 }
+.link-box-dropdown-active{
+    padding-bottom: 1px;
+    background-color: #1E1F25;
+    margin: 10px;
+    border-radius:10px;
+}
 .link-box-active-mode{
     border:solid 2px #222222;
     margin: 10px;
@@ -101,6 +107,32 @@
 .link-box:hover{
     text-decoration: none;
     background-color: #1E1F25;
+}
+.stats-dropdown-block{
+    background-color: #2B303C;
+    margin: 5px;
+    border-radius: 10px;
+    line-height: 0.6;
+    padding-top: 10px;
+    display: none;
+}
+.dropdown-block-link{
+    margin: 5px;
+    display: flex;
+    justify-content: flex-start;
+}
+.dropdown-block-link:hover{
+    text-decoration: none;
+}
+.dropdown-block-link-img{
+    width: 25px;
+    height: 25px;
+    padding-bottom: 2px;
+}
+.desktop-sidebar-dropdown{
+    color:#fff;
+    padding-top: 7px;
+    padding-left: 7px;
 }
 .desktop-sidebar-nav-p{
     color:#fff;
