@@ -109,11 +109,12 @@
     background-color: #1E1F25;
 }
 .stats-dropdown-block{
-    background-color: #2B303C;
+    background-color: #1E1F25;
     margin: 5px;
     border-radius: 10px;
-    line-height: 0.6;
-    padding-top: 10px;
+    line-height: 0.5;
+    padding-top: 5px;
+    padding-bottom: 5px;
     display: none;
 }
 .mobile-dropdown-block{
@@ -147,6 +148,9 @@
     margin: 5px;
     display: flex;
     justify-content: flex-start;
+    background-color: #2B303C;
+    padding: 5px;
+    border-radius: 10px;
 }
 .dropdown-block-link:hover{
     text-decoration: none;
