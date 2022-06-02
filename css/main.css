@@ -308,9 +308,15 @@
 }
 .sidenavMain a:hover {
     background-color: #DDDCE1;
+    text-decoration: none;
 }
 .sidenavMain p {
     color: #1E1F25;
+}
+.sidenavMain-a i{
+    padding-top: 12px;
+    margin-left: 20px;
+    color:#337AB7;
 }
 
 
@@ -342,13 +348,19 @@
 .a-tag {
     display: flex;
     bottom: 0%;
-    padding: 5px 0px;
     width: 100%;
     justify-content: space-evenly;
 }
 .a-tags {
+    border-radius:10px;
+    padding-top: 5px;
+    padding:5px;
+}
+.a-tags i{
     box-shadow: 0px 5px 5px #1E1F25;
     border-radius:5px;
+    padding:5px;
+    background-color: #fff;
 }
 .a-tags-icon {
     width: 45px;
@@ -359,6 +371,7 @@
     padding-top: 15px;
     margin-left: 20px;
 }
+
 .media-texts {
     margin-left: auto;
     margin-right: auto;
@@ -392,6 +405,9 @@
 }
 .social-media-app-link:hover{
     background-color: #F7F7FF;
+}
+.social-media-app-link i{
+    
 }
 .social-media-app-link img{
     width:50px;
