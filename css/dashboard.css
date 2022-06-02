@@ -54,6 +54,10 @@
     text-decoration: none;
     border-radius: 10px;
 }
+.desktop-sidebar-nav-a i{
+    padding-top:12px;
+    color:#3791CD;
+}
 .desktop-sidebar-link {
     text-decoration: none;
     font-size: 18px;
@@ -64,6 +68,7 @@
 }
 .desktop-sidebar-nav-p {
     padding-left:5px;
+    padding-top: 2px;
 }
 .desktop-sidebar-icons{
     width:30px;

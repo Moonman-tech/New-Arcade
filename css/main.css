@@ -1,3 +1,4 @@
+
 /*Main body div*/
 .main-body-container{
     background-color:#DDDCE1;
@@ -402,9 +403,23 @@
     color:#1E1F25;
     width:70%;
 }
+.footer-text{
+    color: #1E1F25;
+}
+.footer-text:hover{
+    color: #1E1F25;
+    text-decoration: none;
+}
 .subscription-block{
     display:block;
     justify-content:space-around;
+}
+.subscription-block input{
+    background-color: #DDDCE1;
+}
+.subscription-block button{
+    background-color: #DDDCE1;
+    margin-left: 10px;
 }
 .last-footer-block{
     padding:5px;
