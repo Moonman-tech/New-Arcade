@@ -82,7 +82,7 @@
     padding-left:5px;
 }
 .active-balls-yellow{
-    color:#edef00;
+    color:#dcdf00;
     padding-left:5px;
 }
 .active-balls-red{
@@ -99,7 +99,7 @@
 }
 .flex-box{
     display:flex;
-    background-color:#1E1F25;
+    background-color:#DDDCE1; 
     padding-top:10px;
     border-radius:10px;
     text-align:center;
