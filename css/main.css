@@ -53,6 +53,8 @@
     width:100%;
     z-index: 1;
     background-color: #fff;
+    box-shadow: 0px 3px 10px -6px rgba(0,0,0,1);
+
 }
 .logo-link{
     justify-content:center;
@@ -220,50 +222,6 @@
 }
 
 
-
-/*Sidenav*/
-/*
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    transition: 0.5s;
-    border-radius: 10px;
-}
-.sidenav a {
-    padding: 5px 5px 5px 5px;
-    font-size: 25px;
-    display: block;
-    transition: 0.2s;
-}
-.sidenav a:hover {
-    border-style: solid;
-    border-color: white;
-}
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 0px;
-    font-size: 36px;
-    margin-left: 0px;
-}
-#mySidenav-tab {
-    padding: 60px 0px 0px 0px;
-}
-#mySidenav-tab a {
-    padding: 5px 10px;
-    box-shadow: 0px 5px 8px #1E1F25;
-    border-right: 5px solid #1E1F25;
-    border-radius: 10px;
-}
-*/
-
-
-
 /*Sidenav 2*/
 .sidenavMain {
   height: 100%;
@@ -358,7 +316,7 @@
     padding:5px;
 }
 .a-tags i{
-    box-shadow: 0px 5px 5px #1E1F25;
+    box-shadow: 0px 5px 10px -6px rgba(0,0,0,1);
     border-radius:5px;
     padding:5px;
     background-color: #fff;
