@@ -85,13 +85,13 @@
 }
 .link-box-active{
     padding: 0px;
-    background-color: #DDDCE1;
+    background-color:#DDDCE1;
     margin: 10px;
     border-radius:10px;
 }
 .link-box-dropdown-active{
     padding-bottom: 1px;
-    background-color: #DDDCE1;
+    background-color: #3791CD;
     margin: 10px;
     border-radius:10px;
 }
@@ -194,9 +194,9 @@
 }
 .desktop-sticky-icons{
     border-radius:10px;
-    color: #1E1F25;
+    color: #fff;
     margin: 10px;
-    background-color: #DDDCE1;
+    background-color: #3791CD;
     padding: 10px;
     padding-bottom: 10px;
 }
@@ -316,7 +316,7 @@
 .sidenavMain-a i{
     padding-top: 12px;
     margin-left: 20px;
-    color:#337AB7;
+    color:#3791CD;
 }
 
 
@@ -361,6 +361,7 @@
     border-radius:5px;
     padding:5px;
     background-color: #fff;
+    color: #3791CD;
 }
 .a-tags-icon {
     width: 45px;
@@ -391,6 +392,7 @@
 .main-device-footer{
     width:100%;
     padding-top:10px;
+    background-color: #fff;
 }
 .social-media-apps{
     justify-content:space-evenly;
@@ -402,12 +404,13 @@
     margin:px;
     border-radius:10px;
     background-color: #fff;
+    padding: 5px 0px;
 }
 .social-media-app-link:hover{
-    background-color: #F7F7FF;
+    background-color: #DDDCE1;
 }
 .social-media-app-link i{
-    
+    color: #3791CD;
 }
 .social-media-app-link img{
     width:50px;
@@ -429,6 +432,7 @@
 .subscription-block{
     display:block;
     justify-content:space-around;
+    font-size: 18px;
 }
 .subscription-block input{
     background-color: #DDDCE1;
@@ -436,11 +440,13 @@
 .subscription-block button{
     background-color: #DDDCE1;
     margin-left: 10px;
+    font-size: 15px;
 }
 .last-footer-block{
     padding:5px;
     color:#1E1F25;
     width:80%;
+    font-size: 18px;
 }
 .copyright{
     color:#1E1F25;
