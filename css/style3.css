@@ -44,7 +44,7 @@
 
 .button-flexing{
     border-radius:10px;
-    box-shadow: 0 5px 5px #18191a;
+    box-shadow: 0px 3px 10px -6px rgba(0,0,0,1);
     width:100%;
     justify-content:space-around;
     padding-top:10px;
@@ -133,7 +133,7 @@
 .comment-div-container{
     padding:10px;
     transition: 0.7s;
-    box-shadow: 0 5px 5px #18191a;
+    box-shadow: 0px 3px 10px -6px rgba(0,0,0,1);
     border-radius:10px;
     background-color:#3a99d9;
 }
@@ -177,7 +177,7 @@
     padding-top:10px;
     padding-left:10px;
     border-radius:10px;
-    box-shadow: 0 5px 5px #18191a;
+    box-shadow: 0px 3px 10px -6px rgba(0,0,0,1);
 }
 .bottom-div-controller{
     padding-top:10px;
@@ -193,13 +193,13 @@
 
 }
 .ways-to-contact a{
-    box-shadow: 0 5px 5px #18191a;
+    box-shadow: 0px 3px 10px -6px rgba(0,0,0,1);
     border-radius:10px;
     padding-top:5px;
     padding-bottom:5px;
 }
 .ways-to-contact a:hover{
-    box-shadow: 0 5px 5px #18191a;
+    box-shadow: 0px 3px 10px -6px rgba(0,0,0,1);
     background-color:#343A40;;
 }
 .ways-to-contact img{
@@ -209,10 +209,10 @@
     width:100%;
     padding:5px;
     border-radius:10px;
-    box-shadow: 0 5px 5px #18191a;
+    box-shadow: 0px 3px 10px -6px rgba(0,0,0,1);
 }
 .timeline-button:hover{
-    box-shadow: 0 0px 0px #18191a;
+    box-shadow: 0px 3px 10px -6px rgba(0,0,0,1);
 }
 .pop-up-form-modal{
     background-color:#2e81b7;
