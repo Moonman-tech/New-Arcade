@@ -203,6 +203,7 @@
 canvas{
     background-color: #fff;
     border-radius: 6px;
+    width: 100%;
 }
 
 .major-block{
@@ -349,11 +350,6 @@ canvas{
 .chart-plates{
     padding:5px;
     background-color:a;
-}
-.canvas-div{
-    border-radius:10px;
-    padding:5px;
-
 }
 
 
