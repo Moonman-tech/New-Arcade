@@ -360,6 +360,7 @@
     justify-content:space-evenly;
     display:flex;
     width:100%;
+    flex-wrap: wrap;
 }
 .social-media-app-link{
     width:55px;
@@ -367,6 +368,7 @@
     border-radius:6px;
     background-color: #fff;
     padding: 5px 0px;
+    flex: 25%;
 }
 .social-media-app-link:hover{
     background-color: #DDDCE1;
@@ -460,13 +462,24 @@
     .mobile-footer {
         display: none;
     }
+    .social-media-app-link{
+        flex: 0%;
+    }
     .social-media-apps{
-        width:60%;
+        width:70%;
     }
     .subscription-block{
         display:flex;
     }
     .newsletter-subscription{
+        width:60%;
+    }
+}
+@media only screen and (min-width:900px) {
+    .social-media-app-link{
+        flex: 0%;
+    }
+    .social-media-apps{
         width:60%;
     }
 }
