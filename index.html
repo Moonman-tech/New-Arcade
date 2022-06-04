@@ -227,23 +227,21 @@
 
                 <div class="bottom-right">
 
-                    <div class="main-index-image">
+                    <div class="main-charts-block">
 
-                        <div class="chart-block-one">
-
-                            <div class="chart-info">
-                                <canvas id="bar-chart">
-                                </canvas>
+                        <div class="chart-block-test">
+                            <div class="chart-block">
+                                <canvas id="bar-chart-one"></canvas>
                                 <script>
-                                    new Chart(document.getElementById("bar-chart"), {
+                                    new Chart(document.getElementById("bar-chart-one"), {
                                     type: 'bar',
                                     data: {
-                                    labels: ["Gauteng", "Kwa-Zulu Natal", "Mpumalanga", "Northern Cape", "Western Cape", "Eastern Cape", "North West", "Free State", "Limpopo"],
+                                    labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
                                     datasets: [
                                         {
                                         label: "Population (millions)",
-                                        backgroundColor: ["#ff5500", "#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500"],
-                                        data: [21,18,16,11,9,9,6,5,2,2]
+                                        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+                                        data: [2478,5267,734,784,433]
                                         }
                                     ]
                                     },
@@ -251,66 +249,41 @@
                                     legend: { display: false },
                                     title: {
                                         display: true,
-                                        text: 'DISTRIBUTION OF POULTRY ENTITIES (2019/20)'
+                                        text: 'Predicted world population (millions) in 2050'
                                     }
                                     }
                                 });
                                 </script>
-                                <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
-                                <div class="reference-text-container">
-                                    <a class="reference-text" href="https://www.agriseta.co.za/wp-content/uploads/2021/02/Agriseta_Poultry_SSSP_DIGITAL.pdf">
-                                        Agriseta, 2021.
-                                    </a>
-                                    <p class="device-width-alert">(Rotate your device to see data clearly)</p>
-                                </div>
                             </div>
 
-
-                            <div class="chart-info">
-                                <canvas id="appleSalesOnMarket">
-                                </canvas>
+                            <div class="chart-block">
+                                <canvas id="bar-chart"></canvas>
                                 <script>
-                                    new Chart(document.getElementById("appleSalesOnMarket"), {
-                                    type: 'line',
+                                    new Chart(document.getElementById("bar-chart"), {
+                                    type: 'bar',
                                     data: {
-                                        labels: [1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
-                                        datasets: [{
-                                            data: [101649,85638,99695,113197,93811,108061,85166,114199,129068,105020,104295,124422,141517,141033,155548,144674,152792,158938,181001,177748,154055,168718,136209,155326,161634,142107,157885,153343,158718,162406,161191,161146,149199,],
-                                            label: "Apple Sales",
-                                            borderColor: "#9d00ff",
-                                            fill: false
-                                        }, {
-                                            data: [211815,191009,221831,227606,220482,221423,254329,211258,226761,214796,209120,183957,234573,185678,165880,228199,245584,328151,335412,270651,266413,296776,338647,332684,298574,318993,335827,410249,346296,403632,423805,424788,400674,],
-                                            label: "Exports",
-                                            borderColor: "#ffff00",
-                                            fill: false
-                                        }, {
-                                            data: [100999,91954,124094,142058,93117,159526,159804,239268,180790,175630,272055,200977,169466,199826,229087,195571,187290,253046,245948,191632,153003,188624,236833,261191,232473,216257,244427,267436,239765,293724,265050,318488,242716,],
-                                            label: "Purchased for processing",
-                                            borderColor: "#ff0000",
-                                            fill: false
+                                    labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+                                    datasets: [
+                                        {
+                                        label: "Population (millions)",
+                                        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+                                        data: [2478,5267,734,784,433]
                                         }
-                                        ]
+                                    ]
                                     },
                                     options: {
-                                        title: {
-                                          display: true,
-                                          text: 'Total Apple Sales Volume (in Rands)'
-                                        }
+                                    legend: { display: false },
+                                    title: {
+                                        display: true,
+                                        text: 'Predicted world population (millions) in 2050'
                                     }
-                                    });
+                                    }
+                                });
                                 </script>
-                                <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
-                                <div class="reference">
-                                    <p class="reference-text">DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
-                                </div>
                             </div>
-
                         </div>
 
                     </div>
-
-                    
 
                 </div>
 
@@ -595,7 +568,7 @@
 
                                 <ul class="list-unstyled mb-0">
                                     <li>
-                                        <a href="rankings" class="footer-text">Rankings/a>
+                                        <a href="rankings" class="footer-text">Rankings</a>
                                     </li>
                                     <li>
                                         <a href="https://www.youtube.com/channel/UCV7uK-eTFK10oKq0hdeB__w" class="footer-text">YouTube</a>

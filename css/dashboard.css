@@ -182,11 +182,15 @@
 /*Charts sections*/
 .chart-block-one{
     display: block;
-    justify-content: space-evenly;
     color: #1E1F5C;
-    background-color: red;
-    margin: 10px;
     
+}
+.chart-block-test{
+    padding-top: 2px;
+    display: block;
+}
+.chart-block{
+    margin: 10px;
 }
 .chart-container-block {
     margin-left: auto;
@@ -333,19 +337,10 @@ canvas{
     border-radius:10px;
 }
 .chart-info{
-    background-color:#242526;
+    background-color:#fff;
     border-radius:10px;
     width:100%;
-}
-.chart-info-right-border{
-    width:100%;
-    background-color:#242526;
-    border-radius:10px;
-}
-.chart-info-left-border{
-    width:100%;
-    background-color:#242526;
-    border-radius:10px;
+    margin: 10px;
 }
 .chart-plates{
     padding:5px;
@@ -424,6 +419,9 @@ canvas{
     .split{
         display:flex;
     }
+    .chart-block-test{
+        display: flex;
+    }
     .chart-block-one{
         display: flex;
     }
@@ -441,12 +439,6 @@ canvas{
     }
     .content-info{
         width:100%;
-    }
-    .chart-info-right-border{
-        width:48.5%;
-    }
-    .chart-info-left-border{
-        width:48.5%;
     }
     .two-grid-top {
         display:flex;
