@@ -25,6 +25,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/bfe88016a0.js" crossorigin="anonymous"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
     <script>
         console.log(window.matchMedia("(prefers-color-scheme: dark)").matches);
     </script>
@@ -224,6 +226,86 @@
                 </div>
 
                 <div class="bottom-right">
+
+                    <div class="main-index-image">
+
+                        <div class="chart-block-one">
+
+                            <div class="chart-container-block" >
+
+                                <div class="chart-body">
+                                    <canvas id="entities"></canvas>
+                                    <script>
+                                        new Chart(document.getElementById("entities"), {
+                                        type: 'bar',
+                                        data: {
+                                        labels: ["Gauteng", "Kwa-Zulu Natal", "Mpumalanga", "Northern Cape", "Western Cape", "Eastern Cape", "North West", "Free State", "Limpopo"],
+                                        datasets: [
+                                            {
+                                            label: "Entities in %",
+                                            backgroundColor: ["#ff5500", "#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500"],
+                                            data: [21,18,16,11,9,9,6,5,2,2]
+                                            }
+                                        ]
+                                        },
+                                        options: {
+                                        legend: { display: false },
+                                        title: {
+                                            display: true,
+                                            text: 'DISTRIBUTION OF POULTRY ENTITIES (2019/20)'
+                                        }
+                                        }
+                                    });
+                                    </script>
+                                </div>
+                                <div class="reference-text-container">
+                                    <a class="reference-text" href="https://www.agriseta.co.za/wp-content/uploads/2021/02/Agriseta_Poultry_SSSP_DIGITAL.pdf">
+                                        Agriseta, 2021.
+                                    </a>
+                                    <p class="device-width-alert">(Rotate your device to see data clearly)</p>
+                                </div>
+
+                            </div>
+
+                            <div class="chart-container-block" >
+
+                                <div class="chart-body">
+                                    <canvas id="entitiesDiv"></canvas>
+                                    <script>
+                                        new Chart(document.getElementById("entitiesDiv"), {
+                                        type: 'bar',
+                                        data: {
+                                        labels: ["Gauteng", "Kwa-Zulu Natal", "Mpumalanga", "Northern Cape", "Western Cape", "Eastern Cape", "North West", "Free State", "Limpopo"],
+                                        datasets: [
+                                            {
+                                            label: "Entities in %",
+                                            backgroundColor: ["#ff5500", "#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500"],
+                                            data: [21,18,16,11,9,9,6,5,2,2]
+                                            }
+                                        ]
+                                        },
+                                        options: {
+                                        legend: { display: false },
+                                        title: {
+                                            display: true,
+                                            text: 'DISTRIBUTION OF POULTRY ENTITIES (2019/20)'
+                                        }
+                                        }
+                                    });
+                                    </script>
+                                </div>
+                                <div class="reference-text-container">
+                                    <a class="reference-text" href="https://www.agriseta.co.za/wp-content/uploads/2021/02/Agriseta_Poultry_SSSP_DIGITAL.pdf">
+                                        Agriseta, 2021.
+                                    </a>
+                                    <p class="device-width-alert">(Rotate your device to see data clearly)</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                     
 

@@ -108,11 +108,7 @@
 
 
 
-canvas{
-    background-color: #242426;
-    border-radius: 10px;
-    width:100%;
-}
+
 .header-container{
     margin:0;
     padding:0;
@@ -162,37 +158,52 @@ canvas{
     padding-left:5px;
     display:flex;
 }
+.reference-text-container{
+    display: flex;
+}
 .reference-text{
-    font-size:7px;
+    font-size:10px;
     text-align:left;
     padding:5px;
+    padding-left:10px;
+    color: #808080;
 }
-.reference a{
-    background-color:18191a;
-    box-shadow: 0px 3px 10px -6px rgba(0,0,0,1);
-    border-radius:10px;
+.reference-text:hover{
+    color: #808080;
+    text-decoration: none; 
 }
-
-
-/*Flex wrap box*/
-.provincial-tiles-layer {
-    width: 100%;
+.device-width-alert{
+    font-size:10px;
+    text-align:left;
+    padding:5px;
+    padding-left:10px;
+    color: #808080;
+}
+/*Charts sections*/
+.chart-block-one{
+    display: block;
+    justify-content: space-evenly;
+    color: #1E1F5C;
+    background-color: red;
+    margin: 10px;
+    
+}
+.chart-container-block {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    border-radius: 7px;
+}
+.chart-container-block a{
     display: flex;
-    flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
 }
-.provincial-tiles-posts {
-    flex: 100%;
-    width: 100%;
-    padding: 3px;
-    font-weight: bold;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: solid;
-    border-color: #18191a;
+.chart-body{
+    border-radius: 5px;
 }
-
+canvas{
+    background-color: #fff;
+    border-radius: 6px;
+}
 
 .major-block{
     display:block;
@@ -374,6 +385,11 @@ canvas{
         width:300px;
     }
 }
+@media only screen and (min-width:420px) {
+    .device-width-alert{
+        display: none;
+    }
+}
 @media only screen and (min-width:768px) {
 
     .provincial-tiles-layer {
@@ -411,6 +427,9 @@ canvas{
     }
     .split{
         display:flex;
+    }
+    .chart-block-one{
+        display: flex;
     }
     .provincial-tiles-posts{
         flex:50%;
