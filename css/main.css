@@ -146,7 +146,7 @@
     justify-content: flex-start;
     background-color: #fff;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .dropdown-block-link:hover{
     text-decoration: none;
@@ -356,6 +356,10 @@
     width:100%;
     padding-top:10px;
     background-color: #fff;
+}
+.main-device-footer hr{
+    width: 70%;
+    background-color: #808080;
 }
 .social-media-apps{
     justify-content:space-evenly;
