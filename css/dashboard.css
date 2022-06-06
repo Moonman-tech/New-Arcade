@@ -40,14 +40,14 @@
     width: 150px;
 }
 .desktop-sidebar-nav-a {
-    padding-top: 6px;
+    padding-top: 5px;
     text-decoration: none;
     font-size: 18px;
     display: flex;
-    padding-left:10px;
+    padding-left:5px;
     /* border-bottom: solid 2px grey; */
     text-decoration:none;
-    height: 40px;
+    height: 35px;
     border-radius:6px;
 }
 .desktop-sidebar-nav-a:hover {
@@ -316,7 +316,7 @@
 }
 .two-grid-top {
     display:block;
-    margin: 5px;
+    width: 100%;
 }
 .two-grid-bottom {
     display:block;
