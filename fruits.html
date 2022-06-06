@@ -237,62 +237,133 @@
                             <div class="two-flexer">
 
                                 <div class="chart-info">
+                                    <h5>Apple Production</h5>
 
-                                    <div id="barchart"></div>
+                                    <div id="appleProduction"></div>
                         
                                     <script>
                                         Morris.Bar({
                                         // ID of the element in which to draw the chart.
-                                        element: 'barchart',
+                                        element: 'appleProduction',
                                         // Chart data records -- each entry in this array corresponds to a point on
                                         // the chart.
                                         data: [
-                                            { year: '2008', value: 20 },
-                                            { year: '2009', value: 10 },
-                                            { year: '2010', value: 5 },
-                                            { year: '2011', value: 5 },
-                                            { year: '2012', value: 20 }
+                                            
+                                            { year: '1986', Tons: 439836 },
+                                            { year: '1987', Tons: 391556 },
+                                            { year: '1988', Tons: 554742 },
+                                            { year: '1989', Tons: 508202 },
+                                            { year: '1990', Tons: 430344 },
+                                            { year: '1991', Tons: 515074 },
+                                            { year: '1992', Tons: 518492 },
+                                            { year: '1993', Tons: 589037 },
+                                            { year: '1994', Tons: 563473 },
+                                            { year: '1995', Tons: 518268 },
+                                            { year: '1996', Tons: 608408 },
+                                            { year: '1997', Tons: 535126 },
+                                            { year: '1998', Tons: 586346 },
+                                            { year: '1999', Tons: 565718 },
+                                            { year: '2000', Tons: 593173 },
+                                            { year: '2001', Tons: 608079 },
+                                            { year: '2002', Tons: 626125 },
+                                            { year: '2003', Tons: 792678 },
+                                            { year: '2004', Tons: 822047 },
+                                            { year: '2005', Tons: 698710 },
+                                            { year: '2006', Tons: 627091 },
+                                            { year: '2007', Tons: 710172 },
+                                            { year: '2008', Tons: 757680 },
+                                            { year: '2009', Tons: 800803 },
+                                            { year: '2010', Tons: 753167 },
+                                            { year: '2011', Tons: 768125 },
+                                            { year: '2012', Tons: 790562 },
+                                            { year: '2013', Tons: 883826 },
+                                            { year: '2014', Tons: 799524 },
+                                            { year: '2015', Tons: 915293 },
+                                            { year: '2016', Tons: 902633 },
+                                            { year: '2017', Tons: 958925 },
+                                            { year: '2018', Tons: 843204 }
                                         ],
+                                        barColors: ["#3791CD"],
                                         resize: true,
                                         // The name of the data record attribute that contains x-values.
                                         xkey: 'year',
                                         // A list of names of data record attributes that contain y-values.
-                                        ykeys: ['value'],
+                                        ykeys: ['Tons'],
                                         // Labels for the ykeys -- will be displayed when you hover over the
                                         // chart.
-                                        labels: ['Value']
+                                        labels: ['Tons']
                                         });
                                     </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
                                 
                                 </div>
 
                                 <div class="chart-info">
 
-                                    <div id="barchartTwo" ></div>
+                                    <h5>Apple Sales</h5>
+
+                                    <div id="appleSalesOnMarket"></div>
                         
                                     <script>
-                                        Morris.Bar({
+                                        Morris.Line({
                                         // ID of the element in which to draw the chart.
-                                        element: 'barchartTwo',
+                                        element: 'appleSalesOnMarket',
                                         // Chart data records -- each entry in this array corresponds to a point on
                                         // the chart.
                                         data: [
-                                            { year: '2008', value: 20 },
-                                            { year: '2009', value: 10 },
-                                            { year: '2010', value: 5 },
-                                            { year: '2011', value: 5 },
-                                            { year: '2012', value: 20 }
+
+                                            { year: '1986', Sales: 101649, Exports: 211815 },
+                                            { year: '1987', Sales: 85638, Exports: 191009 },
+                                            { year: '1988', Sales: 99695, Exports: 221831 },
+                                            { year: '1989', Sales: 113197, Exports: 227606 },
+                                            { year: '1990', Sales: 93811, Exports: 220482 },
+                                            { year: '1991', Sales: 108061, Exports: 221423 },
+                                            { year: '1992', Sales: 85166, Exports: 254329 },
+                                            { year: '1993', Sales: 114199, Exports: 211258 },
+                                            { year: '1994', Sales: 129068, Exports: 226761 },
+                                            { year: '1995', Sales: 105020, Exports: 214796 },
+                                            { year: '1996', Sales: 104295, Exports: 209120 },
+                                            { year: '1997', Sales: 124422, Exports: 183957 },
+                                            { year: '1998', Sales: 141517, Exports: 234573 },
+                                            { year: '1999', Sales: 141033, Exports: 185678 },
+                                            { year: '2000', Sales: 155548, Exports: 165880 },
+                                            { year: '2001', Sales: 144674, Exports: 228199 },
+                                            { year: '2002', Sales: 152792, Exports: 245584 },
+                                            { year: '2003', Sales: 158938, Exports: 328151 },
+                                            { year: '2004', Sales: 181001, Exports: 335412 },
+                                            { year: '2005', Sales: 177748, Exports: 270651 },
+                                            { year: '2006', Sales: 154055, Exports: 266413 },
+                                            { year: '2007', Sales: 168718, Exports: 296776 },
+                                            { year: '2008', Sales: 136209, Exports: 338647 },
+                                            { year: '2009', Sales: 155326, Exports: 332684 },
+                                            { year: '2010', Sales: 161634, Exports: 298574 },
+                                            { year: '2011', Sales: 142107, Exports: 318993 },
+                                            { year: '2012', Sales: 157885, Exports: 335827 },
+                                            { year: '2013', Sales: 153343, Exports: 410249 },
+                                            { year: '2014', Sales: 158718, Exports: 346296 },
+                                            { year: '2015', Sales: 162406, Exports: 403632 },
+                                            { year: '2016', Sales: 161191, Exports: 423805 },
+                                            { year: '2017', Sales: 161146, Exports: 424788 },
+                                            { year: '2018', Sales: 149199, Exports: 400674 }
                                         ],
+                                        labels: ['Sales','Exports'],
+                                        lineColors: ['#373651','#E65A26'],
                                         resize: true,
                                         // The name of the data record attribute that contains x-values.
                                         xkey: 'year',
                                         // A list of names of data record attributes that contain y-values.
-                                        ykeys: ['value'],
+                                        ykeys: ['Sales', 'Exports'],
                                         // Labels for the ykeys -- will be displayed when you hover over the
                                         // chart.
-                                        labels: ['Value']
                                         });
                                     </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
                                 
                                 </div>
 
