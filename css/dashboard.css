@@ -316,6 +316,7 @@
 }
 .two-grid-top {
     display:block;
+    margin: 5px;
 }
 .two-grid-bottom {
     display:block;
