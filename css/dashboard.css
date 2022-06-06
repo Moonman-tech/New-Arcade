@@ -206,11 +206,6 @@
 .chart-body{
     border-radius: 5px;
 }
-canvas{
-    background-color: #fff;
-    border-radius: 6px;
-    width: 100%;
-}
 
 .major-block{
     display:block;

@@ -26,6 +26,7 @@
     <script src="https://kit.fontawesome.com/bfe88016a0.js" crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
     <script>
         console.log(window.matchMedia("(prefers-color-scheme: dark)").matches);
@@ -232,7 +233,7 @@
                         <div class="chart-block-test">
 
                             <div class="chart-block">
-                                <canvas id="bar-chart-one"></canvas>
+                                <canvas id="bar-chart-one" width="100px" height="100px"></canvas>
                                 <script>
                                     new Chart(document.getElementById("bar-chart-one"), {
                                     type: 'bar',
@@ -265,36 +266,29 @@
                             </div>
 
                             <div class="chart-block">
-                                <canvas id="bar-chart"></canvas>
+                                <div id="myPlot" style="width:100%;max-width:700px"></div>
+
                                 <script>
-                                    new Chart(document.getElementById("bar-chart"), {
-                                    type: 'bar',
-                                    data: {
-                                    labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
-                                    datasets: [
-                                        {
-                                        label: "Population (millions)",
-                                        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-                                        data: [2478,5267,734,784,433]
-                                        }
-                                    ]
-                                    },
-                                    options: {
-                                    legend: { display: false },
-                                    title: {
-                                        display: true,
-                                        text: 'Predicted world population (millions) in 2050'
-                                    }
-                                    }
-                                });
+                                    var xArray = [50,60,70,80,90,100,110,120,130,140,150];
+                                    var yArray = [7,8,8,9,9,9,10,11,14,14,15];
+
+                                    // Define Data
+                                    var data = [{
+                                    x: xArray,
+                                    y: yArray,
+                                    mode:"lines"
+                                    }];
+
+                                    // Define Layout
+                                    var layout = {
+                                    xaxis: {range: [40, 160], title: "Square Meters"},
+                                    yaxis: {range: [5, 16], title: "Price in Millions"},  
+                                    title: "House Prices vs. Size"
+                                    };
+
+                                    // Display using Plotly
+                                    Plotly.newPlot("myPlot", data, layout);
                                 </script>
-                                <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
-                                <div class="reference-text-container">
-                                    <a class="reference-text" href="https://www.agriseta.co.za/wp-content/uploads/2021/02/Agriseta_Poultry_SSSP_DIGITAL.pdf">
-                                        Agriseta, 2021.
-                                    </a>
-                                    <p class="device-width-alert">(Rotate your device to see data clearly)</p>
-                                </div>
                             </div>
 
                         </div>
