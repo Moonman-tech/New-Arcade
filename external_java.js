@@ -1,3 +1,32 @@
+/*function formSubmitAlert() {
+    alert("Form Submitted");
+} */
+
+
+window.onload = function () {
+    //Reference the DropDownList.
+    var ddlYears = document.getElementById("ddlYears");
+
+    //Determine the Current Year.
+    var currentYear = (new Date()).getFullYear();
+
+    //Loop and add the Year values to DropDownList.
+    for (var i = 1950; i <= currentYear; i++) {
+        var option = document.createElement("OPTION");
+        option.innerHTML = i;
+        option.value = i;
+        ddlYears.appendChild(option);
+    }
+};
+
+function unopenedStore() {
+    alert("There is currently no active supplier on this block.");
+}
+
+function unavailableService() {
+    alert("There is currently no active service renderer on this block.");
+}
+
 function modernSidebar() {
     var x = document.getElementById("modern-sidebar");
     if (x.style.display === "block") {
@@ -2292,4 +2321,3 @@ function myFunctionMenu() {
         x.style.display = "block";
    }
 }
-

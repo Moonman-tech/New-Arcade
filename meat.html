@@ -1,0 +1,1326 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="css/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <link rel="stylesheet" type="text/css" href="css/display.css">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/darkmode.css">
+    <script src="external_java.js"></script>
+    <script src="vegetables.js"></script>
+    <script src="controls.js"></script>
+    <script src="jsapi.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/bfe88016a0.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+
+    <script>
+        console.log(window.matchMedia("(prefers-color-scheme: dark)").matches);
+    </script>
+
+    <title>Meat & Diary</title>
+</head>
+<body class="main-body-container">
+
+    <div align="center" class="fabricated-body-div">
+        
+        <div class="loader">
+            <img src="css\icons\91.gif" alt="loading...">
+        </div>
+
+        <div class="mobile-navigation" align="center">
+            <div class="logo-link">
+                <img class="mobile-logo-img" src="css\icons\logo.png" alt="Arcaderand">
+            </div>
+        </div>
+
+        <div class="sides-container-two" align="center">
+
+            <div class="left-container">
+
+                <div>
+
+                    <nav class="main-sidebar-container">
+
+                        <div class="desktop-sidebar-div">
+
+                            <img src="css/icons/logo.png" alt="Arcaderand">
+
+                        </div>
+
+                        <div class="link-box-active">
+
+                            <a class="desktop-sidebar-nav-a" href="#" onclick="dashboardDropDownDiv()">
+                                <i class="fa-solid fa-chart-column fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Dashboard</p>
+                            </a>
+
+                            <div class="stats-dropdown-block" id="dashboard-dropdown-block" align="center">
+
+                                <a href="index" class="dropdown-block-link">
+                                    <i class="fa-solid fa-chart-area fa-2x"></i>
+                                    <p class="desktop-sidebar-dropdown">Dashboard</p>
+                                </a>
+
+                                <a href="fruits" class="dropdown-block-link">
+                                    <i class="fa-solid fa-apple-whole fa-2x"></i>
+                                    <p class="desktop-sidebar-dropdown">Fruits</p>
+                                </a>
+
+                                <a href="vegetables" class="dropdown-block-link">
+                                    <i class="fa-solid fa-carrot fa-2x"></i>
+                                    <p class="desktop-sidebar-dropdown">Veges</p>
+                                </a>
+
+                                <a href="meat" class="dropdown-block-link">
+                                    <i class="fa-solid fa-drumstick-bite fa-2x"></i>
+                                    <p class="desktop-sidebar-dropdown">Meat</p>
+                                </a>
+
+
+                                <!--
+                                <a href="other" class="dropdown-block-link">
+                                    <img src="css/icons/package.png" class="dropdown-block-link-img">
+                                    <p class="desktop-sidebar-dropdown">Other</p>
+                                </a>
+                                -->
+
+                            </div>
+
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="market">
+                                <i class="fa-solid fa-store fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Market</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="services">
+                                <i class="fa-solid fa-screwdriver-wrench fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Services</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="courier">
+                                <i class="fa-solid fa-truck fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Courier</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="alert">
+                                <i class="fa-solid fa-circle-exclamation fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Alert</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="Consultation">
+                                <i class="fa-solid fa-comments fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Consult</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="learn">
+                                <i class="fa-solid fa-book-open-reader fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Learn</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="donate">
+                                <i class="fa-solid fa-hand-holding-medical fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Donate</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="about">
+                                <i class="fa-solid fa-user fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">About</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="help">
+                                <i class="fa-solid fa-hand-holding-hand fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Help</p>
+                            </a>
+                        </div>
+
+                    </nav>
+
+                </div>
+
+            </div>
+
+            <div class="right-container">
+
+                <div class="right-top-container" align="right">
+
+                    <a href="projects" class="desktop-sticky-icons">
+                        Projects
+                    </a>
+
+                    <a href="associates" class="desktop-sticky-icons">
+                        Associates
+                    </a>
+
+                    <a href="stakeholders" class="desktop-sticky-icons">
+                        Stakeholders
+                    </a>
+
+                    <a href="#major-contact-block" class="desktop-sticky-icons">
+                        Contact Us
+                    </a>
+
+                </div>
+
+                <div class="bottom-right">
+                    
+                    <h3 class="diff-page-labeling">
+                        <a href="meat">
+                            Meat & Diary Products
+                        </a>
+                    </h3>
+
+                    <div class="main-fruits-charts-block">
+
+                        <div class="two">
+
+                            <h4>Gross Price</h4>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="freshMilk">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("freshMilk"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","1900","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Fresh Milk Price (c/litre)",
+                                                backgroundColor: "#04e762",
+                                                data: [37.9,38.3,45.1,53.1,61.8,62.7,67.4,78.4,81.3,88.2,92.1,103.5,130.0,117.6,116.1,132.9,149.8,183.5,199.6,194.9,182.0,193.9,273.5,303.1,305.2,294.0,299.2,348.5,382.0,431.3,412.8,456.7,473.7,]
+                                                }
+                                            ]
+                                            },
+
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <a href="https://www.dalrrd.gov.za/Portals/0/Statistics%20and%20Economic%20Analysis/Statistical%20Information/Abstract%202019.pdf">
+                                            <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="eggs">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("eggs"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","1900","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Grade 1 Eggs (c/dozen)",
+                                                backgroundColor: "#f5b700",
+                                                data: [75.0,117.0,116.0,127.0,161.0,186.0,218.5,221.9,324.5,365.5,326.4,375.1,382.4,356.8,357.0,398.3,439.3,529.7,562.6,573.0,599.9,669.5,749.9,883.2,935.8,897.0,924.1,994.6,1072.1,1135.8,1197.9,1231.1,1551.9,]
+                                                }
+                                            ]
+                                            },
+
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <a href="https://www.dalrrd.gov.za/Portals/0/Statistics%20and%20Economic%20Analysis/Statistical%20Information/Abstract%202019.pdf">
+                                            <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="two">
+
+                            <h4>White Meat & Eggs</h4>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="whiteMeatProduction">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("whiteMeatProduction"), {
+                                        type: 'bar',
+                                        data: {
+                                        labels: [1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,1900,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,],
+                                        datasets: [
+                                            {
+                                            label: "White Meat Production (1000t)",
+                                            backgroundColor: "#00ffff",
+                                            data: [474,498,541,582,609,593,564,577,607,647,699,753,777,803,850,869,896,925,1043,1273,1427,1499,1584,1644,1681,1721,1681,1691,1668,1709,1704,1663,1702,]
+                                            }
+                                        ]
+                                        },
+                                    });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <a href="https://www.dalrrd.gov.za/Portals/0/Statistics%20and%20Economic%20Analysis/Statistical%20Information/Abstract%202019.pdf">
+                                            <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="whiteMeatConsumption">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("whiteMeatConsumption"), {
+                                            type: 'line',
+                                            data: {
+                                                labels: [1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,1900,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,],
+                                                datasets: [{
+                                                    data: [474,500,539,581,605,593,571,580,609,662,736,826,854,874,927,938,965,1032,1196,1455,1664,1767,1813,1841,1887,1987,2048,2061,2015,2076,2200,2155,2392,],
+                                                    label: "White Meat Consumption (1000t)",
+                                                    borderColor: "#ff5500",
+                                                    fill: false
+                                                }, {
+                                                    data: [939,943,896,899,977,1050,1052,1036,940,829,865,849,835,839,965,828,871,935,1002,1073,1194,1273,1154,1162,1269,1266,1258,1325,1405,1470,1526,1468,1483,],
+                                                    label: "Red Meat Consumption",
+                                                    borderColor: "#ff00ff",
+                                                    fill: false
+                                                }
+                                                ]
+                                            },
+                                            });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <a href="https://www.dalrrd.gov.za/Portals/0/Statistics%20and%20Economic%20Analysis/Statistical%20Information/Abstract%202019.pdf">
+                                            <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="eggsProduction">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("eggsProduction"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: [1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,1900,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,],
+                                            datasets: [
+                                                {
+                                                label: "Egg Production (1000t)",
+                                                backgroundColor: "#ff0000",
+                                                data: [171,193,213,219,224,232,238,235,251,290,282,314,323,318,329,330,340,328,348,375,412,438,426,404,413,452,477,468,453,477,478,445,454,]
+                                                }
+                                            ]
+                                            },
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <a href="https://www.dalrrd.gov.za/Portals/0/Statistics%20and%20Economic%20Analysis/Statistical%20Information/Abstract%202019.pdf">
+                                            <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="eggsConsumption">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("eggsConsumption"), {
+                                            type: 'line',
+                                            data: {
+                                                labels: [1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,1900,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,],
+                                                datasets: [
+                                                    {
+                                                    data: [160,183,201,205,209,214,223,218,233,272,263,293,302,299,310,308,313,305,329,357,392,416,404,379,386,426,447,433,418,438,441,412,423,],
+                                                    label: "Eggs Consumption (1000t)",
+                                                    borderColor: "#04e762",
+                                                    fill: false
+                                                }
+                                                ]
+                                            },
+                                            });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <a href="https://www.dalrrd.gov.za/Portals/0/Statistics%20and%20Economic%20Analysis/Statistical%20Information/Abstract%202019.pdf">
+                                            <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                        </a>
+                                    </div>
+                                </div>
+    
+
+                            </div>
+
+                        </div>
+
+                        <div class="two">
+
+                            <h4>Diary Products</h4>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="creameryButter">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("creameryButter"), {
+                                            type: 'line',
+                                            data: {
+                                            labels: ["1981","1982","1983","1984","1985","1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","1900","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015"],
+                                            datasets: [
+                                                {
+                                                label: "Creamery Butter Production",
+                                                backgroundColor: "#ff5500",
+                                                data: [16876,14792,20813,18317,16420,17626,13241,11968,15550,16686,21453,15320,17043,14566,11949,14598,6313,12793,17192,8484,8926,10964,8534,11234,12817,14769,16817,17326,17732,17760,17159,16536,17429,18750,]
+                                                }
+                                            ]
+                                            },
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <a href="https://www.dalrrd.gov.za/Portals/0/Statistics%20and%20Economic%20Analysis/Statistical%20Information/Abstract%202019.pdf">
+                                            <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="cheese">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("cheese"), {
+                                            type: 'line',
+                                            data: {
+                                            labels: ["1981","1982","1983","1984","1985","1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","1900","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015"],
+                                            datasets: [
+                                                {
+                                                label: "Cheese Production",
+                                                backgroundColor: "#ff00ff",
+                                                data: [32361,34729,35871,36214,36154,33897,35363,40386,39501,42470,42320,39181,32551,35510,38882,36627,38418,35764,38167,36897,35331,37802,35250,36767,36882,69336,72323,73784,72435,72639,78099,82727,87537,88789,]
+                                                }
+                                            ]
+                                            },
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <a href="https://www.dalrrd.gov.za/Portals/0/Statistics%20and%20Economic%20Analysis/Statistical%20Information/Abstract%202019.pdf">
+                                            <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="condensedMilk">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("condensedMilk"), {
+                                            type: 'line',
+                                            data: {
+                                            labels: ["1981","1982","1983","1984","1985","1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","1900","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015"],
+                                            datasets: [
+                                                {
+                                                label: "Condensed Milk",
+                                                backgroundColor: "#00ffff",
+                                                data: [41367,36913,32114,30743,24280,22996,24708,23740,20162,22709,18707,18137,19374,19091,20714,22331,17308,25042,20053,21046,20221,23376,24066,24851,25125,25125,25125,25125,12463,11356,10729,10623,11014,11364,]
+                                                }
+                                            ]
+                                            },
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <a href="https://www.dalrrd.gov.za/Portals/0/Statistics%20and%20Economic%20Analysis/Statistical%20Information/Abstract%202019.pdf">
+                                            <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="milkPowder">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("milkPowder"), {
+                                            type: 'line',
+                                            data: {
+                                            labels: ["1981","1982","1983","1984","1985","1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","1900","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015"],
+                                            datasets: [
+                                                {
+                                                label: "Whole Milk Powder",
+                                                backgroundColor: "#ffff00",
+                                                data: [12873,13512,10041,12317,11786,11370,10312,8555,8741,10477,12392,10529,14660,14428,13830,10215,10280,11838,10269,11427,10369,12728,12500,12290,15272,8306,9197,9598,9929,8480,8865,9427,9929,10352,]
+                                                }
+                                            ]
+                                            },
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <a href="https://www.dalrrd.gov.za/Portals/0/Statistics%20and%20Economic%20Analysis/Statistical%20Information/Abstract%202019.pdf">
+                                            <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="skimmedmilkPowder">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("skimmedmilkPowder"), {
+                                            type: 'line',
+                                            data: {
+                                            labels: ["1981","1982","1983","1984","1985","1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","1900","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015"],
+                                            datasets: [
+                                                {
+                                                label: "Skimmed Milk Powder",
+                                                backgroundColor: "#9d00ff",
+                                                data: [18069,16517,26676,23824,21881,24540,14159,12961,19915,20234,25833,16469,21064,15401,12396,19061,5435,13606,21325,5839,8112,12078,19086,12455,13138,3865,4854,4279,5193,4687,4554,4604,5193,5377,]
+                                                }
+                                            ]
+                                            },
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <a href="https://www.dalrrd.gov.za/Portals/0/Statistics%20and%20Economic%20Analysis/Statistical%20Information/Abstract%202019.pdf">
+                                            <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="two">
+
+                            <h4>Cattle Stats</h4>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="cattleNumber">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("cattleNumber"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["1981","1982","1983","1984","1985","1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","1900","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Quantity of Cattles (Millions)",
+                                                backgroundColor: "#ff5500",
+                                                data: [12.9,12.9,13.1,12.7,11.9,12.0,12.2,12.4,12.8,13.3,13.5,13.5,13.1,12.5,12.6,13.0,13.4,13.7,13.8,13.6,13.5,13.5,13.6,13.5,13.5,13.5,13.9,13.9,13.8,13.7,13.7,13.9,13.9,13.9,13.7,13.4,13.0,12.8,]
+                                                }
+                                            ]
+                                            },
+
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <a href="https://www.dalrrd.gov.za/Portals/0/Statistics%20and%20Economic%20Analysis/Statistical%20Information/Abstract%202019.pdf">
+                                            <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="cattleSlaughtered">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("cattleSlaughtered"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["1981","1982","1983","1984","1985","1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","1900","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Cattle's Slaughtered (1000)",
+                                                backgroundColor: "#ff00ff",
+                                                data: [2434,2558,2788,2853,2806,2682,2657,2266,2237,2573,2844,2970,2960,2629,2112,2171,2118,2095,2197,2666,2247,2452,2478,2545,2616,2985,3060,2742,2838,2953,2924,2873,3013,3286,3476,3641,3491,3291,]
+                                                }
+                                            ]
+                                            },
+
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <a href="https://www.dalrrd.gov.za/Portals/0/Statistics%20and%20Economic%20Analysis/Statistical%20Information/Abstract%202019.pdf">
+                                            <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="calvesSlaughtered">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("calvesSlaughtered"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["1981","1982","1983","1984","1985","1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","1900","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Calves Slaughtered (1000)",
+                                                backgroundColor: "#00ffff",
+                                                data: [158,131,144,138,146,144,126,99,88,93,106,109,111,95,70,71,67,64,61,60,55,58,57,57,57,41,38,34,31,29,24,22,22,21,21,21,20,20,]
+                                                }
+                                            ]
+                                            },
+
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <a href="https://www.dalrrd.gov.za/Portals/0/Statistics%20and%20Economic%20Analysis/Statistical%20Information/Abstract%202019.pdf">
+                                            <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="beefPrice">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("beefPrice"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["1981","1982","1983","1984","1985","1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","1900","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Beef Price (c/kg)",
+                                                backgroundColor: "#ffff00",
+                                                data: [202.4,212.2,211.4,222.9,228.4,257.3,353.4,451.6,482.6,473.6,474.9,522.0,521.4,599.6,823.4,752.7,820.9,820.6,786.8,837.9,837.7,1000.0,1277.5,1325.5,1436.3,1647.2,2097.5,2087.6,2215.1,2216.7,2431.6,2843.0,2880.1,2927.4,3254.4,3517.0,4015.0,4591.4,]
+                                                }
+                                            ]
+                                            },
+
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <a href="https://www.dalrrd.gov.za/Portals/0/Statistics%20and%20Economic%20Analysis/Statistical%20Information/Abstract%202019.pdf">
+                                            <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="two">
+
+                            <h4>Pork Stats</h4>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="porkNumber">
+                                    </canvas>
+                                    <script>
+
+                                        new Chart(document.getElementById("porkNumber"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,1900,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,],
+                                            datasets: [
+                                                {
+                                                data: [1361,1366,1360,1427,1524,1665,1654,1653,1570,1585,1707,1699,1736,1780,1647,1678,1710,1663,1663,1651,1622,1651,1615,1613,1594,1584,1579,1574,1562,1523,1512,1481,1454,],
+                                                label: "Quantity of Pigs (1000)",
+                                                borderColor: "#04e762",
+                                                fill: false
+                                            }
+                                            ]
+                                        },
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <a href="https://www.dalrrd.gov.za/Portals/0/Statistics%20and%20Economic%20Analysis/Statistical%20Information/Abstract%202019.pdf">
+                                            <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="slaughteredPork">
+                                    </canvas>
+                                    <script>
+
+                                        new Chart(document.getElementById("slaughteredPork"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,1900,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,],
+                                            datasets: [
+                                                {
+                                                data: [1899,1879,1941,2075,2275,2360,2189,2267,2101,1973,2194,2172,2061,2006,2145,1864,2017,2079,2131,2158,2290,2497,2441,2383,2474,2601,2651,2734,2844,2926,3011,2897,3134,],
+                                                label: "Pigs Slaughtered (1000)",
+                                                borderColor: "#f5b700",
+                                                fill: false
+                                            }
+                                            ]
+                                        },
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <a href="https://www.dalrrd.gov.za/Portals/0/Statistics%20and%20Economic%20Analysis/Statistical%20Information/Abstract%202019.pdf">
+                                            <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="porkPrice">
+                                    </canvas>
+                                    <script>
+
+                                        new Chart(document.getElementById("porkPrice"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,1900,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,],
+                                            datasets: [
+                                                {
+                                                data: [222.4,284.7,324.4,362.2,340.2,338.1,399.0,448.3,483.1,623.2,523.0,632.2,752.1,724.9,779.0,899.4,933.9,1219.8,1020.1,1075.4,995.4,1299.5,1414.9,1585.4,1496.8,1526.2,1789.3,1807.2,2045.3,2232.9,2225.7,2499.5,2464.6,],
+                                                label: "Pork Price (c/kg)",
+                                                borderColor: "#dc0073",
+                                                fill: false
+                                            }
+                                            ]
+                                        },
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <a href="https://www.dalrrd.gov.za/Portals/0/Statistics%20and%20Economic%20Analysis/Statistical%20Information/Abstract%202019.pdf">
+                                            <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="porkConsumption">
+                                    </canvas>
+                                    <script>
+
+                                        new Chart(document.getElementById("porkConsumption"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,1900,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,],
+                                            datasets: [
+                                                {
+                                                data: [105,101,106,113,125,130,112,129,122,124,131,133,130,126,131,115,123,146,174,182,193,206,198,199,215,231,237,245,236,254,263,254,282,],
+                                                label: "Pork Price (1000t)",
+                                                borderColor: "#008bf8",
+                                                fill: false
+                                            }
+                                            ]
+                                        },
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <a href="https://www.dalrrd.gov.za/Portals/0/Statistics%20and%20Economic%20Analysis/Statistical%20Information/Abstract%202019.pdf">
+                                            <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                        </a>
+                                    </div>
+                                </div>    
+    
+                            </div>
+
+                            
+
+                        </div>
+
+                        <div class="two">
+
+                            <h4>Wool Stats</h4>
+
+                            <div class="two-grid-top">
+
+                                <div class="chart-info">
+                                    <canvas id="woolSales">
+                                    </canvas>
+                                    <script>
+
+                                            new Chart(document.getElementById("woolSales"), {
+                                            type: 'line',
+                                            data: {
+                                                labels: [1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,1900,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,],
+                                                datasets: [
+                                                    {
+                                                    data: [70.2,75.6,76.3,71.6,69.6,65.5,60.8,61.3,65.6,68.9,74.6,58.4,53.7,50.3,43.6,45.2,43.0,39.8,39.4,35.3,33.5,33.2,31.5,32.8,32.5,31.8,32.8,32.5,31.5,32.9,31.5,30.1,33.0,33.6,33.4,31.4,32.3,30.2,],
+                                                    label: "Merino Wool Sales",
+                                                    borderColor: "#00ffff",
+                                                    fill: false
+                                                },{
+                                                    data: [24.5,24.0,28.4,24.8,23.4,21.4,20.2,21.1,22.7,23.3,22.9,16.7,13.3,12.1,11.8,9.8,7.8,7.8,8.3,7.8,7.8,7.7,7.7,8.9,8.6,6.4,9.5,14.3,13.8,13.7,13.6,13.5,15.2,16.3,16.3,17.5,19.3,18.0,],
+                                                    label: "Other Wool Sales",
+                                                    borderColor: "#04e762",
+                                                    fill: false
+                                                }
+                                                ]
+
+
+                                            },
+                                            });
+                                        </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <a href="https://www.dalrrd.gov.za/Portals/0/Statistics%20and%20Economic%20Analysis/Statistical%20Information/Abstract%202019.pdf">
+                                            <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="mohairWool">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("mohairWool"), {
+                                            type: 'line',
+                                            data: {
+                                            labels: ["1981","1982","1983","1984","1985","1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","1900","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Mohair Wool",
+                                                backgroundColor: "#ff5500",
+                                                data: [6.9,7.6,7.2,8.1,9.2,11.0,11.5,12.2,11.7,10.1,7.6,6.7,6.0,5.7,5.4,5.6,5.2,5.0,4.5,4.3,4.2,4.2,4.0,3.7,3.6,3.4,3.0,2.9,2.6,2.3,2.2,2.3,2.4,2.5,2.5,]
+                                                }
+                                            ]
+                                            },
+                                            options: {
+                                            title: {
+                                                display: true,
+                                                text: 'Wool Production (1000t)'
+                                            }
+                                            }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <a href="https://www.dalrrd.gov.za/Portals/0/Statistics%20and%20Economic%20Analysis/Statistical%20Information/Abstract%202019.pdf">
+                                            <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="two">
+
+                            <h4>Wool Auction Prices</h4>
+
+                            <div class="two-grid-top">
+
+                                <div class="chart-info">
+                                    <canvas id="woolAuction">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("woolAuction"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,1900,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,],
+                                            datasets: [
+                                                {
+                                                data: [161099.3,222385.1,214381.6,230485.9,320593.0,339631.3,325002.7,575905.7,785480.4,699624.2,521393.0,441703.7,340583.6,343572.1,521725.2,452139.7,545368.7,524802.4,411997.2,439955.3,519995.9,798693.4,1069361.2,769658.9,646769.4,614924.8,951667.9,1212695.3,931277.7,1178772.9,1373248.7,1788030.3,2048430.2,2266820.0,2293887.1,2736102.1,3034218.5,3408712.6,],
+                                                label: "Merino Wool",
+                                                borderColor: "#ffff00",
+                                                fill: false
+                                            }, {
+                                                data: [35638.9,42022.0,44561.4,51575.6,69165.8,71753.5,75356.6,128735.5,165936.6,131892.0,80748.8,78136.1,55503.9,54516.5,80567.2,59496.4,62813.2,60487.3,45558.6,50803.4,64735.7,115225.1,148437.4,115930.6,90843.0,68560.5,146474.9,326544.1,218578.9,337709.0,385398.0,494276.9,611551.6,703025.0,684906.9,1013206.2,1176894.7,1230195.3,],
+                                                label: "Other",
+                                                borderColor: "#04e762",
+                                                fill: false
+                                            }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Realization Values (R1000)'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="auctionPrice">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("auctionPrice"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,1900,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,],
+                                            datasets: [
+                                                {
+                                                data: [2.29,2.94,2.81,3.22,4.60,5.18,5.35,9.39,11.98,10.15,6.98,7.56,6.34,6.83,11.97,10.01,12.68,13.19,10.45,12.45,15.52,24.05,34.00,23.49,19.92,19.36,29.00,37.31,29.56,35.84,43.58,59.38,61.88,68.16,68.63,87.57,93.80,113.37,],
+                                                label: "Merino Wool",
+                                                borderColor: "#dc0073",
+                                                fill: false
+                                            }, {
+                                                data: [1.45,1.75,1.57,2.07,2.96,3.35,3.73,6.09,7.30,5.66,3.53,4.67,4.16,4.52,6.81,6.05,8.03,7.77,5.49,6.52,8.32,14.83,19.25,13.01,10.56,10.69,15.48,22.87,15.85,24.64,28.46,36.55,42.48,43.63,42.11,58.92,61.00,78.12,],
+                                                label: "Other",
+                                                borderColor: "#008bf8",
+                                                fill: false
+                                            }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Average Auction Prices (R/kg)'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mobile-footer">
+            <div class="sticky-list">
+                <div class="a-tag">
+
+                    <a class="a-tags" href="help">
+                        <i class="fa-solid fa-hand-holding-hand fa-3x"></i>
+                    </a>
+
+                    <a class="a-tags" href="#" onclick="openMedianav()">
+                        <i class="fa-solid fa-circle-nodes fa-3x"></i>
+                    </a>
+
+                         <div id="mediaNav" class="sidenavMain" >
+                            <div class="sidenav-cover">
+                                <p class="closebtn" onclick="closeMedianav()">&times;</p>
+
+                                <a href="https://discord.com/channels/@arcaderand" class="sidenavMain-a">
+                                    <i class="fa-brands fa-discord fa-2x"></i>
+                                    <p class="media-texts">Discord</p>
+                                </a>
+
+                                <a href="mailto:admin@arcaderand.co.za" class="sidenavMain-a">
+                                    <i class="fa-solid fa-envelope fa-2x"></i>
+                                    <p class="media-texts">Email</p>
+                                </a>
+
+                                <a href="https://www.facebook.com/Arcaderand-104749068675206" class="sidenavMain-a">
+                                    <i class="fa-brands fa-facebook-square fa-2x"></i>
+                                    <p class="media-texts">Facebook</p>
+                                </a>
+
+                                <a href="https://www.instagram.com/arcaderand_sa/" class="sidenavMain-a">
+                                    <i class="fa-brands fa-instagram-square fa-2x"></i>
+                                    <p class="media-texts">Instagram</p>
+                                </a>
+
+                                <a href="https://www.reddit.com/user/arcaderand" class="sidenavMain-a">
+                                    <i class="fa-brands fa-reddit-alien fa-2x"></i>
+                                    <p class="media-texts">Reddit</p>
+                                </a>
+
+                                <a href="#" class="sidenavMain-a">
+                                    <i class="fa-brands fa-telegram fa-2x"></i>
+                                    <p class="media-texts">Telegram</p>
+                                </a>
+
+                                <a href="https://twitter.com/arcaderand" class="sidenavMain-a">
+                                    <i class="fa-brands fa-twitter fa-2x"></i>
+                                    <p class="media-texts">Twitter</p>
+                                </a>
+
+                                <a href="https://www.youtube.com/channel/UCV7uK-eTFK10oKq0hdeB__w" class="sidenavMain-a">
+                                    <i class="fa-brands fa-youtube fa-2x"></i>
+                                    <p class="media-texts">YouTube</p>
+                                </a>
+                            </div>
+                         </div>
+
+                    <a class="a-tags" href="#" onclick="openController()"> <!--openController-->
+                        <i class="fa-solid fa-bars fa-3x"></i>
+                    </a>
+                    
+                        <div id="controller" class="sidenavMain">
+                            <div class="sidenav-cover">
+                                <p class="closebtn" onclick="closeController()">&times;</p>
+
+                                <div onclick="mobileDashboardDropDownDiv()" class="mobile-stats-dropdown">
+                                    <div class="block-content">
+                                        <p class="mobile-sidebar-media-texts">Dashboard</p>
+                                    </div>
+
+                                    <div class="mobile-dropdown-block" id="mobile-sidebar-dropdown-block">
+
+                                        <a href="index" class="mobile-dropdown-block-link">
+                                            <i class="fa-solid fa-chart-area fa-2x"></i>
+                                            <p >Dashboard</p>
+                                        </a>
+        
+                                        <a href="fruits" class="mobile-dropdown-block-link">
+                                            <i class="fa-solid fa-apple-whole fa-2x"></i>
+                                            <p >Fruits</p>
+                                        </a>
+        
+                                        <a href="vegetables" class="mobile-dropdown-block-link">
+                                            <i class="fa-solid fa-carrot fa-2x"></i>
+                                            <p>Vegetables</p>
+                                        </a>
+        
+                                        <a href="meat" class="mobile-dropdown-block-link">
+                                            <i class="fa-solid fa-drumstick-bite fa-2x"></i>
+                                            <p>Meat</p>
+                                        </a>
+        
+        
+                                        <!--
+                                        <a href="other" class="mobile-dropdown-block-link">
+                                            <img src="css/icons/package.png">
+                                            <p>Other</p>
+                                        </a>
+                                        -->
+        
+                                    </div>
+                                </div>  
+
+                                <a href="market" class="sidenavMain-a">
+                                    <i class="fa-solid fa-store fa-2x"></i>
+                                    <p class="media-texts">Market</p>
+                                </a>
+
+                                <a href="services" class="sidenavMain-a">
+                                    <i class="fa-solid fa-screwdriver-wrench fa-2x"></i>
+                                    <p class="media-texts">Services</p>
+                                </a>
+
+                                <a href="courier" class="sidenavMain-a">
+                                    <i class="fa-solid fa-truck fa-2x"></i>
+                                    <p class="media-texts">Courier</p>
+                                </a>
+
+                                <a href="Alert" class="sidenavMain-a">
+                                    <i class="fa-solid fa-circle-exclamation fa-2x"></i>
+                                    <p class="media-texts">Alert</p>
+                                </a>
+
+                                <a href="Consultation" class="sidenavMain-a">
+                                    <i class="fa-solid fa-comments fa-2x"></i>
+                                    <p class="media-texts">Consult</p>
+                                </a>
+
+                                <a href="learn" class="sidenavMain-a">
+                                    <i class="fa-solid fa-book-open-reader fa-2x"></i>
+                                    <p class="media-texts">Learn</p>
+                                </a>
+
+                                <a href="donate" class="sidenavMain-a">
+                                    <i class="fa-solid fa-hand-holding-medical fa-2x"></i>
+                                    <p class="media-texts">Donate</p>
+                                </a>
+
+                                <a href="about" class="sidenavMain-a">
+                                    <i class="fa-solid fa-user fa-2x"></i>
+                                    <p class="media-texts">About</p>
+                                </a>
+
+                                <a href="help" class="sidenavMain-a">
+                                    <i class="fa-solid fa-hand-holding-hand fa-2x"></i>
+                                    <p class="media-texts">Help</p>
+                                </a>
+
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="main-device-footer" id="major-contact-block">
+
+            <div class="social-media-apps" align="center">
+
+                <a href="https://discord.com/channels/@arcaderand" class="social-media-app-link">
+                    <i class="fa-brands fa-discord fa-3x"></i>
+                </a>
+
+                <a href="mailto:admin@arcaderand.co.za" class="social-media-app-link">
+                    <i class="fa-solid fa-envelope fa-3x"></i>
+                </a>
+
+                <a href="https://www.facebook.com/Arcaderand-104749068675206" class="social-media-app-link">
+                    <i class="fa-brands fa-facebook-square fa-3x"></i>
+                </a>
+
+                <a href="https://www.instagram.com/arcaderand_sa/" class="social-media-app-link">
+                    <i class="fa-brands fa-instagram-square fa-3x"></i>
+                </a>
+
+                <a href="https://t.me/+FrrBEJ6Hzq8xZWM0" class="social-media-app-link">
+                    <i class="fa-brands fa-reddit-alien fa-3x"></i>
+                </a>
+
+                <a href="https://t.me/+FrrBEJ6Hzq8xZWM0" class="social-media-app-link">
+                    <i class="fa-brands fa-telegram fa-3x"></i>
+                </a>
+
+                <a href="https://twitter.com/arcaderand" class="social-media-app-link">
+                    <i class="fa-brands fa-twitter fa-3x"></i>
+                </a>
+
+                <a href="https://www.youtube.com/channel/UCV7uK-eTFK10oKq0hdeB__w" class="social-media-app-link">
+                    <i class="fa-brands fa-youtube fa-3x"></i>
+                </a>
+
+            </div>
+
+            <hr>
+
+            <div class="newsletter-subscription" >
+
+                <form name="subscription-footer-form" method="POST" data-netlify="true" class="subscription-block">
+                    <div class="row d-flex justify-content-center">
+                        <!--Grid column-->
+                        <div class="col-auto">
+                          <p class="pt-2">
+                            <strong>Sign up for our newsletter</strong>
+                          </p>
+                        </div>
+                        <!--Grid column-->
+              
+                        <!--Grid column-->
+                        <div class="col-md-5 col-12">
+                          <!-- Email input -->
+                          <div class="form-outline form-white mb-4">
+                            <input type="email" id="form5Example21" class="form-control" name="subscription-email" placeholder="Email address"/>
+                          </div>
+                        </div>
+                        <!--Grid column-->
+              
+                        <!--Grid column-->
+
+                        <div class="col-auto">
+                            
+                            <!--
+                            <div data-netlify-recaptcha="true">
+                            </div>
+                            -->
+
+                            <br>
+
+                            <button type="submit" class="btn btn-outline-light mb-4">
+                                Subscribe
+                            </button>
+
+                        </div>
+                        
+                        <!--Grid column-->
+
+                        <hr>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="last-footer-block">
+                <p>Join our communities across many social platforms and be up to date,
+                    you can also check some of our services or click the learn link to
+                    get yourself some lessons for free and be begin your journey with
+                    us. Ready to sell? find out what is required for you to be a
+                    vendor/seller on our site for free.
+                </p>
+
+                <div>
+                    <div>
+
+                        <div class="row">
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase font-weight-bold" style="font-size: 20px;">More From Us</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="application-form" class="footer-text">Want to sell?</a>
+                                    </li>
+                                    <li>
+                                        <a href="consultation" class="footer-text">Consult</a>
+                                    </li>
+                                    <li>
+                                        <a href="about" class="footer-text">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="donate" class="footer-text">Donate</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase font-weight-bold" style="font-size: 20px;">Community</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="https://www.facebook.com/Arcaderand-104749068675206" class="footer-text">Official Facebook Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://t.me/+FrrBEJ6Hzq8xZWM0" class="footer-text">Open Community</a>
+                                    </li>
+                                    <li>
+                                        <a href="consultation" class="footer-text">Session</a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:admin@arcaderand.co.za" class="footer-text">Contact Us</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase font-weight-bold" style="font-size: 20px;">Our Services</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="advertise-on-our-site" class="footer-text">Advertisement</a
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/channel/UCV7uK-eTFK10oKq0hdeB__w" class="footer-text">YouTube</a>
+                                    </li>
+                                    <li>
+                                        <a href="projects" class="footer-text">Projects</a>
+                                    </li>
+                                    <li>
+                                </ul>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase font-weight-bold" style="font-size: 20px;">More</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="mailto:admin@arcaderand.co.za" class="footer-text">Report!</a>
+                                    </li>
+                                    <li>
+                                        <a href="testimonials" class="footer-text">Testimonials</a>
+                                    </li>
+                                    <li>
+                                        <a href="associates" class="footer-text">Associates</a>
+                                    </li>
+                                    <li>
+                                        <a href="stakeholders" class="footer-text">Stakeholders</a>
+                                    </li>
+                                    <li>
+                                        <a href="help" class="footer-text">Help</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--Grid column-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright text-center" align="center">
+                <p>© 2022 Copyright:</p>
+                <a class="copyright-link" href="https://www.arcaderand.co.za/">Arcaderand.co.za</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+
+    </div>
+
+    <div class="bottom-balance">
+        <p>-</p>
+    </div>
+
+</body>
+
+</html>

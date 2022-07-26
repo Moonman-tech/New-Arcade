@@ -1,13 +1,8 @@
 /*Index page*/
-.modal-header{
-    background-color:#242526;
-}
+
 .main-modal-content{
     margin-left:auto;
     margin-right:auto;
-}
-.content-img-container{
-    width:100%;
 }
 .all-time-button-container{
     padding-left:10px;
@@ -21,6 +16,7 @@
 .company-name{
     color:#e54d42;
     font-size: 20px;
+    margin:0px;
 }
 .universal-seller-container{
     display:block;
@@ -212,8 +208,16 @@
     box-shadow: 0px 3px 10px -6px rgba(0,0,0,1);
 }
 .pop-up-form-modal{
-    background-color:#2e81b7;
+    background-color:#1a73e8;
     border-radius:10px;
+    padding: 10px;
+    box-shadow: 0px 3px 10px -6px rgba(0,0,0,1);
+}
+.carousel-message-alert{
+    background-color:#1a73e8;
+    border-radius: 10px;
+    color: #fff;
+    padding: 5px;
 }
 .modal-message-alert{
     padding:5px;
@@ -234,4 +238,3 @@ textarea{
     border-radius:10px;
     padding:2px;
 }
-

@@ -1,0 +1,924 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="css/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <link rel="stylesheet" type="text/css" href="css/display.css">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/darkmode.css">
+    <script src="external_java.js"></script>
+    <script src="vegetables.js"></script>
+    <script src="controls.js"></script>
+    <script src="jsapi.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/bfe88016a0.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+    <script>
+        console.log(window.matchMedia("(prefers-color-scheme: dark)").matches);
+    </script>
+
+    <title>Become a donor</title>
+</head>
+<body class="main-body-container">
+
+    <div align="center" class="fabricated-body-div">
+        
+        <div class="loader">
+            <img src="css\icons\91.gif" alt="loading...">
+        </div>
+
+        <div class="mobile-navigation" align="center">
+            <div class="logo-link">
+                <img class="mobile-logo-img" src="css\icons\logo.png" alt="Arcaderand">
+            </div>
+        </div>
+
+        <div class="sides-container-two" align="center">
+
+            <div class="left-container">
+
+                <div>
+
+                    <nav class="main-sidebar-container">
+
+                        <div class="desktop-sidebar-div">
+
+                            <img src="css/icons/logo.png" alt="Arcaderand">
+
+                        </div>
+
+                        <div class="link-box">
+
+                            <a class="desktop-sidebar-nav-a" href="#" onclick="dashboardDropDownDiv()">
+                                <i class="fa-solid fa-chart-column fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Dashboard</p>
+                            </a>
+
+                            <div class="stats-dropdown-block" id="dashboard-dropdown-block" align="center">
+
+                                <a href="index" class="dropdown-block-link">
+                                    <i class="fa-solid fa-chart-area fa-2x"></i>
+                                    <p class="desktop-sidebar-dropdown">Dashboard</p>
+                                </a>
+
+                                <a href="fruits" class="dropdown-block-link">
+                                    <i class="fa-solid fa-apple-whole fa-2x"></i>
+                                    <p class="desktop-sidebar-dropdown">Fruits</p>
+                                </a>
+
+                                <a href="vegetables" class="dropdown-block-link">
+                                    <i class="fa-solid fa-carrot fa-2x"></i>
+                                    <p class="desktop-sidebar-dropdown">Veges</p>
+                                </a>
+
+                                <a href="meat" class="dropdown-block-link">
+                                    <i class="fa-solid fa-drumstick-bite fa-2x"></i>
+                                    <p class="desktop-sidebar-dropdown">Meat</p>
+                                </a>
+
+
+                                <!--
+                                <a href="other" class="dropdown-block-link">
+                                    <img src="css/icons/package.png" class="dropdown-block-link-img">
+                                    <p class="desktop-sidebar-dropdown">Other</p>
+                                </a>
+                                -->
+
+                            </div>
+
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="market">
+                                <i class="fa-solid fa-store fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Market</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="services">
+                                <i class="fa-solid fa-screwdriver-wrench fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Services</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="courier">
+                                <i class="fa-solid fa-truck fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Courier</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="alert">
+                                <i class="fa-solid fa-circle-exclamation fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Alert</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="Consultation">
+                                <i class="fa-solid fa-comments fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Consult</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="learn">
+                                <i class="fa-solid fa-book-open-reader fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Learn</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box-active">
+                            <a class="desktop-sidebar-nav-a" href="donate">
+                                <i class="fa-solid fa-hand-holding-medical fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Donate</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="about">
+                                <i class="fa-solid fa-user fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">About</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="help">
+                                <i class="fa-solid fa-hand-holding-hand fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Help</p>
+                            </a>
+                        </div>
+
+                    </nav>
+
+                </div>
+
+            </div>
+
+            <div class="right-container">
+
+                <div class="right-top-container" align="right">
+
+                    <a href="projects" class="desktop-sticky-icons">
+                        Projects
+                    </a>
+
+                    <a href="associates" class="desktop-sticky-icons">
+                        Associates
+                    </a>
+
+                    <a href="stakeholders" class="desktop-sticky-icons">
+                        Stakeholders
+                    </a>
+
+                    <a href="#major-contact-block" class="desktop-sticky-icons">
+                        Contact Us
+                    </a>
+
+                </div>
+
+                <div class="bottom-right">
+
+                    <div class="main-fruits-charts-block">
+
+                        <h3 class="diff-page-labeling">
+                            <a href="donate">
+                              Become a donor
+                            </a>
+                        </h3>
+
+                        <div class="donation-block" align="center">    
+                            <div class="block-one"> 
+                                <section>
+                                    <div class="top-bar-flex">
+                                        <a href="about">
+                                            <img class="top-icon-img" src="css/full-logo.png" alt="Arcaderand Logo">
+                                        </a>
+                                        <p class="short-discription">
+                                            Arcaderand promotes open and free market nation-wide. 
+                                            We help small scale farmers grow while ensuring that 
+                                            the general public is well notified about the benefits 
+                                            of agriculture. We are exposing the upside of 
+                                            agriculture to the youth through projects and agricultural 
+                                            trade-fairs. 
+                                        </p>
+                                    </div>
+                                </section>
+
+                                <hr>
+
+                                <div class="small-list-container">
+                                    <div class="tiles-layer-box">
+
+                                        <div class="tiles-posts-div" align="center">
+
+                                            <a href="#">
+                                                <p>R0.00</p>
+                                                <p>Rands</p>
+                                            </a>
+
+                                            <a href="#">
+                                                <p>0</p>
+                                                <p>Donors</p>
+                                            </a>
+
+                                            <a href="#">
+                                                <p>9</p>
+                                                <p>Projetcs</p>
+                                            </a>
+
+                                            <a href="#">
+                                                <p>0</p>
+                                                <p>Districts</p>
+                                            </a>
+
+                                            <a href="#">
+                                                <p>0</p>
+                                                <p>Farmers</p>
+                                            </a>
+
+                                            <a href="#">
+                                                <p>0</p>
+                                                <p>Retailers</p>
+                                            </a>
+
+                                            <a href="#">
+                                                <p>1</p>
+                                                <p>Provinces</p>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <hr>    
+                            
+                            <a href="#" class="working-links">How it works</a>
+
+                            <section class="how-it-works" align="center">
+
+                                <div class="how-it-works-flexer">
+
+                                    <div class="how-it-works-div">
+                                        <i class="fa-solid fa-square-check fa-3x"></i>
+                                        <p>
+                                            We have projects aimed at promoting small and 
+                                            large scale farming, educating people further 
+                                            about farming, planning agricultural fairs and 
+                                            sponsoring technological advances in the agricultural 
+                                            sector. Through donors, our projects can be completed 
+                                            and the community we are looking to create will grow much bigger. 
+                                        </p>
+                                        <a href="#" class="how-it-works-div-links">
+                                            <strong>
+                                                Projects
+                                            </strong>
+                                        </a>
+                                    </div>
+
+                                    <div class="how-it-works-div">
+                                        <i class="fa-solid fa-gift fa-3x"></i>
+                                        <p>
+                                            Donors will be invited to our exclusive donor community 
+                                            where they can help us make better spending choices. 
+                                            Being one of our major donors means being a part of 
+                                            our administration as you help us achieve our goals. 
+                                            Major donors are a part of our board and they are as 
+                                            important to the company as board members. 
+                                        </p>
+                                        <a href="#" class="how-it-works-div-links">
+                                            <strong>
+                                                Donors
+                                            </strong>
+                                        </a>
+                                    </div>
+                            
+                                </div>
+
+                                <div class="how-it-works-flexer">
+
+                                    <div class="how-it-works-div">
+                                        <i class="fa-solid fa-wheat-awn fa-3x"></i>
+                                        <p>
+                                            Being a donor does not necessarily mean donating money, 
+                                            a farmer can donate a piece of their land for our small 
+                                            projects. Water and farming equipment could also be 
+                                            regarded as currency in some situations. A donation of 
+                                            such is welcomed and we will try to do the best with what 
+                                            was donated to achieve our company goals
+                                        </p>
+                                        <a href="#" class="how-it-works-div-links">
+                                            <strong>
+                                                Farmers
+                                            </strong>
+                                        </a>
+                                    </div>
+
+                                    <div class="how-it-works-div">
+                                        <i class="fa-solid fa-people-group fa-3x"></i>
+                                        <p>
+                                            Those looking to learn about agricuture can easily do so and 
+                                            people are now more aware of free and open market. The presence 
+                                            of the youth in farms is increasing overtime and the agricultural 
+                                            sector is slowly growing and people are starting to realise 
+                                            that the agricultural sector is very profitable and open.
+                                        </p>
+                                        <a href="#" class="how-it-works-div-links">
+                                            <strong>
+                                                Our impact
+                                            </strong>
+                                        </a>
+                                    </div>
+                            
+                                </div>
+
+                            </section>
+
+                            <hr>
+
+                            <section class="block-two">
+                                <p class="instruction">To avoid giving out your card details, you can 
+                                    fill out the form to make a pledge to donate then donate afterwards from the App, website or software you trust.</p>
+
+                                <div class="donation-form" align="left">
+
+                                    <form id="donation-form-designer" name="Donor-from" method="POST" data-netlify="true" class="stats-report-block">
+
+                                        <label for="sel1" class="form-label">Select course to donate for:</label>
+                                        <div class="mb-3">
+                                            
+                                            <select class="form-select" aria-label="Default select example" name="Donation-For" id="Donating-For">
+                                                <option selected value="General">General</option>
+                                                <option value="Educate The Youth">Project: Educate The Youth</option>
+                                                <option value="Irrigation Exposition">Project: Irrigation Exposition</option>
+                                                <option value="Annual Trade Fair">Project: Annual Trade Fair</option>
+                                                <option value="Locust Swarm Support">Project: Locust Swarm Support</option>
+                                                <option value="Women In Farming">Project: Women In Farming</option>
+                                                <option value="Community Garden">Project: Community Garden</option>
+                                                <option value="Agricultural Modern Advances">Project: Agricultural Modern Advances</option>
+                                                <option value="Drought Support">Project: Drought Support</option>
+                                                <option value="Green Indoor Farming">Project: Green Indoor Farming</option>
+                                              </select>
+                                        </div>
+
+                                        <div class="name-title-block">  
+                                            <div class="mb-3">
+                                                <label for="sel1" class="form-label">Select your title</label>
+                                                <select class="form-select-block" aria-label="Default select example" name="Donor-title" id="Title">
+                                                    <option selected> </option>
+                                                    <option value="Mr.">Mr.</option>
+                                                    <option value="Mrs.">Mrs.</option>
+                                                    <option value="Miss.">Miss.</option>
+                                                    <option value="Ms.">Ms.</option>
+                                                    <option value="Dr.">Dr.</option>
+                                                    <option value="Prof.">Prof.</option>
+                                                    <option value="Rev.">Rev.</option>
+                                                    <option value="Other.">Other.</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="sel1" class="form-label">Name</label>
+                                                <input class="form-control" type="text" placeholder="Enter Your Name" id="Name" name="Donor-Name">
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="sel1" class="form-label">Surname</label>
+                                                <input class="form-control" type="text" placeholder="Enter Your Surname" id="Surname" name="Donor-Surname">
+                                            </div>
+
+                                        </div>
+
+                                        <div class="textarea-block">  
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Email address</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="Donor-Email">
+                                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="textarea-block">
+
+                                            <div class="mb-3">
+                                                <label  class="form-label">Phone Number:</label>
+                                                <!--<input type="number" class="form-control" name="Donor-Number" placeholder="(Optional)">-->
+                                                <input class="form-control" type="tel" step="0.01" placeholder="Cell Number" id="Phone-number" name="Phone Number">
+                                                <small id="emailHelp" class="form-text text-muted">We'll never share your cell number with anyone else.</small>
+                                            </div>
+
+                                        </div>
+
+                                        <hr>
+
+                                        <div class="textarea-block">  
+                                            <div class="mb-3">
+                                                <label for="quantity" class="form-label">Amount to donate (Rands)</label>
+                                                <input class="form-control" step="0.01" type="number" placeholder="Please Enter Amount" id="Amount" name="Amount to donate">
+                                                <!--<input type="number" class="form-control" name="Amount-To-Donate" placeholder="Please enter amount">-->
+                                            </div>
+                                        </div>
+
+                                        <div class="textarea-block">
+
+                                            <div class="mb-3">
+                                                <label for="quantity" class="form-label">Date to donate</label>
+                                                <input type="date" id="birthday" class="form-control" name="Donation-Date">
+                                            </div>
+
+                                        </div>
+
+                                        <div class="textarea-block">  
+
+                                            <div class="mb-3">
+
+                                                <label for="sel1" class="form-label">Select Your Bank</label><br>
+                                                <select class="form-select-block" aria-label="Default select example" name="Donor-Bank" id="Bank">
+                                                    <option selected> </option>
+                                                    <option value="Absa">Absa</option>
+                                                    <option value="African Bank">African Bank</option>
+                                                    <option value="Bidvest Bank">Bidvest Bank</option>
+                                                    <option value="FNB">FNB</option>
+                                                    <option value="Nedbank">Nedbank</option>
+                                                    <option value="Standard Bank">Standard Bank</option>
+                                                    <option value="Tyme Bank">Tyme Bank</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="textarea-block">  
+
+                                            <div class="mb-3">
+                                                <label for="sel1" class="form-label">Reference</label>
+                                                <input class="form-control" type="text" placeholder="Enter Your Reference" name="Donor-Surname">
+                                                <small id="emailHelp" class="form-text text-muted">Please use this as your reefrence when sending funds</small>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="textarea-block">
+                                            <div class="form-outline">
+                                                <label class="form-label" for="textAreaExample">Message</label>
+                                                <textarea class="form-control" id="textArea"  placeholder="(Optional...)"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <!--
+                                            <div class="donation-alert-block">
+                                                <p>
+                                                    Please capture the "Safe Word" you write on this section 
+                                                    because the word will be included in an email where we will send
+                                                    you our bank account number to send the amount you chose to donate to us.
+                                                    Please do not share the Safe Word with anyone, our email will be 
+                                                    sent from admin@arcaderand.co.za and no other email address. Please 
+                                                    report to us any different email address claiming to be from Arcaderand.
+                                                    Feel free to respond our email with your Safe Word to verify the email.    
+                                                </p>
+                                            </div>
+                                        -->
+
+                                        <div class="donation-alert-block">
+                                            <p class="note">Please note:</p>
+                                            <p>
+                                                Information given in the forms will not be shared with anyone else. For your security, we chose to 
+                                                exclude a part where you will have to share your banking details on the web. After submitting your 
+                                                details, you can then continue to donate from any Application, software of website of your choice. 
+                                                our bank account number is below and please copy instead of re-writing it down to prevent mistakes.   
+                                            </p>
+                                        </div>
+
+                                        <div class="account-number" >
+                                            <a href="#" class="account-number-button">Arcaderand Account Number:</a>
+                                            <a href="#" class="account-number-tag" id="myInput">1680399851</a> 
+                                        </div>
+        
+                                        <hr>
+
+                                        <div class="field">
+                                            <div data-netlify-recaptcha="true">
+
+                                            </div>
+                                        </div>
+                                        
+                                        <button type="submit" class="button" value="Send">
+                                            Submit
+                                        </button>
+                                    
+                                    </form>
+
+                                </div>
+
+                                <div class="thank-you-box">
+                                    <h3>Thank You For Your Donation</h3>
+                                    <p>
+                                        We are glad that you considered donating to our organization. Your Donation will
+                                        help make our projects a reality and our projects are aimed at developing the society
+                                        through agricultural advances. Through your donation, we are going to get one step close
+                                        to achieve every project through your donation.
+  
+                                    </p>
+                                </div>
+
+                            </section>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mobile-footer">
+            <div class="sticky-list">
+                <div class="a-tag">
+
+                    <a class="a-tags" href="help">
+                        <i class="fa-solid fa-hand-holding-hand fa-3x"></i>
+                    </a>
+
+                    <a class="a-tags" href="#" onclick="openMedianav()">
+                        <i class="fa-solid fa-circle-nodes fa-3x"></i>
+                    </a>
+
+                         <div id="mediaNav" class="sidenavMain" >
+                            <div class="sidenav-cover">
+                                <p class="closebtn" onclick="closeMedianav()">&times;</p>
+
+                                <a href="https://discord.com/channels/@arcaderand" class="sidenavMain-a">
+                                    <i class="fa-brands fa-discord fa-2x"></i>
+                                    <p class="media-texts">Discord</p>
+                                </a>
+
+                                <a href="mailto:admin@arcaderand.co.za" class="sidenavMain-a">
+                                    <i class="fa-solid fa-envelope fa-2x"></i>
+                                    <p class="media-texts">Email</p>
+                                </a>
+
+                                <a href="https://www.facebook.com/Arcaderand-104749068675206" class="sidenavMain-a">
+                                    <i class="fa-brands fa-facebook-square fa-2x"></i>
+                                    <p class="media-texts">Facebook</p>
+                                </a>
+
+                                <a href="https://www.instagram.com/arcaderand_sa/" class="sidenavMain-a">
+                                    <i class="fa-brands fa-instagram-square fa-2x"></i>
+                                    <p class="media-texts">Instagram</p>
+                                </a>
+
+                                <a href="https://www.reddit.com/user/arcaderand" class="sidenavMain-a">
+                                    <i class="fa-brands fa-reddit-alien fa-2x"></i>
+                                    <p class="media-texts">Reddit</p>
+                                </a>
+
+                                <a href="#" class="sidenavMain-a">
+                                    <i class="fa-brands fa-telegram fa-2x"></i>
+                                    <p class="media-texts">Telegram</p>
+                                </a>
+
+                                <a href="https://twitter.com/arcaderand" class="sidenavMain-a">
+                                    <i class="fa-brands fa-twitter fa-2x"></i>
+                                    <p class="media-texts">Twitter</p>
+                                </a>
+
+                                <a href="https://www.youtube.com/channel/UCV7uK-eTFK10oKq0hdeB__w" class="sidenavMain-a">
+                                    <i class="fa-brands fa-youtube fa-2x"></i>
+                                    <p class="media-texts">YouTube</p>
+                                </a>
+                            </div>
+                         </div>
+
+                    <a class="a-tags" href="#" onclick="openController()"> <!--openController-->
+                        <i class="fa-solid fa-bars fa-3x"></i>
+                    </a>
+                    
+                        <div id="controller" class="sidenavMain">
+                            <div class="sidenav-cover">
+                                <p class="closebtn" onclick="closeController()">&times;</p>
+
+                                <div onclick="mobileDashboardDropDownDiv()" class="mobile-stats-dropdown">
+                                    <div class="block-content">
+                                        <p class="mobile-sidebar-media-texts">Dashboard</p>
+                                    </div>
+
+                                    <div class="mobile-dropdown-block" id="mobile-sidebar-dropdown-block">
+
+                                        <a href="index" class="mobile-dropdown-block-link">
+                                            <i class="fa-solid fa-chart-area fa-2x"></i>
+                                            <p >Dashboard</p>
+                                        </a>
+        
+                                        <a href="fruits" class="mobile-dropdown-block-link">
+                                            <i class="fa-solid fa-apple-whole fa-2x"></i>
+                                            <p >Fruits</p>
+                                        </a>
+        
+                                        <a href="vegetables" class="mobile-dropdown-block-link">
+                                            <i class="fa-solid fa-carrot fa-2x"></i>
+                                            <p>Vegetables</p>
+                                        </a>
+        
+                                        <a href="meat" class="mobile-dropdown-block-link">
+                                            <i class="fa-solid fa-drumstick-bite fa-2x"></i>
+                                            <p>Meat</p>
+                                        </a>
+        
+        
+                                        <!--
+                                        <a href="other" class="mobile-dropdown-block-link">
+                                            <img src="css/icons/package.png">
+                                            <p>Other</p>
+                                        </a>
+                                        -->
+        
+                                    </div>
+                                </div>  
+
+                                <a href="market" class="sidenavMain-a">
+                                    <i class="fa-solid fa-store fa-2x"></i>
+                                    <p class="media-texts">Market</p>
+                                </a>
+
+                                <a href="services" class="sidenavMain-a">
+                                    <i class="fa-solid fa-screwdriver-wrench fa-2x"></i>
+                                    <p class="media-texts">Services</p>
+                                </a>
+
+                                <a href="courier" class="sidenavMain-a">
+                                    <i class="fa-solid fa-truck fa-2x"></i>
+                                    <p class="media-texts">Courier</p>
+                                </a>
+
+                                <a href="Alert" class="sidenavMain-a">
+                                    <i class="fa-solid fa-circle-exclamation fa-2x"></i>
+                                    <p class="media-texts">Alert</p>
+                                </a>
+
+                                <a href="Consultation" class="sidenavMain-a">
+                                    <i class="fa-solid fa-comments fa-2x"></i>
+                                    <p class="media-texts">Consult</p>
+                                </a>
+
+                                <a href="learn" class="sidenavMain-a">
+                                    <i class="fa-solid fa-book-open-reader fa-2x"></i>
+                                    <p class="media-texts">Learn</p>
+                                </a>
+
+                                <a href="donate" class="sidenavMain-a">
+                                    <i class="fa-solid fa-hand-holding-medical fa-2x"></i>
+                                    <p class="media-texts">Donate</p>
+                                </a>
+
+                                <a href="about" class="sidenavMain-a">
+                                    <i class="fa-solid fa-user fa-2x"></i>
+                                    <p class="media-texts">About</p>
+                                </a>
+
+                                <a href="help" class="sidenavMain-a">
+                                    <i class="fa-solid fa-hand-holding-hand fa-2x"></i>
+                                    <p class="media-texts">Help</p>
+                                </a>
+
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="main-device-footer" id="major-contact-block">
+
+            <div class="social-media-apps" align="center">
+
+                <a href="https://discord.com/channels/@arcaderand" class="social-media-app-link">
+                    <i class="fa-brands fa-discord fa-3x"></i>
+                </a>
+
+                <a href="mailto:admin@arcaderand.co.za" class="social-media-app-link">
+                    <i class="fa-solid fa-envelope fa-3x"></i>
+                </a>
+
+                <a href="https://www.facebook.com/Arcaderand-104749068675206" class="social-media-app-link">
+                    <i class="fa-brands fa-facebook-square fa-3x"></i>
+                </a>
+
+                <a href="https://www.instagram.com/arcaderand_sa/" class="social-media-app-link">
+                    <i class="fa-brands fa-instagram-square fa-3x"></i>
+                </a>
+
+                <a href="https://t.me/+FrrBEJ6Hzq8xZWM0" class="social-media-app-link">
+                    <i class="fa-brands fa-reddit-alien fa-3x"></i>
+                </a>
+
+                <a href="https://t.me/+FrrBEJ6Hzq8xZWM0" class="social-media-app-link">
+                    <i class="fa-brands fa-telegram fa-3x"></i>
+                </a>
+
+                <a href="https://twitter.com/arcaderand" class="social-media-app-link">
+                    <i class="fa-brands fa-twitter fa-3x"></i>
+                </a>
+
+                <a href="https://www.youtube.com/channel/UCV7uK-eTFK10oKq0hdeB__w" class="social-media-app-link">
+                    <i class="fa-brands fa-youtube fa-3x"></i>
+                </a>
+
+            </div>
+
+            <hr>
+
+            <div class="newsletter-subscription" >
+
+                <form name="subscription-footer-form" method="POST" data-netlify="true" class="subscription-block">
+                    <div class="row d-flex justify-content-center">
+                        <!--Grid column-->
+                        <div class="col-auto">
+                          <p class="pt-2">
+                            <strong>Sign up for our newsletter</strong>
+                          </p>
+                        </div>
+                        <!--Grid column-->
+              
+                        <!--Grid column-->
+                        <div class="col-md-5 col-12">
+                          <!-- Email input -->
+                          <div class="form-outline form-white mb-4">
+                            <input type="email" id="form5Example21" class="form-control" name="subscription-email" placeholder="Email address"/>
+                          </div>
+                        </div>
+                        <!--Grid column-->
+              
+                        <!--Grid column-->
+
+                        <div class="col-auto">
+                            
+                            <!--
+                            <div data-netlify-recaptcha="true">
+                            </div>
+                            -->
+
+                            <br>
+
+                            <button type="submit" class="btn btn-outline-light mb-4">
+                                Subscribe
+                            </button>
+
+                        </div>
+                        
+                        <!--Grid column-->
+
+                        <hr>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="last-footer-block">
+                <p>Join our communities across many social platforms and be up to date,
+                    you can also check some of our services or click the learn link to
+                    get yourself some lessons for free and be begin your journey with
+                    us. Ready to sell? find out what is required for you to be a
+                    vendor/seller on our site for free.
+                </p>
+
+                <div>
+                    <div>
+
+                        <div class="row">
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase font-weight-bold" style="font-size: 20px;">More From Us</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="application-form" class="footer-text">Want to sell?</a>
+                                    </li>
+                                    <li>
+                                        <a href="consultation" class="footer-text">Consult</a>
+                                    </li>
+                                    <li>
+                                        <a href="about" class="footer-text">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="donate" class="footer-text">Donate</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase font-weight-bold" style="font-size: 20px;">Community</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="https://www.facebook.com/Arcaderand-104749068675206" class="footer-text">Official Facebook Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://t.me/+FrrBEJ6Hzq8xZWM0" class="footer-text">Open Community</a>
+                                    </li>
+                                    <li>
+                                        <a href="consultation" class="footer-text">Session</a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:admin@arcaderand.co.za" class="footer-text">Contact Us</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase font-weight-bold" style="font-size: 20px;">Our Services</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="advertise-on-our-site" class="footer-text">Advertisement</a
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/channel/UCV7uK-eTFK10oKq0hdeB__w" class="footer-text">YouTube</a>
+                                    </li>
+                                    <li>
+                                        <a href="projects" class="footer-text">Projects</a>
+                                    </li>
+                                    <li>
+                                </ul>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase font-weight-bold" style="font-size: 20px;">More</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="mailto:admin@arcaderand.co.za" class="footer-text">Report!</a>
+                                    </li>
+                                    <li>
+                                        <a href="testimonials" class="footer-text">Testimonials</a>
+                                    </li>
+                                    <li>
+                                        <a href="associates" class="footer-text">Associates</a>
+                                    </li>
+                                    <li>
+                                        <a href="stakeholders" class="footer-text">Stakeholders</a>
+                                    </li>
+                                    <li>
+                                        <a href="help" class="footer-text">Help</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--Grid column-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright text-center" align="center">
+                <p>© 2022 Copyright:</p>
+                <a class="copyright-link" href="https://www.arcaderand.co.za/">Arcaderand.co.za</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+
+    </div>
+
+    <div class="bottom-balance">
+        <p>-</p>
+    </div>
+    
+
+</body>
+
+</html>

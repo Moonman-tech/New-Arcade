@@ -1,0 +1,2127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="css/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <link rel="stylesheet" type="text/css" href="css/display.css">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/darkmode.css">
+    <script src="external_java.js"></script>
+    <script src="vegetables.js"></script>
+    <script src="controls.js"></script>
+    <script src="jsapi.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/bfe88016a0.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+
+    <script>
+        console.log(window.matchMedia("(prefers-color-scheme: dark)").matches);
+    </script>
+
+    <title>Vegetables</title>
+</head>
+<body class="main-body-container">
+
+    <div align="center" class="fabricated-body-div">
+        
+        <div class="loader">
+            <img src="css\icons\91.gif" alt="loading...">
+        </div>
+
+        <div class="mobile-navigation" align="center">
+            <div class="logo-link">
+                <img class="mobile-logo-img" src="css\icons\logo.png" alt="Arcaderand">
+            </div>
+        </div>
+
+        <div class="sides-container-two" align="center">
+
+            <div class="left-container">
+
+                <div>
+
+                    <nav class="main-sidebar-container">
+
+                        <div class="desktop-sidebar-div">
+
+                            <img src="css/icons/logo.png" alt="Arcaderand">
+
+                        </div>
+
+                        <div class="link-box-active">
+
+                            <a class="desktop-sidebar-nav-a" href="#" onclick="dashboardDropDownDiv()">
+                                <i class="fa-solid fa-chart-column fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Dashboard</p>
+                            </a>
+
+                            <div class="stats-dropdown-block" id="dashboard-dropdown-block" align="center">
+
+                                <a href="index" class="dropdown-block-link">
+                                    <i class="fa-solid fa-chart-area fa-2x"></i>
+                                    <p class="desktop-sidebar-dropdown">Dashboard</p>
+                                </a>
+
+                                <a href="fruits" class="dropdown-block-link">
+                                    <i class="fa-solid fa-apple-whole fa-2x"></i>
+                                    <p class="desktop-sidebar-dropdown">Fruits</p>
+                                </a>
+
+                                <a href="vegetables" class="dropdown-block-link">
+                                    <i class="fa-solid fa-carrot fa-2x"></i>
+                                    <p class="desktop-sidebar-dropdown">Veges</p>
+                                </a>
+
+                                <a href="meat" class="dropdown-block-link">
+                                    <i class="fa-solid fa-drumstick-bite fa-2x"></i>
+                                    <p class="desktop-sidebar-dropdown">Meat</p>
+                                </a>
+
+
+                                <!--
+                                <a href="other" class="dropdown-block-link">
+                                    <img src="css/icons/package.png" class="dropdown-block-link-img">
+                                    <p class="desktop-sidebar-dropdown">Other</p>
+                                </a>
+                                -->
+
+                            </div>
+
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="market">
+                                <i class="fa-solid fa-store fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Market</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="services">
+                                <i class="fa-solid fa-screwdriver-wrench fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Services</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="courier">
+                                <i class="fa-solid fa-truck fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Courier</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="alert">
+                                <i class="fa-solid fa-circle-exclamation fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Alert</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="Consultation">
+                                <i class="fa-solid fa-comments fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Consult</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="learn">
+                                <i class="fa-solid fa-book-open-reader fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Learn</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="donate">
+                                <i class="fa-solid fa-hand-holding-medical fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Donate</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="about">
+                                <i class="fa-solid fa-user fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">About</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="help">
+                                <i class="fa-solid fa-hand-holding-hand fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Help</p>
+                            </a>
+                        </div>
+
+                    </nav>
+
+                </div>
+
+            </div>
+
+            <div class="right-container">
+
+                <div class="right-top-container" align="right">
+
+                    <a href="projects" class="desktop-sticky-icons">
+                        Projects
+                    </a>
+
+                    <a href="associates" class="desktop-sticky-icons">
+                        Associates
+                    </a>
+
+                    <a href="stakeholders" class="desktop-sticky-icons">
+                        Stakeholders
+                    </a>
+
+                    <a href="#major-contact-block" class="desktop-sticky-icons">
+                        Contact Us
+                    </a>
+
+                </div>
+
+                <div class="bottom-right">
+
+                    <div class="main-fruits-charts-block">
+
+                        <h3 class="diff-page-labeling">
+                            <a href="vegetables">
+                                Vegetables Statictics
+                            </a>
+                        </h3>
+
+                        <div class="two">
+
+                            <h4>Vegetable Production<h4>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="potatoes"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("potatoes"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [1311,1215,1134,1316,1321,1552,1571,1667,1699,1721,1793,1647,1496,1785,1787,1719,1746,1979,1927,1955,2165,2205,2202,2194,2347,2311,2293,2462],
+                                                label: "(1000tons)",
+                                                borderColor: "#3e95cd",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Potaotes Production'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="tomatoes"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("tomatoes"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [455,451,422,393,452,424,453,415,405,475,420,442,427,514,506,528,500,515,575,523,545,527,538,547,605,667,610],
+                                                label: "(1000tons)",
+                                                borderColor: "red",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Tomatoes Production'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="pumpkins"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("pumpkins"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [163,169,177,177,183,190,192,197,199,202,209,210,215,230,230,236,232,230,229,234,237,244,247,245,256,254,261,264],
+                                                label: "(1000tons)",
+                                                borderColor: "red",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Pumpkins Production'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="greenMealies"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("greenMealies"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [269,265,257,277,275,278,286,290,300,299,298,295,296,323,318,317,319,324,337,339,340,347,361,362,373,378,380,390],
+                                                label: "(1000tons)",
+                                                borderColor: "orange",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Green Mealies Production'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="onion"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("onion"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [241,231,248,245,268,290,285,342,387,329,312,335,356,418,438,448,475,445,472,489,563,625,596,619,675,679,695,714],
+                                                label: "(1000tons)",
+                                                borderColor: "#FF00FF",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Onions Production'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="sweetPotatoes"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("sweetPotatoes"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [56,58,70,67,60,57,59,59,52,51,54,56,50,53,64,53,53,51,63,60,63,55,57,69,63,61,71,83],
+                                                label: "(1000tons)",
+                                                borderColor: "#F6BE00",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Sweet Potatoes Production'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="greenpeas"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("greenpeas"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [24,15,20,19,18,13,16,22,24,20,18,15,16,9,14,16,16,14,15,17,12,8,11,12,9,11,8,9],
+                                                label: "(1000tons)",
+                                                borderColor: "#FF00FF",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Green Peas Production'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="beetroot"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("beetroot"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [36,34,41,43,41,45,38,46,46,57,55,59,64,61,67,62,66,66,61,76,77,79,85],
+                                                label: "(1000tons)",
+                                                borderColor: "#E56717",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Beetroot Production'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="cauliflower"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("cauliflower"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [32,29,26,25,20,20,19,17,22,22,17,17,17,18,25,16,16,14,13,13,14,14,12],
+                                                label: "(1000tons)",
+                                                borderColor: "#FF00FF",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Cauliflower Production'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="cabbage"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("cabbage"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [214,208,204,202,190,191,175,176,178,168,160,146,150,141,141,153,141,136,146,146,139,154,161],
+                                                label: "(1000tons)",
+                                                borderColor: "#cb99c9",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Cabbage and Red Cabbage Production'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="carrot"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("carrot"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [132,103,103,101,97,98,102,117,141,143,150,146,144,164,151,152,178,183,184,202,215,218,231],
+                                                label: "(1000tons)",
+                                                borderColor: "#F62217",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Carrot Production'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="beans"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("beans"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [30,31,33,31,34,31,38,41,44,39,30,25,24,25,23,25,25,24,19,26,24,24,26],
+                                                label: "(1000tons)",
+                                                borderColor: "#dcb56e",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Green Beans Production'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            
+
+                        </div>
+
+                        <div class="two">
+
+                            <h4>Average prices of major vegetables sold on the major fresh produce markets</h4>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="majorPotato"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("majorPotato"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [3354,2598,2591,2645,3379,3428,2855,4691,3445,3696],
+                                                label: "(R/ton)",
+                                                borderColor: "#ec9f90",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Potatoes'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="majorTomatoes"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("majorTomatoes"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [4257,4233,4339,4407,4847,5711,6003,5691,5614,5671],
+                                                label: "(R/ton)",
+                                                borderColor: "#d32821",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Tomatoes'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="majorCabbage"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("majorCabbage"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [1624,1405,1516,1772,2109,2375,1966,2317,2493,2276],
+                                                label: "(R/ton)",
+                                                borderColor: "#53a66f",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Cabbage'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="majorOnions"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("majorOnions"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [3182,2573,2221,2587,3433,3372,2801,4497,3230,4224],
+                                                label: "(R/ton)",
+                                                borderColor: "#7a49ff",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Onions'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="majorPumpkins"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("majorPumpkins"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [1470,1737,1675,1617,2156,2127,1804,2567,2556,2134],
+                                                label: "(R/ton)",
+                                                borderColor: "#FF69B4",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Pumpkins'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="majorCarrots"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("majorCarrots"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [2728,3251,2815,2633,3154,3613,2952,3694,3607,3804],
+                                                label: "(R/ton)",
+                                                borderColor: "#53a66f",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Carrots'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+    
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="majorSquashes"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("majorSquashes"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [2051,2719,2615,2702,2666,3247,3276,3311,3866,4147],
+                                                label: "(R/ton)",
+                                                borderColor: "#33cccc",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Gem Squashes'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="majorSweetPotatoes"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("majorSweetPotatoes"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [2330,1977,2995,3636,2798,3857,3690,4873,3934,3920],
+                                                label: "(R/ton)",
+                                                borderColor: "#a775fa",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Sweet Potatoes'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="majorCauliflower"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("majorCauliflower"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [3616,3777,4145,4960,5066,7712,7213,7921,8170,11194],
+                                                label: "(R/ton)",
+                                                borderColor: "#F778A1",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Cauliflower'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="majorGreenBeans"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("majorGreenBeans"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [5681,5634,6572,6815,7263,8424,7999,9204,9112,9568],
+                                                label: "(R/ton)",
+                                                borderColor: "#F52887",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Green Beans'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="majorHubbardSquashes"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("majorHubbardSquashes"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [1646,1696,1880,1844,1954,2283,1917,2625,2418,2416],
+                                                label: "(R/ton)",
+                                                borderColor: "#D462FF",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Hubbard Squashes'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="majorBeetroot"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("majorBeetroot"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [2109,2763,2821,2365,3858,4325,3053,4131,4157,2842],
+                                                label: "(R/ton)",
+                                                borderColor: "#736AFF",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Beetroot'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+    
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="majorCucumber"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("majorCucumber"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [5913,6666,5862,7337,7320,8664,8351,8308,8712,11110],
+                                                label: "(R/ton)",
+                                                borderColor: "#DC381F",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Cucumber'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="majorLettuce"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("majorLettuce"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [3338,3694,4263,4828,4573,5299,5646,6478,6486,7367],
+                                                label: "(R/ton)",
+                                                borderColor: "#7cd147",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Lettuce'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="majorGreenPeas"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("majorGreenPeas"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [13687,17960,21035,27516,23923,32757,35201,37242,33384,37769],
+                                                label: "(R/ton)",
+                                                borderColor: "#d32821",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Green Peas'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="majorMealies"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("majorMealies"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [8076,8260,9471,11409,8344,12180,13700,16603,14771,17347],
+                                                label: "(R/ton)",
+                                                borderColor: "#008080",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Green Mealies & Sweetcorn'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="majorMarrows"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("majorMarrows"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [6363,7345,8575,7648,9085,9766,10056,10639,11433,11228],
+                                                label: "(R/ton)",
+                                                borderColor: "#f4a923",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Marrows'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="majorTurnips"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("majorTurnips"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [2781,3483,3651,2728,3527,4014,3457,4125,4502,5052],
+                                                label: "(R/ton)",
+                                                borderColor: "#7771de",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Turnips'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>   
+    
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="majorButterNut"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("majorButterNut"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [2266,2078,2420,2408,2871,3227,2593,3737,3500,3146],
+                                                label: "(R/ton)",
+                                                borderColor: "#ccaa33",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Butternut Squashes'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="majorOther"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("majorOther"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [3332,2945,2944,3047,3683,3981,3491,4841,4075,4425],
+                                                label: "(R/ton)",
+                                                borderColor: "#cc5533",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Other'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>   
+    
+                            </div>
+
+                            <div class="reference">
+                                <p class="reference-text-blue-back">DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                            </div>
+
+                        </div>
+
+                        <div class="two">
+
+                            <h4>Gross value of certain major vegetables</h4>
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="valuePotato"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("valuePotato"), {
+                                        type: 'bar',
+                                        data: {
+                                            labels: [2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [5320492,5553072,6286785,6372165,7424138,7263054,7626640],
+                                                label: "(R/ton)",
+                                                backgroundColor: "#ec9f90",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Potatoes'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="valueTomatoes"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("valueTomatoes"), {
+                                        type: 'bar',
+                                        data: {
+                                            labels: [2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [1588679,1866363,2018592,2141368,2528495,2528559,2603732],
+                                                label: "(R/ton)",
+                                                backgroundColor:"#d32821",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Tomatoes'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="valueCabbage"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("valueCabbage"), {
+                                        type: 'bar',
+                                        data: {
+                                            labels: [2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [204644,222665,267666,267612,291198,294049,280717],
+                                                label: "(R/ton)",
+                                                backgroundColor: "#53a66f",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Cabbage'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="valueOnions"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("valueOnions"), {
+                                        type: 'bar',
+                                        data: {
+                                            labels: [2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [1157287,1633100,1849056,1657902,2252330,2295420,1760377],
+                                                label: "(R/ton)",
+                                                backgroundColor: "#7a49ff",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Onions'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="valuePumpkins"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("valuePumpkins"), {
+                                        type: 'bar',
+                                        data: {
+                                            labels: [2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [362432,375878,471056,390948,486669,528771,508788],
+                                                label: "(R/ton)",
+                                                backgroundColor: "#FF69B4",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Pumpkins'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="valueCarrots"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("valueCarrots"), {
+                                        type: 'bar',
+                                        data: {
+                                            labels: [2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [387064,460976,575029,511524,679830,652313,684711],
+                                                label: "(R/ton)",
+                                                backgroundColor: "#53a66f",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Carrots'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+    
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="valueSquashes"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("valueSquashes"), {
+                                        type: 'bar',
+                                        data: {
+                                            labels: [2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [60223,57795,66357,60656,64624,68895,66061],
+                                                label: "(R/ton)",
+                                                backgroundColor: "#33cccc",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Gem Squashes'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="valueSweetPotatoes"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("valueSweetPotatoes"), {
+                                        type: 'bar',
+                                        data: {
+                                            labels: [2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [177817,175123,179507,200133,240888,278659,240569],
+                                                label: "(R/ton)",
+                                                backgroundColor: "#a775fa",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Sweet Potatoes'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="valueCauliflower"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("valueCauliflower"), {
+                                        type: 'bar',
+                                        data: {
+                                            labels: [2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [50319,51974,64112,70127,86989,93665,91435],
+                                                label: "(R/ton)",
+                                                backgroundColor: "#F778A1",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Cauliflower'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="valueGreenBeans"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("valueGreenBeans"), {
+                                        type: 'bar',
+                                        data: {
+                                            labels: [2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [121215,124615,122795,140760,155337,154572,154287],
+                                                label: "(R/ton)",
+                                                backgroundColor: "#F52887",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Green Beans'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="valueBeetroot"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("valueBeetroot"), {
+                                        type: 'bar',
+                                        data: {
+                                            labels: [2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [142288,164883,190797,187409,233716,234252,209286],
+                                                label: "(R/ton)",
+                                                backgroundColor: "#736AFF",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Beetroot'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="lettuceLettuce"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("lettuceLettuce"), {
+                                        type: 'bar',
+                                        data: {
+                                            labels: [2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [125109,154675,172645,156618,210567,198039,200429],
+                                                label: "(R/ton)",
+                                                backgroundColor: "#7cd147",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Lettuce'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="valueGreenPeas"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("valueGreenPeas"), {
+                                        type: 'bar',
+                                        data: {
+                                            labels: [2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [32217,46536,44062,42625,50668,50451,51549],
+                                                label: "(R/ton)",
+                                                backgroundColor: "#d32821",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Green Peas'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="valueMealies"></canvas>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                    <div class="reference">
+                                        <p class="reference-text">Data Source: DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                    </div>
+                    
+                                    <script>
+                                        new Chart(document.getElementById("valueMealies"), {
+                                        type: 'bar',
+                                        data: {
+                                            labels: [2012,2013,2014,2015,2016,2017,2018],
+                                            datasets: [{
+                                                data: [2813746,2972129,2976610,3651702,4897363,4949631,5247537],
+                                                label: "(R/ton)",
+                                                backgroundColor: "#008080",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Green Mealies & Sweetcorn'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="reference">
+                                <p class="reference-text-blue-back">DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mobile-footer">
+            <div class="sticky-list">
+                <div class="a-tag">
+
+                    <a class="a-tags" href="help">
+                        <i class="fa-solid fa-hand-holding-hand fa-3x"></i>
+                    </a>
+
+                    <a class="a-tags" href="#" onclick="openMedianav()">
+                        <i class="fa-solid fa-circle-nodes fa-3x"></i>
+                    </a>
+
+                         <div id="mediaNav" class="sidenavMain" >
+                            <div class="sidenav-cover">
+                                <p class="closebtn" onclick="closeMedianav()">&times;</p>
+
+                                <a href="https://discord.com/channels/@arcaderand" class="sidenavMain-a">
+                                    <i class="fa-brands fa-discord fa-2x"></i>
+                                    <p class="media-texts">Discord</p>
+                                </a>
+
+                                <a href="mailto:admin@arcaderand.co.za" class="sidenavMain-a">
+                                    <i class="fa-solid fa-envelope fa-2x"></i>
+                                    <p class="media-texts">Email</p>
+                                </a>
+
+                                <a href="https://www.facebook.com/Arcaderand-104749068675206" class="sidenavMain-a">
+                                    <i class="fa-brands fa-facebook-square fa-2x"></i>
+                                    <p class="media-texts">Facebook</p>
+                                </a>
+
+                                <a href="https://www.instagram.com/arcaderand_sa/" class="sidenavMain-a">
+                                    <i class="fa-brands fa-instagram-square fa-2x"></i>
+                                    <p class="media-texts">Instagram</p>
+                                </a>
+
+                                <a href="https://www.reddit.com/user/arcaderand" class="sidenavMain-a">
+                                    <i class="fa-brands fa-reddit-alien fa-2x"></i>
+                                    <p class="media-texts">Reddit</p>
+                                </a>
+
+                                <a href="#" class="sidenavMain-a">
+                                    <i class="fa-brands fa-telegram fa-2x"></i>
+                                    <p class="media-texts">Telegram</p>
+                                </a>
+
+                                <a href="https://twitter.com/arcaderand" class="sidenavMain-a">
+                                    <i class="fa-brands fa-twitter fa-2x"></i>
+                                    <p class="media-texts">Twitter</p>
+                                </a>
+
+                                <a href="https://www.youtube.com/channel/UCV7uK-eTFK10oKq0hdeB__w" class="sidenavMain-a">
+                                    <i class="fa-brands fa-youtube fa-2x"></i>
+                                    <p class="media-texts">YouTube</p>
+                                </a>
+                            </div>
+                         </div>
+
+                    <a class="a-tags" href="#" onclick="openController()"> <!--openController-->
+                        <i class="fa-solid fa-bars fa-3x"></i>
+                    </a>
+                    
+                        <div id="controller" class="sidenavMain">
+                            <div class="sidenav-cover">
+                                <p class="closebtn" onclick="closeController()">&times;</p>
+
+                                <div onclick="mobileDashboardDropDownDiv()" class="mobile-stats-dropdown">
+                                    <div class="block-content">
+                                        <p class="mobile-sidebar-media-texts">Dashboard</p>
+                                    </div>
+
+                                    <div class="mobile-dropdown-block" id="mobile-sidebar-dropdown-block">
+
+                                        <a href="index" class="mobile-dropdown-block-link">
+                                            <i class="fa-solid fa-chart-area fa-2x"></i>
+                                            <p >Dashboard</p>
+                                        </a>
+        
+                                        <a href="fruits" class="mobile-dropdown-block-link">
+                                            <i class="fa-solid fa-apple-whole fa-2x"></i>
+                                            <p >Fruits</p>
+                                        </a>
+        
+                                        <a href="vegetables" class="mobile-dropdown-block-link">
+                                            <i class="fa-solid fa-carrot fa-2x"></i>
+                                            <p>Vegetables</p>
+                                        </a>
+        
+                                        <a href="meat" class="mobile-dropdown-block-link">
+                                            <i class="fa-solid fa-drumstick-bite fa-2x"></i>
+                                            <p>Meat</p>
+                                        </a>
+        
+        
+                                        <!--
+                                        <a href="other" class="mobile-dropdown-block-link">
+                                            <img src="css/icons/package.png">
+                                            <p>Other</p>
+                                        </a>
+                                        -->
+        
+                                    </div>
+                                </div> 
+
+                                <a href="market" class="sidenavMain-a">
+                                    <i class="fa-solid fa-store fa-2x"></i>
+                                    <p class="media-texts">Market</p>
+                                </a>
+
+                                <a href="services" class="sidenavMain-a">
+                                    <i class="fa-solid fa-screwdriver-wrench fa-2x"></i>
+                                    <p class="media-texts">Services</p>
+                                </a>
+
+                                <a href="courier" class="sidenavMain-a">
+                                    <i class="fa-solid fa-truck fa-2x"></i>
+                                    <p class="media-texts">Courier</p>
+                                </a>
+
+                                <a href="Alert" class="sidenavMain-a">
+                                    <i class="fa-solid fa-circle-exclamation fa-2x"></i>
+                                    <p class="media-texts">Alert</p>
+                                </a>
+
+                                <a href="Consultation" class="sidenavMain-a">
+                                    <i class="fa-solid fa-comments fa-2x"></i>
+                                    <p class="media-texts">Consult</p>
+                                </a>
+
+                                <a href="learn" class="sidenavMain-a">
+                                    <i class="fa-solid fa-book-open-reader fa-2x"></i>
+                                    <p class="media-texts">Learn</p>
+                                </a>
+
+                                <a href="donate" class="sidenavMain-a">
+                                    <i class="fa-solid fa-hand-holding-medical fa-2x"></i>
+                                    <p class="media-texts">Donate</p>
+                                </a>
+
+                                <a href="about" class="sidenavMain-a">
+                                    <i class="fa-solid fa-user fa-2x"></i>
+                                    <p class="media-texts">About</p>
+                                </a>
+
+                                <a href="help" class="sidenavMain-a">
+                                    <i class="fa-solid fa-hand-holding-hand fa-2x"></i>
+                                    <p class="media-texts">Help</p>
+                                </a>
+
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="main-device-footer" id="major-contact-block">
+
+            <div class="social-media-apps" align="center">
+
+                <a href="https://discord.com/channels/@arcaderand" class="social-media-app-link">
+                    <i class="fa-brands fa-discord fa-3x"></i>
+                </a>
+
+                <a href="mailto:admin@arcaderand.co.za" class="social-media-app-link">
+                    <i class="fa-solid fa-envelope fa-3x"></i>
+                </a>
+
+                <a href="https://www.facebook.com/Arcaderand-104749068675206" class="social-media-app-link">
+                    <i class="fa-brands fa-facebook-square fa-3x"></i>
+                </a>
+
+                <a href="https://www.instagram.com/arcaderand_sa/" class="social-media-app-link">
+                    <i class="fa-brands fa-instagram-square fa-3x"></i>
+                </a>
+
+                <a href="https://t.me/+FrrBEJ6Hzq8xZWM0" class="social-media-app-link">
+                    <i class="fa-brands fa-reddit-alien fa-3x"></i>
+                </a>
+
+                <a href="https://t.me/+FrrBEJ6Hzq8xZWM0" class="social-media-app-link">
+                    <i class="fa-brands fa-telegram fa-3x"></i>
+                </a>
+
+                <a href="https://twitter.com/arcaderand" class="social-media-app-link">
+                    <i class="fa-brands fa-twitter fa-3x"></i>
+                </a>
+
+                <a href="https://www.youtube.com/channel/UCV7uK-eTFK10oKq0hdeB__w" class="social-media-app-link">
+                    <i class="fa-brands fa-youtube fa-3x"></i>
+                </a>
+
+            </div>
+
+            <hr>
+
+            <div class="newsletter-subscription" >
+
+                <form name="subscription-footer-form" method="POST" data-netlify="true" class="subscription-block">
+                    <div class="row d-flex justify-content-center">
+                        <!--Grid column-->
+                        <div class="col-auto">
+                          <p class="pt-2">
+                            <strong>Sign up for our newsletter</strong>
+                          </p>
+                        </div>
+                        <!--Grid column-->
+              
+                        <!--Grid column-->
+                        <div class="col-md-5 col-12">
+                          <!-- Email input -->
+                          <div class="form-outline form-white mb-4">
+                            <input type="email" id="form5Example21" class="form-control" name="subscription-email" placeholder="Email address"/>
+                          </div>
+                        </div>
+                        <!--Grid column-->
+              
+                        <!--Grid column-->
+
+                        <div class="col-auto">
+                            
+                            <!--
+                            <div data-netlify-recaptcha="true">
+                            </div>
+                            -->
+
+                            <br>
+
+                            <button type="submit" class="btn btn-outline-light mb-4">
+                                Subscribe
+                            </button>
+
+                        </div>
+                        
+                        <!--Grid column-->
+
+                        <hr>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="last-footer-block">
+                <p>Join our communities across many social platforms and be up to date,
+                    you can also check some of our services or click the learn link to
+                    get yourself some lessons for free and be begin your journey with
+                    us. Ready to sell? find out what is required for you to be a
+                    vendor/seller on our site for free.
+                </p>
+
+                <div>
+                    <div>
+
+                        <div class="row">
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase font-weight-bold" style="font-size: 20px;">More From Us</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="application-form" class="footer-text">Want to sell?</a>
+                                    </li>
+                                    <li>
+                                        <a href="consultation" class="footer-text">Consult</a>
+                                    </li>
+                                    <li>
+                                        <a href="about" class="footer-text">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="donate" class="footer-text">Donate</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase font-weight-bold" style="font-size: 20px;">Community</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="https://www.facebook.com/Arcaderand-104749068675206" class="footer-text">Official Facebook Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://t.me/+FrrBEJ6Hzq8xZWM0" class="footer-text">Open Community</a>
+                                    </li>
+                                    <li>
+                                        <a href="consultation" class="footer-text">Session</a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:admin@arcaderand.co.za" class="footer-text">Contact Us</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase font-weight-bold" style="font-size: 20px;">Our Services</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="advertise-on-our-site" class="footer-text">Advertisement</a
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/channel/UCV7uK-eTFK10oKq0hdeB__w" class="footer-text">YouTube</a>
+                                    </li>
+                                    <li>
+                                        <a href="projects" class="footer-text">Projects</a>
+                                    </li>
+                                    <li>
+                                </ul>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase font-weight-bold" style="font-size: 20px;">More</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="mailto:admin@arcaderand.co.za" class="footer-text">Report!</a>
+                                    </li>
+                                    <li>
+                                        <a href="testimonials" class="footer-text">Testimonials</a>
+                                    </li>
+                                    <li>
+                                        <a href="associates" class="footer-text">Associates</a>
+                                    </li>
+                                    <li>
+                                        <a href="stakeholders" class="footer-text">Stakeholders</a>
+                                    </li>
+                                    <li>
+                                        <a href="help" class="footer-text">Help</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--Grid column-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright text-center" align="center">
+                <p>© 2022 Copyright:</p>
+                <a class="copyright-link" href="https://www.arcaderand.co.za/">Arcaderand.co.za</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+
+    </div>
+
+    <div class="bottom-balance">
+        <p>-</p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="css/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <link rel="stylesheet" type="text/css" href="css/display.css">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/darkmode.css">
+    <script src="external_java.js"></script>
+    <script src="vegetables.js"></script>
+    <script src="controls.js"></script>
+    <script src="jsapi.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/bfe88016a0.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+
+    <script>
+        console.log(window.matchMedia("(prefers-color-scheme: dark)").matches);
+    </script>
+
+    <title>About</title>
+</head>
+<body class="main-body-container" id="api-controlled-body">
+
+    <div align="center" class="fabricated-body-div">
+        
+        <div class="loader">
+            <img src="css\icons\91.gif" alt="loading...">
+        </div>
+
+        <div class="mobile-navigation" align="center">
+            <div class="logo-link">
+                <img class="mobile-logo-img" src="css\icons\logo.png" alt="Arcaderand">
+            </div>
+        </div>
+
+        <div class="sides-container-two" align="center">
+
+            <div class="left-container">
+
+                <div>
+
+                    <nav class="main-sidebar-container">
+
+                        <div class="desktop-sidebar-div">
+
+                            <img src="css/icons/logo.png" alt="Arcaderand">
+
+                        </div>
+
+                        <div class="link-box">
+
+                            <a class="desktop-sidebar-nav-a" href="#" onclick="dashboardDropDownDiv()">
+                                <i class="fa-solid fa-chart-column fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Dashboard</p>
+                            </a>
+
+                            <div class="stats-dropdown-block" id="dashboard-dropdown-block" align="center">
+
+                                <a href="index" class="dropdown-block-link">
+                                    <i class="fa-solid fa-chart-area fa-2x"></i>
+                                    <p class="desktop-sidebar-dropdown">Dashboard</p>
+                                </a>
+
+                                <a href="fruits" class="dropdown-block-link">
+                                    <i class="fa-solid fa-apple-whole fa-2x"></i>
+                                    <p class="desktop-sidebar-dropdown">Fruits</p>
+                                </a>
+
+                                <a href="vegetables" class="dropdown-block-link">
+                                    <i class="fa-solid fa-carrot fa-2x"></i>
+                                    <p class="desktop-sidebar-dropdown">Veges</p>
+                                </a>
+
+                                <a href="meat" class="dropdown-block-link">
+                                    <i class="fa-solid fa-drumstick-bite fa-2x"></i>
+                                    <p class="desktop-sidebar-dropdown">Meat</p>
+                                </a>
+
+
+                                <!--
+                                <a href="other" class="dropdown-block-link">
+                                    <img src="css/icons/package.png" class="dropdown-block-link-img">
+                                    <p class="desktop-sidebar-dropdown">Other</p>
+                                </a>
+                                -->
+
+                            </div>
+
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="market">
+                                <i class="fa-solid fa-store fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Market</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="services">
+                                <i class="fa-solid fa-screwdriver-wrench fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Services</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="courier">
+                                <i class="fa-solid fa-truck fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Courier</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="alert">
+                                <i class="fa-solid fa-circle-exclamation fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Alert</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="Consultation">
+                                <i class="fa-solid fa-comments fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Consult</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="learn">
+                                <i class="fa-solid fa-book-open-reader fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Learn</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="donate">
+                                <i class="fa-solid fa-hand-holding-medical fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Donate</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="about">
+                                <i class="fa-solid fa-user fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">About</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="help">
+                                <i class="fa-solid fa-hand-holding-hand fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Help</p>
+                            </a>
+                        </div>
+
+                    </nav>
+
+                </div>
+
+            </div>
+
+            <div class="right-container">
+
+                <div class="right-top-container" align="right">
+
+                    <a href="projects" class="desktop-sticky-icons">
+                        Projects
+                    </a>
+
+                    <a href="associates" class="desktop-sticky-icons">
+                        Associates
+                    </a>
+
+                    <a href="stakeholders" class="desktop-sticky-icons">
+                        Stakeholders
+                    </a>
+
+                    <a href="#major-contact-block" class="desktop-sticky-icons">
+                        Contact Us
+                    </a>
+
+                </div>
+
+                <div class="bottom-right">
+
+                    <div class="main-fruits-charts-block">
+
+                        <h3 class="diff-page-labeling">
+                            <a href="About">
+                                About Arcaderand
+                            </a>
+                        </h3>
+
+                        <div class="about-main-block" align="center"> 
+                            <section class="about-top-page">
+                                <div>
+                                    <a href="about">Arcaderand Help Center</a>
+                                </div>
+                            </section>
+                            <section class="words-container">
+                                <div>
+                                    <p>
+                                        This article below is about the features and benefits of Arcaderand Web. 
+                                        Learn how to <a href="#">become a part of Arcaderand</a>
+                                    </p>
+                                    <p>
+                                        Arcaderand is a way farmers, large supply retailers and agriculture service renderers 
+                                        can reach their customers. Arcaderand is an agriculture market focused website managed and controlled by local retailers and farmers. 
+                                        All the products sold on the site are made public and the 
+                                        contact details of the supplier are made public. Retailers on this site have been verified 
+                                        to prevent scams and fraud.   
+                                    </p>
+                                    <p>
+                                        You can run your business our site for free. 
+                                    </p>
+                                </div>
+                                <!--<img src="css/illustration/office.png" alt="Office"> -->
+
+                                <hr>
+
+                                <div class="benefits">
+
+                                    <h4 class="benefits-tag">Benefits of Arcaderand</h4>
+                                    <div>
+                                        <ul class="benefits-tag-list">
+
+                                            <li>
+                                                <strong>Open and free:</strong> You can run your store on our site for free, it will only take a couple of minutes to register you to our database.
+                                            </li>
+
+                                            <br>
+
+                                            <li>
+                                                <strong>Connect with dedicated customers:</strong> We have created our system in way that a customer will get quick response from the retailer unlike on other sites.  
+                                            </li>
+
+                                            <br>
+
+                                            <li>
+                                                <strong>Online payment safety:</strong> While donating to some of our projects, there is no need to enter your card details to our site. You only have to make a pledge then send funds from anywhere you feel safe.
+                                            </li>
+
+                                            <br>
+
+                                            <li>
+                                                <strong>Donating to projects:</strong> Through our projects, the youth will be educated about agriculture and the agricultural sector will grow to be much bigger than it was.
+                                            </li>
+
+                                            <br>
+
+                                            <li>
+                                                <strong>Avertisements:</strong> Your can run ads on our site and grow your business. <a href="advertise-on-our-site" >Learn how you can advertise on our site.</a> 
+                                            </li>
+
+                                        </ul>
+                                        <img src="css/illustration/customer.png">
+                                    </div>
+                                    
+
+                                </div>
+
+                                <hr>
+
+                                <div class="other-block">
+                                    <h4 class="benefits-tag">Contact Us</h4>
+                                    <div class="social-block">
+                                        <div class="social-links">
+                                            <a href="https://discord.com/channels/@arcaderand" class="about-contact-link">
+                                                <i class="fa-brands fa-discord fa-3x"></i>
+                                            </a>
+                            
+                                            <a href="mailto:admin@arcaderand.co.za" class="about-contact-link">
+                                                <i class="fa-solid fa-envelope fa-3x"></i>
+                                            </a>
+                            
+                                            <a href="https://www.facebook.com/Arcaderand-104749068675206" class="about-contact-link">
+                                                <i class="fa-brands fa-facebook-square fa-3x"></i>
+                                            </a>
+                            
+                                            <a href="https://www.instagram.com/arcaderand_sa/" class="about-contact-link">
+                                                <i class="fa-brands fa-instagram-square fa-3x"></i>
+                                            </a>
+                            
+                                            <a href="https://t.me/+FrrBEJ6Hzq8xZWM0" class="about-contact-link">
+                                                <i class="fa-brands fa-reddit-alien fa-3x"></i>
+                                            </a>
+                            
+                                            <a href="https://t.me/+FrrBEJ6Hzq8xZWM0" class="about-contact-link">
+                                                <i class="fa-brands fa-telegram fa-3x"></i>
+                                            </a>
+                            
+                                            <a href="https://twitter.com/arcaderand" class="about-contact-link">
+                                                <i class="fa-brands fa-twitter fa-3x"></i>
+                                            </a>
+                            
+                                            <a href="https://www.youtube.com/channel/UCV7uK-eTFK10oKq0hdeB__w" class="about-contact-link">
+                                                <i class="fa-brands fa-youtube fa-3x"></i>
+                                            </a>
+                                        </div>
+                                        
+                                        <!--
+                                        <div class="social-links-image-container">
+                                            <img src="css/illustration/social.png" alt="Social" class="social-links-image">
+                                        </div>
+                                        -->
+                                    </div>
+                                </div>
+
+                            </section>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mobile-footer">
+            <div class="sticky-list">
+                <div class="a-tag">
+
+                    <a class="a-tags" href="help">
+                        <i class="fa-solid fa-hand-holding-hand fa-3x"></i>
+                    </a>
+
+                    <a class="a-tags" href="#" onclick="openMedianav()">
+                        <i class="fa-solid fa-circle-nodes fa-3x"></i>
+                    </a>
+
+                         <div id="mediaNav" class="sidenavMain" >
+                            <div class="sidenav-cover">
+                                <p class="closebtn" onclick="closeMedianav()">&times;</p>
+
+                                <a href="https://discord.com/channels/@arcaderand" class="sidenavMain-a">
+                                    <i class="fa-brands fa-discord fa-2x"></i>
+                                    <p class="media-texts">Discord</p>
+                                </a>
+
+                                <a href="mailto:admin@arcaderand.co.za" class="sidenavMain-a">
+                                    <i class="fa-solid fa-envelope fa-2x"></i>
+                                    <p class="media-texts">Email</p>
+                                </a>
+
+                                <a href="https://www.facebook.com/Arcaderand-104749068675206" class="sidenavMain-a">
+                                    <i class="fa-brands fa-facebook-square fa-2x"></i>
+                                    <p class="media-texts">Facebook</p>
+                                </a>
+
+                                <a href="https://www.instagram.com/arcaderand_sa/" class="sidenavMain-a">
+                                    <i class="fa-brands fa-instagram-square fa-2x"></i>
+                                    <p class="media-texts">Instagram</p>
+                                </a>
+
+                                <a href="https://www.reddit.com/user/arcaderand" class="sidenavMain-a">
+                                    <i class="fa-brands fa-reddit-alien fa-2x"></i>
+                                    <p class="media-texts">Reddit</p>
+                                </a>
+
+                                <a href="#" class="sidenavMain-a">
+                                    <i class="fa-brands fa-telegram fa-2x"></i>
+                                    <p class="media-texts">Telegram</p>
+                                </a>
+
+                                <a href="https://twitter.com/arcaderand" class="sidenavMain-a">
+                                    <i class="fa-brands fa-twitter fa-2x"></i>
+                                    <p class="media-texts">Twitter</p>
+                                </a>
+
+                                <a href="https://www.youtube.com/channel/UCV7uK-eTFK10oKq0hdeB__w" class="sidenavMain-a">
+                                    <i class="fa-brands fa-youtube fa-2x"></i>
+                                    <p class="media-texts">YouTube</p>
+                                </a>
+                            </div>
+                         </div>
+
+                    <a class="a-tags" href="#" onclick="openController()"> <!--openController-->
+                        <i class="fa-solid fa-bars fa-3x"></i>
+                    </a>
+                    
+                        <div id="controller" class="sidenavMain">
+                            <div class="sidenav-cover">
+                                <p class="closebtn" onclick="closeController()">&times;</p>
+
+                                <div onclick="mobileDashboardDropDownDiv()" class="mobile-stats-dropdown">
+                                    <div class="block-content">
+                                        <p class="mobile-sidebar-media-texts">Dashboard</p>
+                                    </div>
+
+                                    <div class="mobile-dropdown-block" id="mobile-sidebar-dropdown-block">
+
+                                        <a href="index" class="mobile-dropdown-block-link">
+                                            <i class="fa-solid fa-chart-area fa-2x"></i>
+                                            <p >Dashboard</p>
+                                        </a>
+        
+                                        <a href="fruits" class="mobile-dropdown-block-link">
+                                            <i class="fa-solid fa-apple-whole fa-2x"></i>
+                                            <p >Fruits</p>
+                                        </a>
+        
+                                        <a href="vegetables" class="mobile-dropdown-block-link">
+                                            <i class="fa-solid fa-carrot fa-2x"></i>
+                                            <p>Vegetables</p>
+                                        </a>
+        
+                                        <a href="meat" class="mobile-dropdown-block-link">
+                                            <i class="fa-solid fa-drumstick-bite fa-2x"></i>
+                                            <p>Meat</p>
+                                        </a>
+        
+        
+                                        <!--
+                                        <a href="other" class="mobile-dropdown-block-link">
+                                            <img src="css/icons/package.png">
+                                            <p>Other</p>
+                                        </a>
+                                        -->
+        
+                                    </div>
+                                </div>  
+
+                                <a href="market" class="sidenavMain-a">
+                                    <i class="fa-solid fa-store fa-2x"></i>
+                                    <p class="media-texts">Market</p>
+                                </a>
+
+                                <a href="services" class="sidenavMain-a">
+                                    <i class="fa-solid fa-screwdriver-wrench fa-2x"></i>
+                                    <p class="media-texts">Services</p>
+                                </a>
+
+                                <a href="courier" class="sidenavMain-a">
+                                    <i class="fa-solid fa-truck fa-2x"></i>
+                                    <p class="media-texts">Courier</p>
+                                </a>
+
+                                <a href="Alert" class="sidenavMain-a">
+                                    <i class="fa-solid fa-circle-exclamation fa-2x"></i>
+                                    <p class="media-texts">Alert</p>
+                                </a>
+
+                                <a href="Consultation" class="sidenavMain-a">
+                                    <i class="fa-solid fa-comments fa-2x"></i>
+                                    <p class="media-texts">Consult</p>
+                                </a>
+
+                                <a href="learn" class="sidenavMain-a">
+                                    <i class="fa-solid fa-book-open-reader fa-2x"></i>
+                                    <p class="media-texts">Learn</p>
+                                </a>
+
+                                <a href="donate" class="sidenavMain-a">
+                                    <i class="fa-solid fa-hand-holding-medical fa-2x"></i>
+                                    <p class="media-texts">Donate</p>
+                                </a>
+
+                                <a href="about" class="sidenavMain-a">
+                                    <i class="fa-solid fa-user fa-2x"></i>
+                                    <p class="media-texts">About</p>
+                                </a>
+
+                                <a href="help" class="sidenavMain-a">
+                                    <i class="fa-solid fa-hand-holding-hand fa-2x"></i>
+                                    <p class="media-texts">Help</p>
+                                </a>
+
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="main-device-footer" id="major-contact-block">
+
+            <!--
+            <div class="social-media-apps" align="center">
+
+                <a href="https://discord.com/channels/@arcaderand" class="social-media-app-link">
+                    <i class="fa-brands fa-discord fa-3x"></i>
+                </a>
+
+                <a href="mailto:admin@arcaderand.co.za" class="social-media-app-link">
+                    <i class="fa-solid fa-envelope fa-3x"></i>
+                </a>
+
+                <a href="https://www.facebook.com/Arcaderand-104749068675206" class="social-media-app-link">
+                    <i class="fa-brands fa-facebook-square fa-3x"></i>
+                </a>
+
+                <a href="https://www.instagram.com/arcaderand_sa/" class="social-media-app-link">
+                    <i class="fa-brands fa-instagram-square fa-3x"></i>
+                </a>
+
+                <a href="https://t.me/+FrrBEJ6Hzq8xZWM0" class="social-media-app-link">
+                    <i class="fa-brands fa-reddit-alien fa-3x"></i>
+                </a>
+
+                <a href="https://t.me/+FrrBEJ6Hzq8xZWM0" class="social-media-app-link">
+                    <i class="fa-brands fa-telegram fa-3x"></i>
+                </a>
+
+                <a href="https://twitter.com/arcaderand" class="social-media-app-link">
+                    <i class="fa-brands fa-twitter fa-3x"></i>
+                </a>
+
+                <a href="https://www.youtube.com/channel/UCV7uK-eTFK10oKq0hdeB__w" class="social-media-app-link">
+                    <i class="fa-brands fa-youtube fa-3x"></i>
+                </a>
+
+            </div>
+            
+            <hr>
+            -->
+
+            
+
+            <div class="newsletter-subscription" >
+
+                <form name="subscription-footer-form" method="POST" data-netlify="true" class="subscription-block">
+                    <div class="row d-flex justify-content-center">
+                        <!--Grid column-->
+                        <div class="col-auto">
+                          <p class="pt-2">
+                            <strong>Sign up for our newsletter</strong>
+                          </p>
+                        </div>
+                        <!--Grid column-->
+              
+                        <!--Grid column-->
+                        <div class="col-md-5 col-12">
+                          <!-- Email input -->
+                          <div class="form-outline form-white mb-4">
+                            <input type="email" id="form5Example21" class="form-control" name="subscription-email" placeholder="Email address"/>
+                          </div>
+                        </div>
+
+                        <!--Grid column-->
+
+                        <div class="col-auto">
+                            
+                            <!--
+                            <div data-netlify-recaptcha="true">
+                            </div>
+                            -->
+
+
+                            <br>
+
+                            <button type="submit" class="btn btn-outline-light mb-4">
+                                Subscribe
+                            </button>
+
+                        </div>
+
+                        <!--Grid column-->
+
+                        <hr>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="last-footer-block">
+                <p>Join our communities across many social platforms and be up to date,
+                    you can also check some of our services or click the learn link to
+                    get yourself some lessons for free and be begin your journey with
+                    us. Ready to sell? find out what is required for you to be a
+                    vendor/seller on our site for free.
+                </p>
+
+                <div>
+                    <div>
+
+                        <div class="row">
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase font-weight-bold" style="font-size: 20px;">More From Us</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="application-form" class="footer-text">Want to sell?</a>
+                                    </li>
+                                    <li>
+                                        <a href="consultation" class="footer-text">Consult</a>
+                                    </li>
+                                    <li>
+                                        <a href="about" class="footer-text">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="donate" class="footer-text">Donate</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase font-weight-bold" style="font-size: 20px;">Community</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="https://www.facebook.com/Arcaderand-104749068675206" class="footer-text">Official Facebook Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://t.me/+FrrBEJ6Hzq8xZWM0" class="footer-text">Open Community</a>
+                                    </li>
+                                    <li>
+                                        <a href="consultation" class="footer-text">Session</a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:admin@arcaderand.co.za" class="footer-text">Contact Us</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase font-weight-bold" style="font-size: 20px;">Our Services</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="advertise-on-our-site" class="footer-text">Advertisement</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/channel/UCV7uK-eTFK10oKq0hdeB__w" class="footer-text">YouTube</a>
+                                    </li>
+                                    <li>
+                                        <a href="projects" class="footer-text">Projects</a>
+                                    </li>
+                                    <li>
+                                </ul>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase font-weight-bold" style="font-size: 20px;">More</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="mailto:admin@arcaderand.co.za" class="footer-text">Report!</a>
+                                    </li>
+                                    <li>
+                                        <a href="testimonials" class="footer-text">Testimonials</a>
+                                    </li>
+                                    <li>
+                                        <a href="associates" class="footer-text">Associates</a>
+                                    </li>
+                                    <li>
+                                        <a href="stakeholders" class="footer-text">Stakeholders</a>
+                                    </li>
+                                    <li>
+                                        <a href="help" class="footer-text">Help</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--Grid column-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright text-center" align="center">
+                <p>© 2022 Copyright:</p>
+                <a class="copyright-link" href="https://www.arcaderand.co.za/">Arcaderand.co.za</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+
+    </div>
+
+    <div class="bottom-balance">
+        <p>-</p>
+    </div>
+    
+
+</body>
+
+</html>

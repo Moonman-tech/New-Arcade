@@ -6,13 +6,15 @@
     <link rel="shortcut icon" type="image/png" href="css/favicon.png">
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
     <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <link rel="stylesheet" type="text/css" href="css/display.css">
     <link rel="stylesheet" type="text/css" href="css/style3.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/darkmode.css">
     <script src="external_java.js"></script>
     <script src="vegetables.js"></script>
     <script src="controls.js"></script>
-    <script src="charts.js"></script>
+    <script src="jsapi.js"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
@@ -25,39 +27,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/bfe88016a0.js" crossorigin="anonymous"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
 
     <script>
         console.log(window.matchMedia("(prefers-color-scheme: dark)").matches);
     </script>
-
-    <style>
-        @media (prefers-color-scheme: dark) {
-            .main-body-container, .bottom-right, .link-box:hover, .link-box-active, .stats-dropdown-block, .mobile-dropdown-block-link, .desktop-sticky-icons:hover, .a-tags i{
-                background-color:#202124;
-            }
-            .mobile-stats-dropdown, .block-content, .sidenavMain-a, .sidenavMain a:hover, .social-media-app-link:hover, .subscription-block input, .subscription-block button, .flex-box{
-                background-color:#202124;
-            }
-            .reference a, .main-modal-content-img, .review-setting-box a, .review-setting-box a:hover, .product-container, .vendor-contact-details img, .footer-links img, .footer-links img:hover, .mobile-navigation{
-                box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
-            }
-            .desktop-sticky-icons, .a-tags i, .subscription-block button:hover, .fixed-foot-icon, .about-facebook, .about-instagram, .about-twitter, .about-youtube, .about-mail, .about-discord, .tiles-posts{
-                box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
-            }
-            .comments, .comments, .comment-div-container, .product-type, .timeline-button:hover, .timeline-button, .timeline-button:hover, .timeline-button:hover{
-                box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
-            }
-            .fabricated-body-div, .mobile-navigation,.left-container, .mobile-dropdown-block, .dropdown-block-link, .right-container, .right-top-container, .sidenavMain, .mobile-footer, .main-device-footer, .social-media-app-link, .tiles-posts{
-                background-color: #323639;
-            }
-            .desktop-sidebar-dropdown, .desktop-sidebar-nav-p, .desktop-sticky-icons:hover, .sidenavMain p, .newsletter-subscription, .footer-text, .footer-text:hover, .last-footer-block, .copyright, .copyright-link, .copyright-link:hover, .tiles-posts, .subscription-block button{
-                color: #F8F8F8;
-            }
-
-        }
-    </style>
 
     <title>Dashboard</title>
 </head>
@@ -98,31 +73,33 @@
 
                             <div class="stats-dropdown-block" id="dashboard-dropdown-block" align="center">
 
-                                <a href="index.html" class="dropdown-block-link">
-                                    <img src="css/icons/bar-graph.png" class="dropdown-block-link-img">
+                                <a href="index" class="dropdown-block-link">
+                                    <i class="fa-solid fa-chart-area fa-2x"></i>
                                     <p class="desktop-sidebar-dropdown">Dashboard</p>
                                 </a>
 
-                                <a href="fuits" class="dropdown-block-link">
-                                    <img src="css/icons/fruit.png" class="dropdown-block-link-img">
+                                <a href="fruits" class="dropdown-block-link">
+                                    <i class="fa-solid fa-apple-whole fa-2x"></i>
                                     <p class="desktop-sidebar-dropdown">Fruits</p>
                                 </a>
 
                                 <a href="vegetables" class="dropdown-block-link">
-                                    <img src="css/icons/vegetable.png" class="dropdown-block-link-img">
+                                    <i class="fa-solid fa-carrot fa-2x"></i>
                                     <p class="desktop-sidebar-dropdown">Veges</p>
                                 </a>
 
                                 <a href="meat" class="dropdown-block-link">
-                                    <img src="css/icons/meat.png" class="dropdown-block-link-img">
+                                    <i class="fa-solid fa-drumstick-bite fa-2x"></i>
                                     <p class="desktop-sidebar-dropdown">Meat</p>
                                 </a>
 
 
+                                <!--
                                 <a href="other" class="dropdown-block-link">
                                     <img src="css/icons/package.png" class="dropdown-block-link-img">
                                     <p class="desktop-sidebar-dropdown">Other</p>
                                 </a>
+                                -->
 
                             </div>
 
@@ -153,13 +130,6 @@
                             <a class="desktop-sidebar-nav-a" href="alert">
                                 <i class="fa-solid fa-circle-exclamation fa-xl"></i>
                                 <p class="desktop-sidebar-nav-p">Alert</p>
-                            </a>
-                        </div>
-
-                        <div class="link-box">
-                            <a class="desktop-sidebar-nav-a" href="Infographics">
-                                <i class="fa-solid fa-newspaper fa-xl"></i>
-                                <p class="desktop-sidebar-nav-p">Updates</p>
                             </a>
                         </div>
 
@@ -228,220 +198,2213 @@
 
                 <div class="bottom-right">
 
-                    <div class="main-charts-block">
+                    <div class="main-fruits-charts-block">
 
-                        <div class="chart-block-test">
+                        <h3 class="diff-page-labeling">
+                            <a href="index">
+                                South African Farming
+                            </a>
+                        </h3>
 
-                            <div class="chart-block">
-                                <canvas id="bar-chart-one" width="100px" height="100px"></canvas>
-                                <script>
-                                    new Chart(document.getElementById("bar-chart-one"), {
-                                    type: 'bar',
-                                    data: {
-                                    labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
-                                    datasets: [
-                                        {
-                                        label: "Population (millions)",
-                                        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-                                        data: [2478,5267,734,784,433]
+                        <div class="two">
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="entities"></canvas>
+                                    <script>
+                                        new Chart(document.getElementById("entities"), {
+                                        type: 'bar',
+                                        data: {
+                                            labels: ["Gauteng", "Kwa-Zulu Natal", "Mpumalanga", "Northern Cape", "Western Cape", "Eastern Cape", "North West", "Free State", "Limpopo"],
+                                            datasets: [
+                                            {
+                                                label: "Entities in %",
+                                                backgroundColor: ["#ff5500", "#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500"],
+                                                data: [21,18,16,11,9,9,6,5,2,2]
+                                            }
+                                            ]
+                                        },
+                                        options: {
+                                            legend: { display: false },
+                                            title: {
+                                            display: true,
+                                            text: 'DISTRIBUTION OF POULTRY ENTITIES (2019/20)'
+                                            }
                                         }
-                                    ]
-                                    },
-                                    options: {
-                                    legend: { display: false },
-                                    title: {
-                                        display: true,
-                                        text: 'Predicted world population (millions) in 2050'
-                                    }
-                                    }
-                                });
-                                </script>
-                                <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
-                                <div class="reference-text-container">
-                                    <a class="reference-text" href="https://www.agriseta.co.za/wp-content/uploads/2021/02/Agriseta_Poultry_SSSP_DIGITAL.pdf">
-                                        Agriseta, 2021.
+                                    });
+                                    </script>
+                                    <a href="https://www.agriseta.co.za/wp-content/uploads/2021/02/Agriseta_Poultry_SSSP_DIGITAL.pdf">
+                                        <p class="reference-text">Agriseta, 2021</p>
                                     </a>
-                                    <p class="device-width-alert">(Rotate your device to see data clearly)</p>
                                 </div>
+
+                                <div class="chart-info">
+                                    <canvas id="grossFarmingincome"></canvas>
+                                    <p class="reference">Statssa.gov.za</p> 
+                    
+                                    <script>
+                                        new Chart(document.getElementById("grossFarmingincome"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2011,2012,2015,2016,2017,2019],
+                                            datasets: [{
+                                                data: [25.805, 31.318, 50.435, 53.796, 56.970, 61.862],
+                                                label: "Field crops",
+                                                borderColor: "#3e95cd",
+                                                fill: false
+                                                }, {
+                                                    data: [31.964,	32.060,	55.722,	64.640,	74.367,	86.347],
+                                                    label: "Horticultural products",
+                                                    borderColor: "#8e5ea2",
+                                                    fill: false
+                                                }, {
+                                                    data: [71.850,	82.793, 109.538, 118.783, 128.198,	153.140],
+                                                    label: "Animals & animal Products",
+                                                    borderColor: "#3cba9f",
+                                                    fill: false
+                                                }, {
+                                                    data: [1.814, 1.268, 27.881, 7.211,	7.446, 8.810],
+                                                    label: "Animals & animal Products",
+                                                    borderColor: "#e8c3b9",
+                                                    fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Gross Farming Income (in millions)'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
                             </div>
 
-                            <div class="chart-block">
-                                <div id="myPlot" style="width:100%;max-width:700px"></div>
+                            <div class="two-grid-top" align="center">
 
-                                <script>
-                                    var xArray = [50,60,70,80,90,100,110,120,130,140,150];
-                                    var yArray = [7,8,8,9,9,9,10,11,14,14,15];
+                                <div class="chart-info">
+                                    <canvas id="capitalExpenditure"></canvas>
+                                    <p class="Charts-container-bottom-p">Year</p>
+                                    <p class="reference">Statssa.gov.za</p>
+                            
+                                    <script>
+                                        new Chart(document.getElementById("capitalExpenditure"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2011,2012,2015,2016,2017,2019],
+                                            datasets: [{
+                                                data: [17.952,	19.022,	28.510,	32.158,	34.990,	43.372],
+                                                label: "Salaries, cash wages and bonuses",
+                                                borderColor: "green",
+                                                fill: false
+                                                }, {
+                                                    data: [19.075,	24.737,	123.154, 136.853, 145.887, 170.711],
+                                                    label: "Animals and additional products purchased",
+                                                    borderColor: "red",
+                                                    fill: false
+                                                }, {
+                                                    data: [98.999, 116.956,	80.048, 90.776,	96.747, 116.339],
+                                                    label: "Other current expenditure",
+                                                    borderColor: "skyblue",
+                                                    fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Capital expenditure (in millions)'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
 
-                                    // Define Data
-                                    var data = [{
-                                    x: xArray,
-                                    y: yArray,
-                                    mode:"lines"
-                                    }];
+                                <div class="chart-info">
+                                    <canvas id="maizeProduction"></canvas>
+                                    <p class="Charts-container-bottom-p">Year</p>
+                                    <p class="reference">Department of agriculture, forestry & fisheries (2019)</p>
+                                    <script>
+                                        new Chart(document.getElementById("maizeProduction"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2000 ,2001 ,2002 ,2003 ,2004 ,2005 ,2006 ,2007 ,2008 ,2009 ,2010 ,2011 ,2012 ,2013 ,2014 ,2015 ,2016 ,2017 ,2018],
+                                            datasets: [{
+                                                data: [7772,10076, 9705, 9737, 11749, 6947, 7339, 13169, 12567, 13421, 10942, 12759, 12486, 14925, 10629, 8214, 17551, 13104, 11050],
+                                                label: "Maize",
+                                                borderColor: "#07a0c3",
+                                                fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Maize Production (tons)'
+                                            }
+                                        }
+                                        });
+                                    </script> 
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
 
-                                    // Define Layout
-                                    var layout = {
-                                    xaxis: {range: [40, 160], title: "Square Meters"},
-                                    yaxis: {range: [5, 16], title: "Price in Millions"},  
-                                    title: "House Prices vs. Size"
-                                    };
+                            </div>
 
-                                    // Display using Plotly
-                                    Plotly.newPlot("myPlot", data, layout);
-                                </script>
+                            <div class="two-grid-top" align="center">
+
+                                <div class="centered-graph" align="center">
+                                    <canvas id="maizeProvincial"></canvas>
+                                    <p class="Charts-container-bottom-p">Year</p>
+                                    <p class="reference">Department of agriculture, forestry & fisheries (2019)</p>
+                                    <script>
+                                        new Chart(document.getElementById("maizeProvincial"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+                                            datasets: [{
+                                                    data: [9,14, 21, 15, 20, 27, 20, 40, 50, 18, 14, 30, 33, 33, 38, 45, 22, 34, 34],
+                                                    label: "Western Cape",
+                                                    borderColor: "yellow",
+                                                    fill: false
+                                                }, {
+                                                    data: [46, 45, 51, 82, 88, 70, 83, 85, 92, 80, 68, 93, 108, 111, 100, 76, 97, 93, 90],
+                                                    label: "Eastern Cape",
+                                                    borderColor: "#dd1c1a",
+                                                    fill: false
+                                                }, {
+                                                    data: [320, 511, 534, 511, 557, 443, 541, 662, 634, 609, 538, 617, 675, 664, 679, 710, 712, 668, 676],
+                                                    label: "Northern Cape",
+                                                    borderColor: "#3cba9f",
+                                                    fill: false
+                                                }, {
+                                                    data: [2695, 3217, 3337, 3100, 4113, 2080, 2855, 4928, 4527, 5076, 4052, 4823, 4885, 6247, 3944, 2214, 7362, 5275, 4066],
+                                                    label: "Free State",
+                                                    borderColor: "#e8c3b9",
+                                                    fill: false
+                                                }, {
+                                                    data: [256, 402, 385, 390, 400, 310, 359, 489, 521, 524, 450, 512, 599, 559, 508, 522, 740, 660, 644],
+                                                    label: "KwaZulu-Nata",
+                                                    borderColor: "#aa4578",
+                                                    fill: false
+                                                }, {
+                                                    data: [92, 106, 162, 115, 120, 58, 131, 224, 247, 210, 173, 274, 292, 307, 281, 310, 492, 232, 200],
+                                                    label: "Limpopo",
+                                                    borderColor: "darkblue",
+                                                    fill: false
+                                                }, {
+                                                    data: [1520, 2068, 1882, 2219, 2807, 1615, 1490, 2875, 2870, 2745, 2190, 2529, 3005, 2783, 2429, 2319, 3431, 2817, 2608],
+                                                    label: "Mpuma-langa",
+                                                    borderColor: "orange",
+                                                    fill: false
+                                                }, {
+                                                    data: [334, 484, 418, 482, 483, 325, 254, 568, 534, 685, 543, 578, 600, 648, 486, 442, 804, 632, 564],
+                                                    label: "Gauteng",
+                                                    borderColor: "blue",
+                                                    fill: false
+                                                }, {
+                                                    data: [2215, 2885,2601,2568,2862,1690,1392,2829,2575,2868,2332,2664,1613,2898,1490,1141,3160,2099,1628,],
+                                                    label: "North West",
+                                                    borderColor: "purple",
+                                                    fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Maize Production Per Province (Per 1000tons)'
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                                <!--
+                                <div class="chart-info">
+                                    <canvas id="maizeProvincialLow"></canvas>
+                                    <script>
+                                        new Chart(document.getElementById("maizeProvincialLow"), {
+                                        type: 'line',
+                                        data: {
+                                            labels: [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+                                            datasets: [{
+                                                    data: [9,14, 21, 15, 20, 27, 20, 40, 50, 18, 14, 30, 33, 33, 38, 45, 22, 34, 34],
+                                                    label: "Western Cape",
+                                                    borderColor: "yellow",
+                                                    fill: false
+                                                }, {
+                                                    data: [46, 45, 51, 82, 88, 70, 83, 85, 92, 80, 68, 93, 108, 111, 100, 76, 97, 93, 90],
+                                                    label: "Eastern Cape",
+                                                    borderColor: "#dd1c1a",
+                                                    fill: false
+                                                }, {
+                                                    data: [320, 511, 534, 511, 557, 443, 541, 662, 634, 609, 538, 617, 675, 664, 679, 710, 712, 668, 676],
+                                                    label: "Northern Cape",
+                                                    borderColor: "#3cba9f",
+                                                    fill: false
+                                                }, {
+                                                    data: [256, 402, 385, 390, 400, 310, 359, 489, 521, 524, 450, 512, 599, 559, 508, 522, 740, 660, 644],
+                                                    label: "KwaZulu-Nata",
+                                                    borderColor: "#aa4578",
+                                                    fill: false
+                                                }, {
+                                                    data: [92, 106, 162, 115, 120, 58, 131, 224, 247, 210, 173, 274, 292, 307, 281, 310, 492, 232, 200],
+                                                    label: "Limpopo",
+                                                    borderColor: "darkblue",
+                                                    fill: false
+                                                }, {
+                                                    data: [334, 484, 418, 482, 483, 325, 254, 568, 534, 685, 543, 578, 600, 648, 486, 442, 804, 632, 564],
+                                                    label: "Gauteng",
+                                                    borderColor: "blue",
+                                                    fill: false
+                                                }
+                                            ]
+                                        },
+                                        options: {
+                                            title: {
+                                            display: true,
+                                            text: 'Maize Production Per Province [Per 1000tons(Low performing)] '
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+                                -->
+
+                            
+
+                        </div>
+
+                        <h3>Southern African Customs Union Stats</h3>
+
+                        <div class="two">
+
+                            <h4>Import Product Value</h4>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="riceImport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("riceImport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Rice (R1000)",
+                                                backgroundColor: "#04e762",
+                                                data: [6280233,	4560382,	5565056,	5926145,	6951898,	6860128,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="wheatImport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("wheatImport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Wheat (R1000)",
+                                                backgroundColor: "#f5b700",
+                                                data: [4023674,	5514814,	6044244,	4488483,	4371838,	5303297,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="alcoholImport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("alcoholImport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "alcoholic beverages (R1000)",
+                                                backgroundColor: "#dc0073",
+                                                data: [112233,	179348,	181730,	119134,	3699763,4049570,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="soyaImport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("soyaImport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Soya-bean oilcake (R1000)",
+                                                backgroundColor: "#008bf8",
+                                                data: [2075684,	1720681,	1767311,	2285627,	2058261,	1421692,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="palmImport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("palmImport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Palm oil (R1000)",
+                                                backgroundColor: "#89fc00",
+                                                data: [3000043,	3834016,	3181271,	4211739,	4371838,	3931271,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="sunflowerImport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("sunflowerImport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Sunflower and cotton-seed oil (R1000)",
+                                                backgroundColor: "#ff0000",
+                                                data: [1515137,	1448431,	1158581,	1603322,	1962249,	1624188,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+    
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="totalOffalImport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("totalOffalImport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Meat and edible offal of poultry (R1000)",
+                                                backgroundColor: "#0000ff",
+                                                data: [3899472,	4067960,	4654490,	5465329,	6409972,	6466722,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="totalTobaccoImport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("totalTobaccoImport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Tobacco (R1000)",
+                                                backgroundColor: "#ffff00",
+                                                data: [929618,	1600803,	1684277,	2011072,	1714558,	1840295,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="totalCottonImport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("totalCottonImport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Cotton (R1000)",
+                                                backgroundColor: "#00ffff",
+                                                data: [684061,	526562,	359390,	313543,	447986,	355112,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="totalMaizeImport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("totalMaizeImport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Cotton (R1000)",
+                                                backgroundColor: "#ff00ff",
+                                                data: [111563,	393598,	1970018,	9257288,	1791885,	575722,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="totalCoffeeImport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("totalCoffeeImport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Coffee (R1000)",
+                                                backgroundColor: "#00ff00",
+                                                data: [736305,	912129,	1179187,	1223634,	1225317,	1185842,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="totalBovinesImport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("totalBovinesImport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Bovines (R1000)",
+                                                backgroundColor: "#ff5500",
+                                                data: [53015,	67861,	138067,	22019,	74192,	10452,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+    
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="barleyImport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("barleyImport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Barley (R1000)",
+                                                backgroundColor: "#04e762",
+                                                data: [94708,	230753,	276255,	274,154281,	50373,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="maltImport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("maltImport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Malt (R1000)",
+                                                backgroundColor: "#f5b700",
+                                                data: [351065,	337445,	473303,	401098,	305378,	383066,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="milkImport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("milkImport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Milk and Cream (R1000)",
+                                                backgroundColor: "#dc0073",
+                                                data: [351065,	337445,	473303,	401098,	305378,	383066,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="sheepImport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("sheepImport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Meat of sheep or goats (R1000)",
+                                                backgroundColor: "#008bf8",
+                                                data: [66536,	63535,	321570,	83179,	265378,	97905,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="driedImport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("driedImport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Dried leguminous vegetables (R1000)",
+                                                backgroundColor: "#89fc00",
+                                                data: [646951,	728308,	606984,	754106,	594949,	399841,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="otherImport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("otherImport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Other (R1000)",
+                                                backgroundColor: "#ff0000",
+                                                data: [29129318,30600896,	68181997,	39316201,	44217204,	35199825,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>    
+    
+                            </div>
+
+                            <div class="reference">
+                                <p class="reference-text-blue-back">DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
                             </div>
 
                         </div>
 
                         <div class="two">
-                            <div class="chart-info">
-                                <canvas id="appleProduction">
-                                </canvas>
-                                <script>
-                                    new Chart(document.getElementById("appleProduction"), {
-                                    type: 'bar',
-                                    data: {
-                                      labels: [1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
-                                      datasets: [
-                                        {
-                                          label: "Apple Production Volume",
-                                          backgroundColor: ["#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500","#ff5500"],
-                                          data: [439836,391556,554742,508202,430344,515074,518492,589037,563473,518268,608408,535126,586346,565718,593173,608079,626125,792678,822047,698710,627091,710172,757680,800803,753167,768125,790562,883826,799524,915293,902633,958925,843204,]
-                                        }
-                                      ]
-                                    },
-                                    options: {
-                                      legend: { display: false },
-                                      title: {
-                                        display: true,
-                                        text: 'Apple Production Rate (tons)'
-                                      }
-                                    }
-                                });
-                                </script>
-                                <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
-                                <div class="reference">
-                                    <p class="reference-text">DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
-                                </div>
-                            </div>
 
-                            <div class="chart-info">
-                                <canvas id="appleSalesOnMarket">
-                                </canvas>
-                                <script>
-                                    new Chart(document.getElementById("appleSalesOnMarket"), {
-                                    type: 'line',
-                                    data: {
-                                        labels: [1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
-                                        datasets: [{
-                                            data: [101649,85638,99695,113197,93811,108061,85166,114199,129068,105020,104295,124422,141517,141033,155548,144674,152792,158938,181001,177748,154055,168718,136209,155326,161634,142107,157885,153343,158718,162406,161191,161146,149199,],
-                                            label: "Apple Sales",
-                                            borderColor: "#9d00ff",
-                                            fill: false
-                                        }, {
-                                            data: [211815,191009,221831,227606,220482,221423,254329,211258,226761,214796,209120,183957,234573,185678,165880,228199,245584,328151,335412,270651,266413,296776,338647,332684,298574,318993,335827,410249,346296,403632,423805,424788,400674,],
-                                            label: "Exports",
-                                            borderColor: "#ffff00",
-                                            fill: false
-                                        }, {
-                                            data: [100999,91954,124094,142058,93117,159526,159804,239268,180790,175630,272055,200977,169466,199826,229087,195571,187290,253046,245948,191632,153003,188624,236833,261191,232473,216257,244427,267436,239765,293724,265050,318488,242716,],
-                                            label: "Purchased for processing",
-                                            borderColor: "#ff0000",
-                                            fill: false
-                                        }
-                                        ]
-                                    },
-                                    options: {
-                                        title: {
-                                          display: true,
-                                          text: 'Total Apple Sales Volume (in Rands)'
-                                        }
-                                    }
-                                    });
-                                </script>
-                                <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
-                                <div class="reference">
-                                    <p class="reference-text">DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
-                                </div>
-                            </div>
+                            <h4>Export Product Value</h4>
 
-                            <div class="chart-info">
-                                <canvas id="appleProducerPrice">
-                                </canvas>
-                                <script>
-                                    new Chart(document.getElementById("appleProducerPrice"), {
-                                    type: 'line',
-                                      data: {
-                                        labels: [1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
-                                        datasets: [
-                                            {
-                                            data: [517,631,666,746,952,1033,1319,1202,1230,1694,1716,1623,1646,1772,1800,1907,2282,2409,2481,2717,3035,3293,4257,4197,4301,5091,5258,5700,5817,5938,6534,6529,6904,],
-                                            label: "Average Apple Price",
-                                            borderColor: "#008bf8",
-                                            fill: false
-                                            },{
-                                            data: [955.87,883.77,747.23,924.83,1790.97,1913.81,1598.44,927.69,2130.24,1720.63,2597.83,2191.94,2420.06,1467.75,2191.49,2158.96,3440.85,3245.69,3793.64,3637.88,3790.86,4362.81,5418.73,5834.04,5880.70,6210.32,6531.15,8658.44,10136.25,10674.85,10785.95,9220.24,11417.28,],
-                                            label: "Net Realisation",
-                                            borderColor: "#ffff00",
-                                            fill: false
-                                            },{
-                                            data: [107.25,103.32,115.98,102.27,193.29,136.86,323.16,215.01,182.59,279.82,411.09,387.90,262.72,271.65,397.94,387.58,521.89,415.19,336.07,341.18,372.68,447.23,1071.45,786.41,534.49,737.22,1146.20,1137.49,1140.56,1141.90,1430.59,1327.23,1552.14,],
-                                            label: "Apple for Processing",
-                                            borderColor: "#ff5500",
-                                            fill: false
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="sugarExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("sugarExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Sugar (R1000)",
+                                                backgroundColor: "#04e762",
+                                                data: [3019572,3450612,2009015,625138,3657770,3840124,]
+                                                }
+                                            ]
                                             },
-                                        ]
-                                      },
-                                      options: {
-                                        title: {
-                                          display: true,
-                                          text: 'Apple Producer Price (R/ton)'
-                                        }
-                                      }
-                                    });
-                                </script>
-                                <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
-                                <div class="reference">
-                                    <p class="reference-text">DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
                                 </div>
+
+                                <div class="chart-info">
+                                    <canvas id="wineExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("wineExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Wine (R1000)",
+                                                backgroundColor: "#f5b700",
+                                                data: [7933067,8010465,8943425,9090107,9555441,	9614205,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
                             </div>
 
-                            <div class="chart-info">
-                                <canvas id="grossAppleValue">
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="citrusExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("citrusExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Citrus fruit, fresh or dried (R1000)",
+                                                backgroundColor: "#dc0073",
+                                                data: [9334645,	11582375,	13884811,	17067763,	18670513,		20173341,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="grapesExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("grapesExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Grapes, fresh or dried (R1000)",
+                                                backgroundColor: "#008bf8",
+                                                data: [4981765,	6274479,	7538166,	7821995,	8535890,		9062014,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="nutsExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("nutsExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Preserved fruit and nuts (R1000)",
+                                                backgroundColor: "#89fc00",
+                                                data: [1777536,1904281,2437601,2597771,2573963,	2404074,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="appleExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("appleExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Apples, pears and quinces, fresh or dried (R1000)",
+                                                backgroundColor: "#ff0000",
+                                                data: [5926518,5677049,6924805,7790203,7644995,	7364280,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+    
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="juiceExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("juiceExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Fruit and vegetable juices (R1000)",
+                                                backgroundColor: "#9d00ff",
+                                                data: [2280575,2729307,3762313,2660993,3362776,	3045752,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="cigarExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("cigarExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Cigars, cheroots, cigarillos and cigarettes (R1000)",
+                                                backgroundColor: "#ffff00",
+                                                data: [749070,872192,1925942,1103731,1940838,786108,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="maizeExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("maizeExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Maize (R1000)",
+                                                backgroundColor: "#00ffff",
+                                                data: [6197682,5115674,2705320,2541645,6304352,4790462,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="alcoholExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("alcoholExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Undenatured ethyl alcohol (R1000)",
+                                                backgroundColor: "#ff00ff",
+                                                data: [1253408,	1481552,	1556090,	1820481,	1881008,	4790462,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="woolExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("woolExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Wool (R1000)",
+                                                backgroundColor: "#00ff00",
+                                                data: [2943246,	2839692,	3285902,	3996210,	4714515,	5264786,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="cherriesExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("cherriesExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Apricots, cherries, peaches, plums and sloes, fresh or dried (R1000)",
+                                                backgroundColor: "#ff5500",
+                                                data: [1061320,	1472238,	1518531,	1726673,	1653318,	1608456,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+    
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="skinsExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("skinsExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Raw skins of sheep and lambs (R1000)",
+                                                backgroundColor: "#04e762",
+                                                data: [1665141,	815604,	816154,	803679,	733960,	582286]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="beveragesExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("beveragesExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Undenatured ethyl alcohol beverages (R1000)",
+                                                backgroundColor: "#f5b700",
+                                                data: [1420998,1224423,1556090,1820481,2285338,1410784,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="confectionaryExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("confectionaryExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Sugar confectionery (R1000)",
+                                                backgroundColor: "#dc0073",
+                                                data: [302388,	382752,	996673,	621046,	1150545,		395375,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="offalExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("offalExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Other meat and edible meat offal (R1000)",
+                                                backgroundColor: "#008bf8",
+                                                data: [45628,	78741,	225511,	337612,	159545,	24556]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="bovineExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("bovineExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Raw hides and skins of bovine (R1000)",
+                                                backgroundColor: "#89fc00",
+                                                data: [534185,580601,613033,376351,266774,88409,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="otherExport">
                                 </canvas>
                                 <script>
-                                    new Chart(document.getElementById("grossAppleValue"), {
-                                    type: 'line',
-                                      data: {
-                                        labels: [1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                                    new Chart(document.getElementById("otherExport"), {
+                                        type: 'bar',
+                                        data: {
+                                        labels: ["2013","2014","2015","2016","2017","2018",],
                                         datasets: [
                                             {
-                                            data: [266421,233200,294973,310144,502747,557826,571516,385632,676156,598387,835611,684450,862282,594374,753509,879244,1316408,1601189,1860923,1593922,1606061,2004814,2741771,2880575,2688532,3141017,3408525,4840801,4823434,5730315,6136443,5524244,6104172,],
-                                            label: "Fresh Apple",
-                                            borderColor: "#00ff00",
-                                            fill: false
-                                            },{
-                                            data: [2314,2162,2162,1223,1413,3267,2666,3832,2330,1511,2245,2874,3367,861,2220,1410,1068,1356,1367,1462,438,2972,4266,3136,2610,5800,2976,7936,16119,14482,1053,13743,12925,],
-                                            label: "Dried Apple",
-                                            borderColor: "#ffff00",
-                                            fill: false
+                                            label: "Other (R1000)",
+                                            backgroundColor: "#ffff00",
+                                            data: [18737756,	23743161,	44213320,	31581094,	48823322,	30810622,]
                                             }
                                         ]
-                                      },
-                                      options: {
-                                        title: {
-                                          display: true,
-                                          text: 'Gross Apple Value (R/ton)'
-                                        }
-                                      }
+                                        },
+                                        
                                     });
                                 </script>
-                                <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
-                                <div class="reference">
-                                    <p class="reference-text">DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
-                                </div>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>    
+    
                             </div>
-                    </div>
+
+                            <div class="reference">
+                                <p class="reference-text-blue-back">DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                            </div>
+
+                        </div>
+
+                        <div class="two">
+
+                            <h4>Exports of agricultural products by country of destination</h4>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="ukExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("ukExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "United Kingdom (R1000)",
+                                                backgroundColor: "#04e762",
+                                                data: [6261076,	5546933,	8532528,	9465400,	9707511,	10986019,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="netherlandsExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("netherlandsExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Netherlands (R1000)",
+                                                backgroundColor: "#f5b700",
+                                                data: [7604135,	8050068,	9255737,	11012545,	11569554,	12496494,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="belgiumExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("belgiumExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Belgium (R1000)",
+                                                backgroundColor: "#dc0073",
+                                                data: [362647,	140086,	569777,	622704,	535747,	712911,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="japanExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("japanExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Japan (R1000)",
+                                                backgroundColor: "#008bf8",
+                                                data: [3472126,2087239,1389043,1705333,3549725,2402149,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="mozambiqueExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("mozambiqueExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Mozambique (R1000)",
+                                                backgroundColor: "#89fc00",
+                                                data: [4324778,	4855359,	6016474,	6351822,	6511444,	6800627,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="usaExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("usaExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "USA (R1000)",
+                                                backgroundColor: "#04e762",
+                                                data: [2191414,2312714,3331193,3663885,4110105,4776759,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+    
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="germanyExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("germanyExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Germany (R1000)",
+                                                backgroundColor: "#f5b700",
+                                                data: [2486870,	1415735,	3209739,	3808877,	3397895,	4186707,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="saudiExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("saudiExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Saudi Arabia (R1000)",
+                                                backgroundColor: "#dc0073",
+                                                data: [870908,	1234195,	1583735,	1894619,	1764737,	1768027,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="italyExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("italyExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Italy (R1000)",
+                                                backgroundColor: "#008bf8",
+                                                data: [1586446,	1401510,	1494201,	1453552,	1846162,	2004103,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="kenyaExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("kenyaExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Kenya (R1000)",
+                                                backgroundColor: "#89fc00",
+                                                data: [553597,	444501,	755212,	864090,	1769891, 849820,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="angolaExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("angolaExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Angola (R1000)",
+                                                backgroundColor: "#04e762",
+                                                data: [2894961,	2593250,	2845073,	2390987,	2503472,	1710542,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="franceExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("franceExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "France (R1000)",
+                                                backgroundColor: "#f5b700",
+                                                data: [1344994,791690,1028983,1192528,1190836,1324003,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+    
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="canadaExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("canadaExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Canada (R1000)",
+                                                backgroundColor: "#dc0073",
+                                                data: [1338760,	993143,1715262,2173729,2066638,2149178,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="iranExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("iranExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Iran (R1000)",
+                                                backgroundColor: "#04e762",
+                                                data: [3275,	6818,	4099,	11764,	7726,	35082,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="zambiaExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("zambiaExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Zambia (R1000)",
+                                                backgroundColor: "#ff5500",
+                                                data: [1988813,2231268,3360551,3614872,3619394,3733342,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="koreanExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("koreanExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Korean (R1000)",
+                                                backgroundColor: "#00ff00",
+                                                data: [488086,	649901,	405961,	423000,	573247,	965699,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="zimExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("zimExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Zimbabwe (R1000)",
+                                                backgroundColor: "#f5b700",
+                                                data: [5638585,	5536460,	5125106,	6671086,	4458457,	3132381,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="kongExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("kongExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Hong Kong (R1000)",
+                                                backgroundColor: "#89fc00",
+                                                data: [5638585,	5536460,	5125106,	6671086,	4458457,	3132381,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="malawiExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("malawiExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Malawi (R1000)",
+                                                backgroundColor: "#ff00ff",
+                                                data: [410253,	462970,	667108,	877201,	826062,	764145,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="mauritiusExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("mauritiusExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Mauritius (R1000)",
+                                                backgroundColor: "#00ffff",
+                                                data: [596255,	777421,	931351,	1135575,	1076161,	1273515,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="othervExport">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("othervExport"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "other (R1000)",
+                                                backgroundColor: "#ffff00",
+                                                data: [26329853,	36386473,	53803490,	35004870,	62631981,	44902888,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>  
+    
+                            </div>
+
+                            <div class="reference">
+                                <p class="reference-text-blue-back">DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                            </div>
+
+                        </div>
+
+                        <div class="two">
+
+                            <h4>Imports of agricultural products by country of destination</h4>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="argentina">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("argentina"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Argentina (R1000)",
+                                                backgroundColor: "#04e762",
+                                                data: [5536150,	4109999,	6047529,	10502117,	4975908,	4388208,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="usa">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("usa"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "USA (R1000)",
+                                                backgroundColor: "#f5b700",
+                                                data: [2758104,	2823349,	4334465,	4093201,	4497573,	3855563,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="uk">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("uk"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "United Kingdom (R1000)",
+                                                backgroundColor: "#dc0073",
+                                                data: [3838606,	4229650,	5106269,	4177049,	3592212,	3698740,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="au">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("au"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Australia (R1000)",
+                                                backgroundColor: "#008bf8",
+                                                data: [1609676,	1608671,	2139425,	1145812,	1200961,	998219,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="zim">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("zim"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Zimbabwe (R1000)",
+                                                backgroundColor: "#89fc00",
+                                                data: [1044634,	984736,	1027446,	1190030,	1200934,	1680598,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="malaysia">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("malaysia"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Malaysia (R1000)",
+                                                backgroundColor: "#ff0000",
+                                                data: [1398430,	1266874,	2493260,	2613186,	2530947,	2402469,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+    
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="thai">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("thai"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Thailand (R1000)",
+                                                backgroundColor: "#9d00ff",
+                                                data: [2688372,	2938809,	5085748,	3921288,	5286070,	5447535,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="canada">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("canada"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Canada (R1000)",
+                                                backgroundColor: "#0000ff",
+                                                data: [832908,	688721,	1170063,	729229,	667131,	1004313,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="france">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("france"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "France (R1000)",
+                                                backgroundColor: "#ffff00",
+                                                data: [1752000,2230796,3417166,2977650,2444139,3239245,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="netherlands">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("netherlands"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Netherlands (R1000)",
+                                                backgroundColor: "#00ffff",
+                                                data: [3128109,	3171811,	3700082,	4380977,	2850588,	3269982,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="germany">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("germany"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Germany (R1000)",
+                                                backgroundColor: "#ff00ff",
+                                                data: [2171589,3091358,5654521,2741048,3230388,3729431,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="india">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("india"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "India (R1000)",
+                                                backgroundColor: "#00ff00",
+                                                data: [3097944,	2948800,	4190729,	3248992,	3279295,	3729431,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+    
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="indo">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("indo"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Indonesia (R1000)",
+                                                backgroundColor: "#ff5500",
+                                                data: [2690109,	3967002,	3664525,	3558573,	3633122,	3047634,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="china">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("china"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "China (R1000)",
+                                                backgroundColor: "#04e762",
+                                                data: [4527969,	3100559,	6614453,	3678784,	3723789,	3701958,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="Brazil">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("Brazil"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Brazil (R1000)",
+                                                backgroundColor: "#f5b700",
+                                                data: [4728026,	3184558,	5344064,	4747928,	6294269,	5429862,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="Italy">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("Italy"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Italy (R1000)",
+                                                backgroundColor: "#dc0073",
+                                                data: [1636449,	1475739,	2205320,	1634623,	1772640,	2003588,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="newzealand">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("newzealand"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "New Zealand (R1000)",
+                                                backgroundColor: "#008bf8",
+                                                data: [574102,565722,1432830,713476	,826438,1000412]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="Belgium">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("Belgium"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Belgium (R1000)",
+                                                backgroundColor: "#89fc00",
+                                                data: [687426,	1121762,1735868,1346194,1533220,1370252]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="Malawi">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("Malawi"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Malawi (R1000)",
+                                                backgroundColor: "#ff0000",
+                                                data: [515141,	609952,	637887,	678027,	576252,	648221,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                                <div class="chart-info">
+                                    <canvas id="Spain">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("Spain"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Spain (R1000)",
+                                                backgroundColor: "#9d00ff",
+                                                data: [1647647,	1971771,	2324236,	3143713,	2422520,	2143483,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>
+
+                            </div>
+
+                            <div class="two-grid-top" align="center">
+
+                                <div class="chart-info">
+                                    <canvas id="Other">
+                                    </canvas>
+                                    <script>
+                                        new Chart(document.getElementById("Other"), {
+                                            type: 'bar',
+                                            data: {
+                                            labels: ["2013","2014","2015","2016","2017","2018",],
+                                            datasets: [
+                                                {
+                                                label: "Other (R1000)",
+                                                backgroundColor: "#0000ff",
+                                                data: [10444041,	14947081,	34334421,	21139931,	29328026,	18435761,]
+                                                }
+                                            ]
+                                            },
+                                            
+                                        });
+                                    </script>
+                                    <noscript>Please turn on JavaScript in your browser to enjoy the experience.</noscript>
+                                </div>  
+    
+                            </div>
+
+                            <div class="reference">
+                                <p class="reference-text-blue-back">DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES</p>
+                            </div>
+
+                        </div>
 
                     </div>
 
@@ -523,34 +2486,36 @@
 
                                     <div class="mobile-dropdown-block" id="mobile-sidebar-dropdown-block">
 
-                                        <a href="index.html" class="mobile-dropdown-block-link">
-                                            <img src="css/icons/charts.png">
+                                        <a href="index" class="mobile-dropdown-block-link">
+                                            <i class="fa-solid fa-chart-area fa-2x"></i>
                                             <p >Dashboard</p>
                                         </a>
         
-                                        <a href="fuits" class="mobile-dropdown-block-link">
-                                            <img src="css/icons/fruit.png">
+                                        <a href="fruits" class="mobile-dropdown-block-link">
+                                            <i class="fa-solid fa-apple-whole fa-2x"></i>
                                             <p >Fruits</p>
                                         </a>
         
                                         <a href="vegetables" class="mobile-dropdown-block-link">
-                                            <img src="css/icons/vegetable.png">
+                                            <i class="fa-solid fa-carrot fa-2x"></i>
                                             <p>Vegetables</p>
                                         </a>
         
                                         <a href="meat" class="mobile-dropdown-block-link">
-                                            <img src="css/icons/meat.png">
+                                            <i class="fa-solid fa-drumstick-bite fa-2x"></i>
                                             <p>Meat</p>
                                         </a>
         
         
+                                        <!--
                                         <a href="other" class="mobile-dropdown-block-link">
                                             <img src="css/icons/package.png">
                                             <p>Other</p>
                                         </a>
+                                        -->
         
                                     </div>
-                                </div>    
+                                </div>  
 
                                 <a href="market" class="sidenavMain-a">
                                     <i class="fa-solid fa-store fa-2x"></i>
@@ -570,11 +2535,6 @@
                                 <a href="Alert" class="sidenavMain-a">
                                     <i class="fa-solid fa-circle-exclamation fa-2x"></i>
                                     <p class="media-texts">Alert</p>
-                                </a>
-
-                                <a href="Infographics" class="sidenavMain-a">
-                                    <i class="fa-solid fa-newspaper fa-2x"></i>
-                                    <p class="media-texts">Updates</p>
                                 </a>
 
                                 <a href="Consultation" class="sidenavMain-a">
@@ -611,13 +2571,13 @@
 
         <footer class="main-device-footer" id="major-contact-block">
 
-            <div class="social-media-apps">
+            <div class="social-media-apps" align="center">
 
                 <a href="https://discord.com/channels/@arcaderand" class="social-media-app-link">
                     <i class="fa-brands fa-discord fa-3x"></i>
                 </a>
 
-                <a href="admin@arcaderand.co.za" class="social-media-app-link">
+                <a href="mailto:admin@arcaderand.co.za" class="social-media-app-link">
                     <i class="fa-solid fa-envelope fa-3x"></i>
                 </a>
 
@@ -649,19 +2609,49 @@
 
             <hr>
 
-            <div class="newsletter-subscription">
+            <div class="newsletter-subscription" >
 
                 <form name="subscription-footer-form" method="POST" data-netlify="true" class="subscription-block">
-                    <p><strong>Sign up for our newsletter </strong></p>
+                    <div class="row d-flex justify-content-center">
+                        <!--Grid column-->
+                        <div class="col-auto">
+                          <p class="pt-2">
+                            <strong>Sign up for our newsletter</strong>
+                          </p>
+                        </div>
+                        <!--Grid column-->
+              
+                        <!--Grid column-->
+                        <div class="col-md-5 col-12">
+                          <!-- Email input -->
+                          <div class="form-outline form-white mb-4">
+                            <input type="email" id="form5Example21" class="form-control" name="subscription-email" placeholder="Email address"/>
+                          </div>
+                        </div>
+                        <!--Grid column-->
+              
+                        <!--Grid column-->
 
-                    <div class="form-outline form-white" align="center">
-                        <input type="email" class="form-control" />
-                        <label class="form-label">Email address</label>
+                        <div class="col-auto">
+                            
+                            <!--
+                            <div data-netlify-recaptcha="true">
+                            </div>
+                            -->
+
+                            <br>
+
+                            <button type="submit" class="btn btn-outline-light mb-4">
+                                Subscribe
+                            </button>
+
+                        </div>
+                        
+                        <!--Grid column-->
+
+                        <hr>
+
                     </div>
-
-                    <button type="submit" class="btn btn-outline mb-4">
-                        Sign Up
-                    </button>
 
                 </form>
 
@@ -685,7 +2675,7 @@
 
                                 <ul class="list-unstyled mb-0">
                                     <li>
-                                        <a href="application" class="footer-text">Want to sell?</a>
+                                        <a href="application-form" class="footer-text">Want to sell?</a>
                                     </li>
                                     <li>
                                         <a href="consultation" class="footer-text">Consult</a>
@@ -712,10 +2702,10 @@
                                         <a href="https://t.me/+FrrBEJ6Hzq8xZWM0" class="footer-text">Open Community</a>
                                     </li>
                                     <li>
-                                        <a href="Session" class="footer-text">Session</a>
+                                        <a href="consultation" class="footer-text">Session</a>
                                     </li>
                                     <li>
-                                        <a href="admin@arcaderand.co.za" class="footer-text">Contact Us</a>
+                                        <a href="mailto:admin@arcaderand.co.za" class="footer-text">Contact Us</a>
                                     </li>
                                 </ul>
 
@@ -728,7 +2718,7 @@
 
                                 <ul class="list-unstyled mb-0">
                                     <li>
-                                        <a href="rankings" class="footer-text">Rankings</a>
+                                        <a href="advertise-on-our-site" class="footer-text">Advertisement</a
                                     </li>
                                     <li>
                                         <a href="https://www.youtube.com/channel/UCV7uK-eTFK10oKq0hdeB__w" class="footer-text">YouTube</a>
@@ -747,7 +2737,7 @@
 
                                 <ul class="list-unstyled mb-0">
                                     <li>
-                                        <a href="report" class="footer-text">Report!</a>
+                                        <a href="mailto:admin@arcaderand.co.za" class="footer-text">Report!</a>
                                     </li>
                                     <li>
                                         <a href="testimonials" class="footer-text">Testimonials</a>

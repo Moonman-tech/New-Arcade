@@ -1,20 +1,3 @@
-.morris-hover.morris-default-style {
-    border-radius:2px;
-}
-
-.morris-hover {
-    animation: fade 500ms ease-in;
-    position: absolute;
-    background-color: #fff;
-    padding:5px;
-    opacity: 0.8;
-}
-
-@keyframes fade {
-    0% {
-        opacity: 0;
-        }
-    100% {
-        opacity: 1;
-        }
+#block-one-b{
+    display: none;
 }

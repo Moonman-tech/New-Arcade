@@ -1,0 +1,1150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="css/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <link rel="stylesheet" type="text/css" href="css/display.css">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/darkmode.css">
+    <script src="external_java.js"></script>
+    <script src="vegetables.js"></script>
+    <script src="controls.js"></script>
+    <script src="jsapi.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/bfe88016a0.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+
+    <script>
+        console.log(window.matchMedia("(prefers-color-scheme: dark)").matches);
+    </script>
+
+    <title>Projects</title>
+</head>
+<body class="main-body-container">
+
+    <div align="center" class="fabricated-body-div">
+        
+        <div class="loader">
+            <img src="css\icons\91.gif" alt="loading...">
+        </div>
+
+        <div class="mobile-navigation" align="center">
+            <div class="logo-link">
+                <img class="mobile-logo-img" src="css\icons\logo.png" alt="Arcaderand">
+            </div>
+        </div>
+
+        <div class="sides-container-two" align="center">
+
+            <div class="left-container">
+
+                <div>
+
+                    <nav class="main-sidebar-container">
+
+                        <div class="desktop-sidebar-div">
+
+                            <img src="css/icons/logo.png" alt="Arcaderand">
+
+                        </div>
+
+                        <div class="link-box">
+
+                            <a class="desktop-sidebar-nav-a" href="#" onclick="dashboardDropDownDiv()">
+                                <i class="fa-solid fa-chart-column fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Dashboard</p>
+                            </a>
+
+                            <div class="stats-dropdown-block" id="dashboard-dropdown-block" align="center">
+
+                                <a href="index" class="dropdown-block-link">
+                                    <i class="fa-solid fa-chart-area fa-2x"></i>
+                                    <p class="desktop-sidebar-dropdown">Dashboard</p>
+                                </a>
+
+                                <a href="fruits" class="dropdown-block-link">
+                                    <i class="fa-solid fa-apple-whole fa-2x"></i>
+                                    <p class="desktop-sidebar-dropdown">Fruits</p>
+                                </a>
+
+                                <a href="vegetables" class="dropdown-block-link">
+                                    <i class="fa-solid fa-carrot fa-2x"></i>
+                                    <p class="desktop-sidebar-dropdown">Veges</p>
+                                </a>
+
+                                <a href="meat" class="dropdown-block-link">
+                                    <i class="fa-solid fa-drumstick-bite fa-2x"></i>
+                                    <p class="desktop-sidebar-dropdown">Meat</p>
+                                </a>
+
+
+                                <!--
+                                <a href="other" class="dropdown-block-link">
+                                    <img src="css/icons/package.png" class="dropdown-block-link-img">
+                                    <p class="desktop-sidebar-dropdown">Other</p>
+                                </a>
+                                -->
+
+                            </div>
+
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="market">
+                                <i class="fa-solid fa-store fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Market</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="services">
+                                <i class="fa-solid fa-screwdriver-wrench fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Services</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="courier">
+                                <i class="fa-solid fa-truck fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Courier</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="alert">
+                                <i class="fa-solid fa-circle-exclamation fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Alert</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="Consultation">
+                                <i class="fa-solid fa-comments fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Consult</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="learn">
+                                <i class="fa-solid fa-book-open-reader fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Learn</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="donate">
+                                <i class="fa-solid fa-hand-holding-medical fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Donate</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="about">
+                                <i class="fa-solid fa-user fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">About</p>
+                            </a>
+                        </div>
+
+                        <div class="link-box">
+                            <a class="desktop-sidebar-nav-a" href="help">
+                                <i class="fa-solid fa-hand-holding-hand fa-xl"></i>
+                                <p class="desktop-sidebar-nav-p">Help</p>
+                            </a>
+                        </div>
+
+                    </nav>
+
+                </div>
+
+            </div>
+
+            <div class="right-container">
+
+                <div class="right-top-container" align="right">
+
+                    <a href="projects" class="desktop-sticky-icons">
+                        Projects
+                    </a>
+
+                    <a href="associates" class="desktop-sticky-icons">
+                        Associates
+                    </a>
+
+                    <a href="stakeholders" class="desktop-sticky-icons">
+                        Stakeholders
+                    </a>
+
+                    <a href="#major-contact-block" class="desktop-sticky-icons">
+                        Contact Us
+                    </a>
+
+                </div>
+
+                <div class="bottom-right">
+
+                    <div class="main-fruits-charts-block">
+
+                        <h3 class="diff-page-labeling">
+                            <a href="Projects">
+                                Projects
+                            </a>
+                        </h3>
+
+                        <div class="projects-div">
+
+                            <section class="project-blocks-containers">
+                        
+                                <div class="project-blocks">
+
+                                    <img src="css/illustration/read.png"> 
+                                    <div class="project-blocks-content">
+                                        <h5>Agriculture | Education</h5>
+                                        <h3 class="project-name-tag">Educate the youth about farming</h3>
+                                        <p>By Arcaderand</p>
+                                        <div class="project-context">
+                                            <p class="text-break">
+                                                Arcaderand intends to educate young people about agriculture 
+                                                and help them gain necessary skills that will enable them to start 
+                                                a successful backyard garden. We believe in starting small, through 
+                                                micro lessons, those learning might be inspired by the little profit 
+                                                they could be making to learn more so they can grow as business 
+                                                individuals. Projects will be created for those learning agriculture 
+                                                through us and a community will be created through funding and forums.  
+                                            </p>
+                                            <br>
+                                            <h4>R0.00 Raised of (indecisive) goal</h4>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+
+                                            <a href="donate" class="button" data-toggle="modal" data-target="#exampleModal">
+                                                Donate Now
+                                            </a>
+
+                                            <!--
+                                            <a href="#" class="button" data-toggle="modal" data-target="#exampleModal">
+                                                Learn More
+                                            </a>
+
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                      </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                      ...
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            -->
+
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                            </section>
+
+                            <section class="project-blocks-containers">
+                        
+                                <div class="project-blocks">
+
+                                    <img src="css/illustration/garden.png"> 
+                                    <div class="project-blocks-content">
+                                        <h5>Agriculture | Exposition</h5>
+                                        <h3 class="project-name-tag">Provincial Irrigation Exposition</h3>
+                                        <p>By Arcaderand</p>
+                                        <div class="project-context">
+                                            <p>
+                                                Through funding, our goal to host provincial irrigation expositions several
+                                                times a year will be made into reality. We believe irrigation expositions will
+                                                open a new wave of advanced farming methods encouraging change in the agriculture
+                                                sector. Through the expositions, people will be given a chance to showcase  their
+                                                inventions and strategies that could change the farming business as we know.
+                                                Not only are looking to get people's ideas and inventions exposed, we are also looking
+                                                to create a solid network of genius inventors and business owners, a network of success.
+     
+                                            </p>
+                                            <br>
+                                            <h4>R0.00 Raised of (indecisive) goal</h4>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+
+                                            <a href="donate" class="button" data-toggle="modal" data-target="#exampleModal">
+                                                Donate Now
+                                            </a>
+
+                                            <!--
+                                            <a href="#" class="button" data-toggle="modal" data-target="#exampleModal">
+                                                Learn More
+                                            </a>
+
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                      </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                      ...
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            -->
+
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                            </section>
+
+                            <section class="project-blocks-containers">
+                        
+                                <div class="project-blocks">
+
+                                    <img src="css/illustration/fair.png"> 
+                                    <div class="project-blocks-content">
+                                        <h5>Agriculture | Market Fair</h5>
+                                        <h3 class="project-name-tag">Major Annual Market Fair</h3>
+                                        <p>By Arcaderand</p>
+                                        <div class="project-context">
+                                            <p>
+                                                We intend to host market fairs across provinces throughout the year for small farmers. 
+                                                The main purpose of the market fair is to promote local food production while creating 
+                                                a positive community of small farmers and local retailers. The market fairs will be 
+                                                aimed at growing Agribusiness in different regions and the youth's interest in the 
+                                                agriculture sector as they will witness how profitable the sector is through the 
+                                                market fair events. Other small businesses linked to the market part of the agricultural 
+                                                sector will be given exposure at the event.
+                                            </p>
+                                            <br>
+                                            <h4>R0.00 Raised of (indecisive) goal</h4>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+
+                                            <a href="donate" class="button" data-toggle="modal" data-target="#exampleModal">
+                                                Donate Now
+                                            </a>
+
+                                            <!--
+                                            <a href="#" class="button" data-toggle="modal" data-target="#exampleModal">
+                                                Learn More
+                                            </a>
+
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                      </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                      ...
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            -->
+
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                            </section>
+
+                            <section class="project-blocks-containers">
+                        
+                                <div class="project-blocks">
+
+                                    <img src="css/illustration/support.png"> 
+                                    <div class="project-blocks-content">
+                                        <h5>Agriculture | Disaster Support</h5>
+                                        <h3 class="project-name-tag">Locast Swarm Support</h3>
+                                        <p>By Arcaderand</p>
+                                        <div class="project-context">
+                                            <p>
+                                                We want small farmers to work in association with our company. The association will
+                                                be through trusted partnership with farmers as there will be projects to complete with 
+                                                them to reach certain outcomes. Through funding, we will have the ability to 
+                                                assist other farmers through disasters such as a locust swarm in their farms. Farmers 
+                                                have been going through the pain of watching their hard work being destroyed for decades, 
+                                                we want to be able to assist our farming associates recover from such a disaster and that 
+                                                can be made possible through your donations.  
+                                                         
+                                            </p>
+                                            <br>
+                                            <h4>R0.00 Raised of (indecisive) goal</h4>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+
+                                            <a href="donate" class="button" data-toggle="modal" data-target="#exampleModal">
+                                                Donate Now
+                                            </a>
+
+                                            <!--
+                                            <a href="#" class="button" data-toggle="modal" data-target="#exampleModal">
+                                                Learn More
+                                            </a>
+
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                      </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                      ...
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            -->
+
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                            </section>
+
+                            <section class="project-blocks-containers">
+                        
+                                <div class="project-blocks">
+
+                                    <img src="css/illustration/women.png"> 
+                                    <div class="project-blocks-content">
+                                        <h5>Agriculture | Women</h5>
+                                        <h3 class="project-name-tag">Women in farming</h3>
+                                        <p>By Arcaderand</p>
+                                        <div class="project-context">
+                                            <p>
+                                                We intend to educateand empower as much women as possible, they 
+                                                empowerment of women in the agricultural sector will create a sector 
+                                                where women have as much power as men in the work place. Young women 
+                                                will be empowered through projects and workshops creted by female farmers 
+                                                to better enhance the minds of female farmers at a young age. Donations will 
+                                                make the concept of women empowerment into a reality as they will be mentord 
+                                                and well trianed by other female farmers to prepare them into the agriculture 
+                                                sector as women.             
+                                            </p>
+                                            <br>
+                                            <h4>R0.00 Raised of (indecisive) goal</h4>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+
+                                            <a href="donate" class="button" data-toggle="modal" data-target="#exampleModal">
+                                                Donate Now
+                                            </a>
+
+                                            <!--
+                                            <a href="#" class="button" data-toggle="modal" data-target="#exampleModal">
+                                                Learn More
+                                            </a>
+
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                      </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                      ...
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            -->
+
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                            </section>
+
+                            <section class="project-blocks-containers">
+                        
+                                <div class="project-blocks">
+
+                                    <img src="css/illustration/community.png"> 
+                                    <div class="project-blocks-content">
+                                        <h5>Agriculture | Community</h5>
+                                        <h3 class="project-name-tag">Community Garden</h3>
+                                        <p>By Arcaderand</p>
+                                        <div class="project-context">
+                                            <p>
+                                                One of our aims is to prevent children from going to sleep hungry. To counter that, 
+                                                we are looking to create a system where we will partner with orphanage homes that 
+                                                we will be providing with agricultural activates and necessary agricultural assistance 
+                                                to help them grow a garden in their yards so they can give enough nutritious food 
+                                                to those in need. The garden will also enable orphanage homes to carry on assisting 
+                                                more children while being able to feed them at the same time. The goal can be achieved 
+                                                through your donation as we will get one step closer to prevet children from going to 
+                                                sleep hungry.           
+                                            </p>
+                                            <br>
+                                            <h4>R0.00 Raised of (indecisive) goal</h4>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+
+                                            <a href="donate" class="button" data-toggle="modal" data-target="#exampleModal">
+                                                Donate Now
+                                            </a>
+
+                                            <!--
+                                            <a href="#" class="button" data-toggle="modal" data-target="#exampleModal">
+                                                Learn More
+                                            </a>
+
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                      </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                      ...
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            -->
+
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                            </section>
+
+                            <section class="project-blocks-containers">
+                        
+                                <div class="project-blocks">
+
+                                    <img src="css/illustration/advance.png"> 
+                                    <div class="project-blocks-content">
+                                        <h5>Agriculture | Technology - Evolution</h5>
+                                        <h3 class="project-name-tag">Agricultural Modern Advances</h3>
+                                        <p>By Arcaderand</p>
+                                        <div class="project-context">
+                                            <p>
+                                                We believe there is a better way of doing everything, the agricultural sector has not 
+                                                changed much. Most of the techniques, strategies and machinery used in farming in this 
+                                                current century were being used in the 20th if not the 19nth century. We believe there 
+                                                is no better time to introduce major change in the agricultural sector than now. We 
+                                                know of many skilled entrepreneurs with Genius inventions that could revolutionize 
+                                                farming as we know. introducing new the inventions, strategies or machinery in the big 
+                                                farming community will be an almost impossible task, through donations it can be done 
+                                                with ease and the standard method of farming could be changed forever.   
+                                            </p>
+                                            <br>
+                                            <h4>R0.00 Raised of (indecisive) goal</h4>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+
+                                            <a href="donate" class="button" data-toggle="modal" data-target="#exampleModal">
+                                                Donate Now
+                                            </a>
+
+                                            <!--
+                                            <a href="#" class="button" data-toggle="modal" data-target="#exampleModal">
+                                                Learn More
+                                            </a>
+
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                      </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                      ...
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            -->
+
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                            </section>
+
+                            <section class="project-blocks-containers">
+                        
+                                <div class="project-blocks">
+
+                                    <img src="css/illustration/indoor.png"> 
+                                    <div class="project-blocks-content">
+                                        <h5>Agriculture | Natural Disaster</h5>
+                                        <h3 class="project-name-tag">Drought Support</h3>
+                                        <p>By Arcaderand</p>
+                                        <div class="project-context">
+                                            <p>
+                                                We are looking to create a society of  unified farmer other people in the 
+                                                agricultural sector. The drought support project will be set to create 
+                                                water reserve facilities so we can help other farmers should they experience 
+                                                drought or a problem with their water supply. Through a water reserve 
+                                                facility, farmers will be able to produce throughout the season and the 
+                                                concept of food shortage will not be used when talking about challenges in the 
+                                                agricultural sector. We have seen many farmers in the past lose their 
+                                                livestock, crops, income and employees, through donations, such will be avoided 
+                                                and the water reserve facility will be a reality.    
+                                            </p>
+                                            <br>
+                                            <h4>R0.00 Raised of (indecisive) goal</h4>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+
+                                            <a href="donate" class="button" data-toggle="modal" data-target="#exampleModal">
+                                                Donate Now
+                                            </a>
+
+                                            <!--
+                                            <a href="#" class="button" data-toggle="modal" data-target="#exampleModal">
+                                                Learn More
+                                            </a>
+
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                      </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                      ...
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            -->
+
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                            </section>
+
+                            <section class="project-blocks-containers">
+                        
+                                <div class="project-blocks">
+
+                                    <img src="css/illustration/facility.png"> 
+                                    <div class="project-blocks-content">
+                                        <h5>Agriculture | Advances</h5>
+                                        <h3 class="project-name-tag">Green Indoor Farming</h3>
+                                        <p>By Arcaderand</p>
+                                        <div class="project-context">
+                                            <p>
+                                                We intend to promote an unusual farming practice that could be heavily used 
+                                                in the future. People think large open land when they hear of farming but 
+                                                that is not the only place where profitable farming can take place. We aim 
+                                                to educate people about green indoor farming and also make awareness to 
+                                                those looking to farm without having to manage a huge portion of land. Your 
+                                                donations will make this possible and people will know and be aware about 
+                                                indoor farming. What people think of farming will be changed through this project. 
+                                            </p>
+                                            <br>
+                                            <h4>R0.00 Raised of (indecisive) goal</h4>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+
+                                            <a href="donate" class="button" data-toggle="modal" data-target="#exampleModal">
+                                                Donate Now
+                                            </a>
+
+                                            <!--
+                                            <a href="#" class="button" data-toggle="modal" data-target="#exampleModal">
+                                                Learn More
+                                            </a>
+
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                      </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                      ...
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            -->
+
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                            </section>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mobile-footer">
+            <div class="sticky-list">
+                <div class="a-tag">
+
+                    <a class="a-tags" href="help">
+                        <i class="fa-solid fa-hand-holding-hand fa-3x"></i>
+                    </a>
+
+                    <a class="a-tags" href="#" onclick="openMedianav()">
+                        <i class="fa-solid fa-circle-nodes fa-3x"></i>
+                    </a>
+
+                         <div id="mediaNav" class="sidenavMain" >
+                            <div class="sidenav-cover">
+                                <p class="closebtn" onclick="closeMedianav()">&times;</p>
+
+                                <a href="https://discord.com/channels/@arcaderand" class="sidenavMain-a">
+                                    <i class="fa-brands fa-discord fa-2x"></i>
+                                    <p class="media-texts">Discord</p>
+                                </a>
+
+                                <a href="mailto:admin@arcaderand.co.za" class="sidenavMain-a">
+                                    <i class="fa-solid fa-envelope fa-2x"></i>
+                                    <p class="media-texts">Email</p>
+                                </a>
+
+                                <a href="https://www.facebook.com/Arcaderand-104749068675206" class="sidenavMain-a">
+                                    <i class="fa-brands fa-facebook-square fa-2x"></i>
+                                    <p class="media-texts">Facebook</p>
+                                </a>
+
+                                <a href="https://www.instagram.com/arcaderand_sa/" class="sidenavMain-a">
+                                    <i class="fa-brands fa-instagram-square fa-2x"></i>
+                                    <p class="media-texts">Instagram</p>
+                                </a>
+
+                                <a href="https://www.reddit.com/user/arcaderand" class="sidenavMain-a">
+                                    <i class="fa-brands fa-reddit-alien fa-2x"></i>
+                                    <p class="media-texts">Reddit</p>
+                                </a>
+
+                                <a href="#" class="sidenavMain-a">
+                                    <i class="fa-brands fa-telegram fa-2x"></i>
+                                    <p class="media-texts">Telegram</p>
+                                </a>
+
+                                <a href="https://twitter.com/arcaderand" class="sidenavMain-a">
+                                    <i class="fa-brands fa-twitter fa-2x"></i>
+                                    <p class="media-texts">Twitter</p>
+                                </a>
+
+                                <a href="https://www.youtube.com/channel/UCV7uK-eTFK10oKq0hdeB__w" class="sidenavMain-a">
+                                    <i class="fa-brands fa-youtube fa-2x"></i>
+                                    <p class="media-texts">YouTube</p>
+                                </a>
+                            </div>
+                         </div>
+
+                    <a class="a-tags" href="#" onclick="openController()"> <!--openController-->
+                        <i class="fa-solid fa-bars fa-3x"></i>
+                    </a>
+                    
+                        <div id="controller" class="sidenavMain">
+                            <div class="sidenav-cover">
+                                <p class="closebtn" onclick="closeController()">&times;</p>
+
+                                <div onclick="mobileDashboardDropDownDiv()" class="mobile-stats-dropdown">
+                                    <div class="block-content">
+                                        <p class="mobile-sidebar-media-texts">Dashboard</p>
+                                    </div>
+
+                                    <div class="mobile-dropdown-block" id="mobile-sidebar-dropdown-block">
+
+                                        <a href="index" class="mobile-dropdown-block-link">
+                                            <i class="fa-solid fa-chart-area fa-2x"></i>
+                                            <p >Dashboard</p>
+                                        </a>
+        
+                                        <a href="fruits" class="mobile-dropdown-block-link">
+                                            <i class="fa-solid fa-apple-whole fa-2x"></i>
+                                            <p >Fruits</p>
+                                        </a>
+        
+                                        <a href="vegetables" class="mobile-dropdown-block-link">
+                                            <i class="fa-solid fa-carrot fa-2x"></i>
+                                            <p>Vegetables</p>
+                                        </a>
+        
+                                        <a href="meat" class="mobile-dropdown-block-link">
+                                            <i class="fa-solid fa-drumstick-bite fa-2x"></i>
+                                            <p>Meat</p>
+                                        </a>
+        
+        
+                                        <!--
+                                        <a href="other" class="mobile-dropdown-block-link">
+                                            <img src="css/icons/package.png">
+                                            <p>Other</p>
+                                        </a>
+                                        -->
+        
+                                    </div>
+                                </div>  
+
+                                <a href="market" class="sidenavMain-a">
+                                    <i class="fa-solid fa-store fa-2x"></i>
+                                    <p class="media-texts">Market</p>
+                                </a>
+
+                                <a href="services" class="sidenavMain-a">
+                                    <i class="fa-solid fa-screwdriver-wrench fa-2x"></i>
+                                    <p class="media-texts">Services</p>
+                                </a>
+
+                                <a href="courier" class="sidenavMain-a">
+                                    <i class="fa-solid fa-truck fa-2x"></i>
+                                    <p class="media-texts">Courier</p>
+                                </a>
+
+                                <a href="Alert" class="sidenavMain-a">
+                                    <i class="fa-solid fa-circle-exclamation fa-2x"></i>
+                                    <p class="media-texts">Alert</p>
+                                </a>
+
+                                <a href="Consultation" class="sidenavMain-a">
+                                    <i class="fa-solid fa-comments fa-2x"></i>
+                                    <p class="media-texts">Consult</p>
+                                </a>
+
+                                <a href="learn" class="sidenavMain-a">
+                                    <i class="fa-solid fa-book-open-reader fa-2x"></i>
+                                    <p class="media-texts">Learn</p>
+                                </a>
+
+                                <a href="donate" class="sidenavMain-a">
+                                    <i class="fa-solid fa-hand-holding-medical fa-2x"></i>
+                                    <p class="media-texts">Donate</p>
+                                </a>
+
+                                <a href="about" class="sidenavMain-a">
+                                    <i class="fa-solid fa-user fa-2x"></i>
+                                    <p class="media-texts">About</p>
+                                </a>
+
+                                <a href="help" class="sidenavMain-a">
+                                    <i class="fa-solid fa-hand-holding-hand fa-2x"></i>
+                                    <p class="media-texts">Help</p>
+                                </a>
+
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="main-device-footer" id="major-contact-block">
+
+            <div class="social-media-apps" align="center">
+
+                <a href="https://discord.com/channels/@arcaderand" class="social-media-app-link">
+                    <i class="fa-brands fa-discord fa-3x"></i>
+                </a>
+
+                <a href="mailto:admin@arcaderand.co.za" class="social-media-app-link">
+                    <i class="fa-solid fa-envelope fa-3x"></i>
+                </a>
+
+                <a href="https://www.facebook.com/Arcaderand-104749068675206" class="social-media-app-link">
+                    <i class="fa-brands fa-facebook-square fa-3x"></i>
+                </a>
+
+                <a href="https://www.instagram.com/arcaderand_sa/" class="social-media-app-link">
+                    <i class="fa-brands fa-instagram-square fa-3x"></i>
+                </a>
+
+                <a href="https://t.me/+FrrBEJ6Hzq8xZWM0" class="social-media-app-link">
+                    <i class="fa-brands fa-reddit-alien fa-3x"></i>
+                </a>
+
+                <a href="https://t.me/+FrrBEJ6Hzq8xZWM0" class="social-media-app-link">
+                    <i class="fa-brands fa-telegram fa-3x"></i>
+                </a>
+
+                <a href="https://twitter.com/arcaderand" class="social-media-app-link">
+                    <i class="fa-brands fa-twitter fa-3x"></i>
+                </a>
+
+                <a href="https://www.youtube.com/channel/UCV7uK-eTFK10oKq0hdeB__w" class="social-media-app-link">
+                    <i class="fa-brands fa-youtube fa-3x"></i>
+                </a>
+
+            </div>
+
+            <hr>
+
+            <div class="newsletter-subscription" >
+
+                <form name="subscription-footer-form" method="POST" data-netlify="true" class="subscription-block">
+                    <div class="row d-flex justify-content-center">
+                        <!--Grid column-->
+                        <div class="col-auto">
+                          <p class="pt-2">
+                            <strong>Sign up for our newsletter</strong>
+                          </p>
+                        </div>
+                        <!--Grid column-->
+              
+                        <!--Grid column-->
+                        <div class="col-md-5 col-12">
+                          <!-- Email input -->
+                          <div class="form-outline form-white mb-4">
+                            <input type="email" id="form5Example21" class="form-control" name="subscription-email" placeholder="Email address"/>
+                          </div>
+                        </div>
+                        <!--Grid column-->
+              
+                        <!--Grid column-->
+
+                        <div class="col-auto">
+                            
+                            <!--
+                            <div data-netlify-recaptcha="true">
+                            </div>
+                            -->
+
+                            <br>
+
+                            <button type="submit" class="btn btn-outline-light mb-4">
+                                Subscribe
+                            </button>
+
+                        </div>
+                        
+                        <!--Grid column-->
+
+                        <hr>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="last-footer-block">
+                <p>Join our communities across many social platforms and be up to date,
+                    you can also check some of our services or click the learn link to
+                    get yourself some lessons for free and be begin your journey with
+                    us. Ready to sell? find out what is required for you to be a
+                    vendor/seller on our site for free.
+                </p>
+
+                <div>
+                    <div>
+
+                        <div class="row">
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase font-weight-bold" style="font-size: 20px;">More From Us</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="application-form" class="footer-text">Want to sell?</a>
+                                    </li>
+                                    <li>
+                                        <a href="consultation" class="footer-text">Consult</a>
+                                    </li>
+                                    <li>
+                                        <a href="about" class="footer-text">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="donate" class="footer-text">Donate</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase font-weight-bold" style="font-size: 20px;">Community</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="https://www.facebook.com/Arcaderand-104749068675206" class="footer-text">Official Facebook Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://t.me/+FrrBEJ6Hzq8xZWM0" class="footer-text">Open Community</a>
+                                    </li>
+                                    <li>
+                                        <a href="consultation" class="footer-text">Session</a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:admin@arcaderand.co.za" class="footer-text">Contact Us</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase font-weight-bold" style="font-size: 20px;">Our Services</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="advertise-on-our-site" class="footer-text">Advertisement</a
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/channel/UCV7uK-eTFK10oKq0hdeB__w" class="footer-text">YouTube</a>
+                                    </li>
+                                    <li>
+                                        <a href="projects" class="footer-text">Projects</a>
+                                    </li>
+                                    <li>
+                                </ul>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase font-weight-bold" style="font-size: 20px;">More</h5>
+
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="mailto:admin@arcaderand.co.za" class="footer-text">Report!</a>
+                                    </li>
+                                    <li>
+                                        <a href="testimonials" class="footer-text">Testimonials</a>
+                                    </li>
+                                    <li>
+                                        <a href="associates" class="footer-text">Associates</a>
+                                    </li>
+                                    <li>
+                                        <a href="stakeholders" class="footer-text">Stakeholders</a>
+                                    </li>
+                                    <li>
+                                        <a href="help" class="footer-text">Help</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--Grid column-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright text-center" align="center">
+                <p>© 2022 Copyright:</p>
+                <a class="copyright-link" href="https://www.arcaderand.co.za/">Arcaderand.co.za</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+
+    </div>
+
+    <div class="bottom-balance">
+        <p>-</p>
+    </div>
+    
+
+</body>
+
+</html>

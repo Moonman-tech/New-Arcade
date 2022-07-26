@@ -1,0 +1,176 @@
+@media (prefers-color-scheme: dark) {
+    
+    .main-body-container, .bottom-right, .container-right, .link-box:hover, .link-box-active, 
+    .stats-dropdown-block, .mobile-dropdown-block-link, .desktop-sticky-icons:hover, .a-tags i, .two{
+        background-color:#202124;
+    }
+    .mobile-stats-dropdown, .block-content, .sidenavMain-a, .sidenavMain a:hover, 
+    .social-media-app-link:hover, .subscription-block input, .subscription-block button, .flex-box{
+        background-color:#202124;
+    }
+    .reference a, .review-setting-box a, .review-setting-box a:hover, 
+    .product-container, .vendor-contact-details img, .footer-links img, .footer-links img:hover, .mobile-navigation{
+        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+    }
+    .desktop-sticky-icons, .a-tags i, .subscription-block button:hover, .fixed-foot-icon, 
+    .about-facebook, .about-instagram, .about-twitter, .about-youtube, .about-mail, .about-discord, .tiles-posts{
+        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+    }
+    .comments, .comments, .comment-div-container, .product-type, .timeline-button:hover, 
+    .timeline-button, .timeline-button:hover, .timeline-button:hover{
+        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+    }
+    .fabricated-body-div, .mobile-navigation,.left-container, .mobile-dropdown-block, .dropdown-block-link, 
+    .right-container, .right-top-container, .sidenavMain, .mobile-footer, .main-device-footer, 
+    .social-media-app-link, .tiles-posts, .two{
+        background-color: #323639;
+    }
+    .desktop-sidebar-dropdown, .desktop-sidebar-nav-p, .desktop-sticky-icons:hover, .sidenavMain p, 
+    .newsletter-subscription, .footer-text, .footer-text:hover, .last-footer-block, .copyright, 
+    .copyright-link, .copyright-link:hover, .tiles-posts, .subscription-block button, .main-fruits-charts-block h3{
+        color: #F8F8F8;
+    }
+    .chart-info, canvas {
+        color: #808080;
+        background-color: #202124;
+        box-shadow: none;
+    }
+    .modal-header, .modal-body, .modal-footer, .vendor-contact-details img, .review-div-container, 
+    .review-writer-div-container, .review-filler-form-box input, .review-filler-form-box textarea, .service-contacts{
+        background-color:#202124;
+        box-shadow: 0;
+    }
+    .modal-header button, .alert-block a, .alert-block p, .modal-header h3 {
+        color: #fff;
+    }
+    .stats-report-block input, .stats-report-block textarea, .stats-report-block label, .stats-report-block select{
+        background-color: #323639;
+        color: #fff;
+    }
+    .modal-content-flex, .products-main-container, .vendor-contact-details, .vendor-contact-details img:hover, 
+    .alert-block{
+        background-color: #323639;
+        box-shadow: 0;
+    }
+    .review-form-box, .review-filler-form-box, .review-setting-box a, .review-div, .pop-up-form-modal, 
+    .carousel-message-alert, .services-review-div, legend, .projects-div{
+        background-color: #323639;
+        border: 0;
+        color: #fff;
+    }
+    .clicking-counter{
+        color: #202124;
+    }
+    .main-image{
+        background-color: #323639;
+    }
+    .switcher-button, .switcher-button:hover{
+        background-color: #1E1F25;
+        color: #fff;
+    }
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        filter: invert(0);
+    }
+    .service-contacts-links, .service-contacts-links:hover, .page-labeling, .page-labeling a, .other-page-labeling, .other-page-labeling a, 
+    .services-modal-contact-container, .main-modal-content-img, .diff-page-labeling, .diff-page-labeling a, .final-page-labeling, .final-page-labeling a, .alert-container-box, 
+    .main-card-body, .card-img-block, .donation-block, .short-discription, .tiles-posts-div a, .tiles-posts-div a:hover,
+    .how-it-works-div{
+        color: #fff;
+        background-color: #323639;
+        box-shadow: none;
+    }
+    .content-info, .services-to-render, .d-block, .tiles-posts-div, .account-number, .account-number-tag{  
+        color: #fff;
+        background-color: #202124;
+        box-shadow: none;
+    }
+    .btn, .how-it-works{
+        background-color: #202124;
+        color: #fff;
+    }
+    .tiles-posts-container i{
+        color: #fff;
+        box-shadow: none;
+    }
+    .donation-form-div{
+        color: #fff;
+    }
+    .donation-form-div input, .donation-form-div input:active{
+        background-color: #1E1F25;
+    }
+    .working-links, .working-links:hover{
+        color: #fff;
+    }
+
+    .desktop-sidebar-nav-a i, .sidenavMain-a i, .a-tags i, .social-media-app-link i, .tiles-posts-container i, 
+    .consult-link-div i, .service-contacts-links i, .dropdown-block-link, .project-context h4{  
+        color:#3791CD; 
+    } 
+    .review-form-box, .account-number{
+        border: solid 2px #3791CD;
+    }
+    .alert-block, .review-setting-box a, .review-div, .services-review-div, .carousel-btn, legend, .button, .btn-linker,
+    .desktop-sticky-icons, .two, .account-number-button, #business-link-div, .pop-up-form-modal, .carousel-message-alert {
+        background-color: #3791CD;
+    }
+    .two{
+        background-color: #323639;
+    }
+    .centered-graph p{
+        color: #808080;
+    }
+    .centered-graph{
+        background-color: #202124;
+    }
+    .project-blocks{
+        box-shadow: none;
+        border: solid 2px #808080;
+    }
+    .project-blocks img{
+        background-color: #202124;
+    }
+    .project-name-tag{
+        color: #3791CD  ;
+    }
+    .active-balls-red{
+        color:#d92121;
+    }
+    .words-container, .benefits, .about-contact-link, .advert-block{
+        background-color: #323639;
+    }
+    .social-links{
+        background-color: #202124;
+    }
+    .words-container p, .benefits-tag-list{
+        color: #fff;
+    }
+    .words-container a{
+        color: #3791CD;
+        font-weight: bold;
+    }
+    .about-top-page{
+        background-color: #3791CD;
+    }
+    .benefits-tag, .advertisement-list, .list-title-tag, .site-title{
+        color: #fff !important;
+    }
+    .page-section-labeling{
+        color: #3791CD !important;
+    }
+    .application-block{
+        background-color: #323639;
+    }
+    .apply-form label{
+        color: #fff;
+    } 
+    .apply-form input{
+        background-color: #202124;
+        color: #fff;
+    } 
+    .apply-form select{
+        background-color: #202124;
+        color: #fff;
+    } 
+
+}

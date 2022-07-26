@@ -1,18 +1,20 @@
-
 /*Main body div*/
 .main-body-container{
     background-color:#DDDCE1;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
 }
 .fabricated-body-div{
     width:100%;
     justify-content:center;
     margin-left:auto;
     margin-right:auto;
-    left:0;
-    right:0;
     background-color: #fff;
+    right: 0;
+    left: 0;
 }
-
 
 
 /*Loader*/
@@ -47,9 +49,9 @@
 .mobile-navigation{
     display:block;
     border-bottom:2px solid #808080;
-    position:fixed;
+    /* position:fixed; */
     width:100%;
-    z-index: 1;
+    /* z-index: 1; */
     background-color: #fff;
     box-shadow: 0px 3px 10px -6px rgba(0,0,0,1);
 
@@ -66,7 +68,7 @@
 .sides-container-two{
     display:flex;
     justify-content:center;
-    margin: 0px
+    margin: 0px;
 }
 
 
@@ -90,6 +92,7 @@ nav{
 }
 .desktop-sidebar-div img{
     width:130px;
+    
 }
 .link-box-active{
     padding: 5px;
@@ -109,7 +112,6 @@ nav{
 }
 .stats-dropdown-block{
     background-color: #DDDCE1;
-    margin: 5px;
     border-radius: 10px;
     line-height: 0.5;
     padding-top: 5px;
@@ -121,7 +123,8 @@ nav{
     margin: 10px;
     border-radius: 10px;
     line-height: 0.6;
-    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     display: none;
 }
 .mobile-dropdown-block-link{
@@ -140,7 +143,7 @@ nav{
     margin-top:5px;
 }
 .mobile-dropdown-block-link p{
-    padding-top: 10px;
+    padding-top: 12px;
     padding-left: 10px;
 }
 .dropdown-block-link{
@@ -150,6 +153,9 @@ nav{
     background-color: #fff;
     padding: 5px;
     border-radius: 5px;
+}
+.dropdown-block-link {
+    color: #1a73e8;
 }
 .dropdown-block-link:hover{
     text-decoration: none;
@@ -178,22 +184,45 @@ nav{
     background-color: #fff;
 }
 .right-top-container{
-    padding-right: 0px;
     display: none;
-    padding: 13px;
-    margin-top:5px;
+    margin-top:15px;
+    margin-bottom: 15px;
+}
+.stats-report-block{
+    text-align: left;
+}
+.stats-report-block label{
+    color: #1E1F25;
+    font-size: 15px;
+}
+.stats-report-block input{
+    background-color: #fff;
+    font-size: 15px;
+}
+.stats-report-block textarea{
+    background-color: #fff;
+    font-size: 15px;
+}
+.stats-report-block select{
+    background-color: #fff;
+    font-size: 15px;
+    width: 100%;
+    padding: 6px;
+    border-radius: 4px;
+    border: solid 1px #ccc;
 }
 .desktop-sticky-icons-img{
-    margin: 0;
     width: 50px;
 }
 .desktop-sticky-icons{
     border-radius:6px;
+    margin-left: 5px;
+    margin-right: 5px;
     color: #fff;
-    margin: 10px;
-    background-color: #3791CD;
+    font-size: 15px;
+    text-decoration: none;
+    background-color:#1a73e8;
     padding: 10px;
-    padding-bottom: 10px;
     box-shadow: 0px 5px 10px -6px rgba(0,0,0,1);
 }
 .desktop-sticky-icons:hover{
@@ -201,22 +230,38 @@ nav{
     text-decoration: none;
     box-shadow: none;
 }
+.desktop-sticky-icons:a{
+    color: #fff;
+    text-decoration: none;
+    box-shadow: none;
+}
+.container-right{
+    background-color: #DDDCE1;
+    border-radius: 10px;
+    padding: 5px;
+}
 .bottom-right{
-    padding-top:25px;
+    padding-top:5px;
     padding-bottom: 10px;
     padding-left: 5px;
     padding-right: 5px;
     width:100%;
     background-color: #DDDCE1;
     border-radius: 0px 0px 10px 10px;
-    margin: 10px;
     margin-left: auto;
     margin-right: auto;
 }
+.main-fruits-charts-block h3{
+    color: #1E1F25;
+}
 .two{
-    background-color: #3791CD;
+    background-color:#1a73e8;
     border-radius: 10px;
     padding-bottom: 5px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 .two h4{
     padding:5px;
@@ -235,17 +280,205 @@ nav{
     width:100%;
     margin-left: auto;
     margin-right: auto;
-    margin: 10px;
-
+    margin-bottom: 10px;
+    padding: 10px;
 }
 canvas{
     background-color: #fff;
     border-radius: 10px;
 }
 .list-container{
-    margin: 5px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+
+
+.page-labeling{
+    font-weight: bold;
+    margin-bottom: 5px;
+    background-color: #fff;
+    padding: 6px;
+    width:300px;
+    border-radius: 7px;
+    box-shadow: 0px 5px 10px -6px rgba(0,0,0,1);
+}
+.page-labeling a{
+    color: #1E1F25;
+}
+.page-labeling a:hover{
+    color: #1E1F25;
+    text-decoration: none;
+}
+.other-page-labeling{
+    color: #1E1F25;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    padding: 6px;
+    width:300px;
+    border-radius: 7px;
+    box-shadow: 0px 5px 10px -6px rgba(0,0,0,1);
+}
+.other-page-labeling a{
+    color: #1E1F25;
+}
+.diff-page-labeling{
+    color: #1E1F25;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 6px;
+    width:300px;
+    border-radius: 7px;
+    box-shadow: 0px 5px 10px -6px rgba(0,0,0,1);
+}
+.diff-page-labeling a{
+    color: #1E1F25;
+}
+.diff-page-labeling a:hover{
+    color: #1E1F25;
+    text-decoration: none;
+}
+.final-page-labeling{
+    color: #1E1F25;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    padding: 6px;
+    width:300px;
+    border-radius: 7px;
+    box-shadow: 0px 5px 10px -6px rgba(0,0,0,1);
+}
+.final-page-labeling a{
+    color: #1E1F25;
+}
+.final-page-labeling a:hover{
+    color: #1E1F25;
+    text-decoration: none;
+}
+.donation-block{
+    background-color: #fff;
+    padding: 10px;
     border-radius: 10px;
 }
+.instruction{
+    text-align: left;
+    margin-left: 5px;
+    font-size: 15px;
+}
+#donation-form-designer{
+    width: 100%;
+    border: solid 2px #808080;
+    border-radius: 10px;
+    padding: 10px;
+}
+.donation-form{
+    padding: 10px;
+    border-radius: 10px;
+}
+.donation-form-div{
+    color: #1E1F25;
+    text-align: left;
+}
+.donation-form-div input{
+    background-color: #fff;
+}
+.name-title-block{
+    display: block;
+}
+.textarea-block{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.name-title-block div{
+    margin-right: 0;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.donation-alert-block{
+    background-color: #E54D42;
+    border-radius: 5px;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.donation-alert-block p{
+    text-align: justify;
+}
+.donation-alert-block a{
+    color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 5px;
+}
+.account-number{
+    margin-bottom: 10px;
+    display: flex;
+}
+.account-number{
+    width: 100%;
+    margin-bottom: 3px;
+    border:solid 2px #1a73e8;
+    background-color: #fff;
+    color: #1E1F25;
+    border-radius: 6px;
+}
+.account-number-tag{
+    color: #1E1F25;
+    padding-top: 5px;   
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 0px 5px 5px 0px;
+}
+.account-number-button{
+    background-color:#1a73e8;
+    padding: 5px;
+    color:#fff;
+    border-radius: 5px 0px 0px 5px;
+}
+.account-number-button:hover{
+    color: #fff;
+    text-decoration: none;
+}
+.field{
+    margin-bottom: 10px;
+}
+.form-select-block{
+    width: 100%;
+}
+select{
+    width: 100%;
+}
+.half-diver{
+    width: 100%;
+}
+#Donating-For{
+    width: 100%;
+}
+.thank-you-box{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: center;
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 18px;
+}
+
+
+
 .breadcrumbs-bar{
     padding-top: 15px;
     display: flex;
@@ -265,11 +498,11 @@ canvas{
 .active-div{
     margin-right:5px;
     font-size: 18px;
-    color: #3791CD;
+    color:#1a73e8;
     text-decoration: none;
 }
 .active-div:hover{
-    color: #3791CD;
+    color:#1a73e8;
     text-decoration: none;
 }
 
@@ -327,7 +560,7 @@ canvas{
 .sidenavMain-a i{
     padding-top: 12px;
     margin-left: 20px;
-    color:#3791CD;
+    color:#1a73e8;
 }
 
 
@@ -337,7 +570,7 @@ canvas{
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-    color:#3791CD;
+    color:#1a73e8;
 }
 
 
@@ -370,7 +603,7 @@ canvas{
     box-shadow: 0px 5px 10px -6px rgba(0,0,0,1);
     border-radius:5px;
     padding:5px;
-    color: #3791CD;
+    color:#1a73e8;
     background-color: #fff;
 }
 .a-tags-icon {
@@ -403,6 +636,9 @@ canvas{
     width:100%;
     padding-top:10px;
     background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
 }
 .main-device-footer hr{
     width: 70%;
@@ -413,6 +649,8 @@ canvas{
     display:flex;
     width:100%;
     flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
 }
 .social-media-app-link{
     width:55px;
@@ -426,7 +664,7 @@ canvas{
     background-color: #DDDCE1;
 }
 .social-media-app-link i{
-    color: #3791CD;
+    color:#1a73e8;
 }
 .social-media-app-link img{
     width:50px;
@@ -437,6 +675,9 @@ canvas{
     padding-bottom:0px;
     color:#1E1F25;
     width:70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
 }
 .footer-text{
     color: #1E1F25;
@@ -447,15 +688,14 @@ canvas{
 }
 .subscription-block{
     display:block;
-    justify-content:space-around;
     font-size: 18px;
 }
 .subscription-block input{
     background-color: #DDDCE1;
+    font-size: 15px;
 }
 .subscription-block button{
     background-color: #DDDCE1;
-    margin-left: 10px;
     font-size: 15px;
     color: #1E1F25;
 }
@@ -465,8 +705,15 @@ canvas{
 .last-footer-block{
     padding:5px;
     color:#1E1F25;
-    width:80%;
+    width:100%;
     font-size: 18px;
+    text-align: center;
+    justify-content: center;
+}
+.last-footer-block p{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .copyright{
     color:#1E1F25;
@@ -475,6 +722,7 @@ canvas{
     height:50px;
     padding-top:10px;
     justify-content:center;
+    font-size: 15px;
 }
 .copyright-link{
     padding-left:5px;
@@ -490,6 +738,9 @@ canvas{
     .bottom-right{
         padding-top:0px;
     }
+    .two{
+        padding: 10px;
+    }
 }
 @media only screen and (min-width:768px) {
     .mobile-navigation{
@@ -502,6 +753,7 @@ canvas{
     }
     .right-top-container{
         display: block;
+        padding: 5px;
     }
     .bottom-right{
         border-radius: 10px;
@@ -510,14 +762,34 @@ canvas{
         padding-left: 10px;
         padding-right: 10px;
     }
+    .diff-page-labeling{
+        margin-top: 10px;
+    }
+    .final-page-labeling{
+        margin-top: 10px;
+    }
     .list-container{
         padding-top:0px;
+        margin-top: 0px;
+    }
+    .two{
+        padding-left: 0px;
+        padding-right: 0px;
     }
     .left-container{
         display:block;
     }
     .top-right{
         display:block;
+    }
+    .name-title-block{
+        display: flex;
+    }
+    .name-title-block div{
+        margin-right: 15px;
+    }
+    .textarea-block{
+        width: 50%;
     }
     .mobile-footer {
         display: none;
@@ -534,6 +806,21 @@ canvas{
     .newsletter-subscription{
         width:60%;
     }
+    #Donating-For{
+        width: 60%;
+    }
+    .half-diver{
+        width: 50%;
+    }
+    .donation-alert-block{
+        width: 50%;
+    }
+    .thank-you-box{
+        width: 60%;
+    }
+    .account-number{
+        width: 50%;
+    }
 }
 @media only screen and (min-width:900px) {
     .social-media-app-link{
@@ -545,18 +832,34 @@ canvas{
     .two-flexer{
         display: flex;
     }
+    .two{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
     .chart-info{
-        width:97%;
+        width:98%;
     }
 }
 @media only screen and (min-width:1024px) {
+    .page-labeling{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .other-page-labeling{
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
     .chart-info{
-        width:50%;
+        width:48%;
+        margin-bottom: 0px;
+        margin: 10px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 @media only screen and (min-width:1366px) {
     .fabricated-body-div{
-        width:1366px;
+        width:1325px;
     }
     .newsletter-subscription{
         width:40%;
