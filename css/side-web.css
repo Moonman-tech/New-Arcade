@@ -220,6 +220,34 @@ body{
 .carousel-indicators{
     filter: invert(50%);
 }
+.contact-blocks-container{
+    display: block;
+    justify-content: center;
+    border-bottom: solid 2px #808080;
+    padding-bottom: 15px;
+}
+.contact-blocks{
+    display: flex;
+    justify-content: space-around;
+}
+.footer-block{
+    text-align: center;
+    margin: auto;
+    background-color: red;
+    width: 100%;
+}
+.footer-block h4{
+    padding: 20px;
+    margin-bottom: 0px;
+}
+.footer-block a{
+    color: #f1f1f1;
+}
+.footer-block a:hover{
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
 
 
 @media only screen and (min-width:450px) {

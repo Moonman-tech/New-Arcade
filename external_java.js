@@ -3,6 +3,11 @@
 } */
 
 
+function closingBlock() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+
 window.onload = function () {
     //Reference the DropDownList.
     var ddlYears = document.getElementById("ddlYears");
