@@ -66,40 +66,41 @@
 
                         <div class="link-box">
 
-                            <a class="desktop-sidebar-nav-a" href="#" onclick="dashboardDropDownDiv()">
-                                <i class="fa-solid fa-chart-column fa-xl"></i>
-                                <p class="desktop-sidebar-nav-p">Dashboard</p>
-                            </a>
+                            <div class="desktop-dropdown-block-container" >
 
-                            <div class="stats-dropdown-block" id="dashboard-dropdown-block" align="center">
+                                <div class="desktop-dropdown-block" align="left">
+                                    <i class="fa-solid fa-chart-simple fa-2x"></i>
 
-                                <a href="index" class="dropdown-block-link">
-                                    <i class="fa-solid fa-chart-area fa-2x"></i>
-                                    <p class="desktop-sidebar-dropdown">Dashboard</p>
-                                </a>
+                                    <a data-toggle="collapse" href="#collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Dashboard
+                                    </a>
 
-                                <a href="fruits" class="dropdown-block-link">
-                                    <i class="fa-solid fa-apple-whole fa-2x"></i>
-                                    <p class="desktop-sidebar-dropdown">Fruits</p>
-                                </a>
+                                </div>
+                                <div class="collapse" id="collapse">
 
-                                <a href="vegetables" class="dropdown-block-link">
-                                    <i class="fa-solid fa-carrot fa-2x"></i>
-                                    <p class="desktop-sidebar-dropdown">Veges</p>
-                                </a>
+                                    <div class="dropdown-elements">
+                                        <a href="market">
+                                            <i class="fa-solid fa-chart-area fa-2x"></i>
+                                            <p >Charts</p>
+                                        </a>
+        
+                                        <a href="application-form">
+                                            <i class="fa-solid fa-apple-whole fa-2x"></i>
+                                            <p >Fruits</p>
+                                        </a>
 
-                                <a href="meat" class="dropdown-block-link">
-                                    <i class="fa-solid fa-drumstick-bite fa-2x"></i>
-                                    <p class="desktop-sidebar-dropdown">Meat</p>
-                                </a>
+                                        <a href="application-form">
+                                            <i class="fa-solid fa-carrot fa-2x"></i>
+                                            <p>Vegetables</p>
+                                        </a>
 
+                                        <a href="application-form">
+                                            <i class="fa-solid fa-drumstick-bite fa-2x"></i>
+                                            <p>Meat</p>
+                                        </a>
+                                    </div>
 
-                                <!--
-                                <a href="other" class="dropdown-block-link">
-                                    <img src="css/icons/package.png" class="dropdown-block-link-img">
-                                    <p class="desktop-sidebar-dropdown">Other</p>
-                                </a>
-                                -->
+                                </div>
 
                             </div>
 
@@ -186,8 +187,8 @@
                         Associates
                     </a>
 
-                    <a href="stakeholders" class="desktop-sticky-icons">
-                        Stakeholders
+                    <a href="application-form" class="desktop-sticky-icons">
+                        Apply
                     </a>
 
                     <a href="#major-contact-block" class="desktop-sticky-icons">
@@ -926,7 +927,7 @@
                             <div class="sidenav-cover">
                                 <p class="closebtn" onclick="closeController()">&times;</p>
 
-                                <div onclick="mobileDashboardDropDownDiv()" class="mobile-stats-dropdown">
+                                <div   class="mobile-stats-dropdown">
                                     <div class="block-content">
                                         <p class="mobile-sidebar-media-texts">Dashboard</p>
                                     </div>
@@ -1193,7 +1194,7 @@
                                         <a href="associates" class="footer-text">Associates</a>
                                     </li>
                                     <li>
-                                        <a href="stakeholders" class="footer-text">Stakeholders</a>
+                                        <a href="Stakeholders" class="footer-text">Stakeholders</a>
                                     </li>
                                     <li>
                                         <a href="help" class="footer-text">Help</a>

@@ -5,6 +5,9 @@
 .logo-link{
     justify-content:center;
 }
+i {
+    color: #1a73e8;
+}
 
 
 
@@ -47,7 +50,7 @@
 }
 .desktop-sidebar-nav-a i{
     padding-top:12px;
-    color:#1a73e8; /* #3791CD; */
+    /*color:#1a73e8;*/ 
 }
 .desktop-sidebar-link {
     text-decoration: none;
@@ -542,6 +545,7 @@ legend{
     border-radius: 10px;
     padding-top: 1px;
     padding-bottom: 1px;
+    box-shadow: 0px 5px 10px -6px rgba(0,0,0,1);
 }
 .project-blocks-containers{
     border-radius: 10px;
@@ -591,6 +595,7 @@ legend{
 .about-main-block{
     border-radius: 10px;
     margin: 5px;
+    box-shadow: 0px 5px 10px -6px rgba(0,0,0,1);
 }
 .about-top-page{
     background-color:#1a73e8;
@@ -646,6 +651,9 @@ legend{
     justify-content: center;
     display: flex;
 }
+.about-contact-link:hover{
+    text-decoration: none;
+}
 .words-container{
     padding:10px;
     font-size: 15px;
@@ -695,7 +703,7 @@ legend{
     background-color: #fff;
     border-radius: 10px;
     padding: 5px;
-    
+    box-shadow: 0px 5px 10px -6px rgba(0,0,0,1);
 }
 .advert-block h4{
     color: #1E1F25;
@@ -709,6 +717,13 @@ legend{
 .advertisement-illustration{
     width: 100%;
     object-fit: scale-down;
+}
+.intext-link{
+    color: #1a73e8;
+}
+.intext-link:hover{
+    color: #1a73e8;
+    text-decoration: none;
 }
 .advertisement-list{
     text-align: left;
@@ -731,6 +746,7 @@ legend{
 .application-block{
     background-color: #fff;
     border-radius: 10px;
+    box-shadow: 0px 5px 10px -6px rgba(0,0,0,1);
 }
 .main-application-badge{
     width: 100%;
@@ -766,6 +782,64 @@ legend{
     margin-bottom: 10px;
     padding: 0px;
     text-decoration: underline;
+}
+
+
+.drop-block{
+    padding-top: 15px;
+    padding-bottom: 5px;
+    margin: 0px;
+}
+.drop-block i{
+    float: left;
+    padding-left: 22px;
+}
+.drop-block .tag{
+    color: #1E1F25;
+    font-size: 20px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+#card-background{
+    background-color: #DDDCE1;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+#card-background-one{
+    background-color: #DDDCE1;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+#card-background-courier{
+    background-color: #DDDCE1;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+.card-dropdown-icon{
+    background-color: #fff;
+    margin: 5px;
+    display: flex;
+    border-radius: 5px;
+    padding-left: 5px;
+    font-size: 20px;
+    padding-right: 10px;
+    background-color: #fff;
+}
+.card-dropdown-icon p{
+    /*padding-left: 10px;*/
+    padding-top: 10px;
+    justify-content: center;
+    justify-content: center;
+    width: 100%;
+
+}
+.card-dropdown-icon i{
+    padding-top: 5px;
+    padding-left: 5px;
+    left: 0;
 }
 
 .many{
@@ -828,7 +902,9 @@ legend{
 
 .site-construction-container {
     width:100%;
-    
+    box-shadow: 0px 5px 10px -6px rgba(0,0,0,1);
+    border-radius: 10px;
+    background-color: #fff;
 }
 .site-construction{
     width: 100%;
@@ -847,6 +923,7 @@ legend{
     color: #1E1F25;
     border-radius: 10px;
     margin: 5px;
+    box-shadow: 0px 5px 10px -6px rgba(0,0,0,1);
 }
 .card-flexer{
     display: block;
@@ -867,6 +944,7 @@ legend{
     background-color: #fff;
     border: solid 2px #808080;
     margin: 10px;
+    font-size: 16px;
 }
 .card-img-block{
     text-align: left;
@@ -887,6 +965,10 @@ legend{
     padding: 10px;
     border-radius: 5px;
     padding-bottom:5px;
+}
+.btn-linker:hover{
+    color: #fff;
+    text-decoration: none;
 }
 .button{
     background-color:#1a73e8;

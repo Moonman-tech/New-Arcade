@@ -66,40 +66,41 @@
 
                         <div class="link-box">
 
-                            <a class="desktop-sidebar-nav-a" href="#" onclick="dashboardDropDownDiv()">
-                                <i class="fa-solid fa-chart-column fa-xl"></i>
-                                <p class="desktop-sidebar-nav-p">Dashboard</p>
-                            </a>
+                            <div class="desktop-dropdown-block-container" >
 
-                            <div class="stats-dropdown-block" id="dashboard-dropdown-block" align="center">
+                                <div class="desktop-dropdown-block" align="left">
+                                    <i class="fa-solid fa-chart-simple fa-2x"></i>
 
-                                <a href="index" class="dropdown-block-link">
-                                    <i class="fa-solid fa-chart-area fa-2x"></i>
-                                    <p class="desktop-sidebar-dropdown">Dashboard</p>
-                                </a>
+                                    <a data-toggle="collapse" href="#collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Dashboard
+                                    </a>
 
-                                <a href="fruits" class="dropdown-block-link">
-                                    <i class="fa-solid fa-apple-whole fa-2x"></i>
-                                    <p class="desktop-sidebar-dropdown">Fruits</p>
-                                </a>
+                                </div>
+                                <div class="collapse" id="collapse">
 
-                                <a href="vegetables" class="dropdown-block-link">
-                                    <i class="fa-solid fa-carrot fa-2x"></i>
-                                    <p class="desktop-sidebar-dropdown">Veges</p>
-                                </a>
+                                    <div class="dropdown-elements">
+                                        <a href="market">
+                                            <i class="fa-solid fa-chart-area fa-2x"></i>
+                                            <p >Charts</p>
+                                        </a>
+        
+                                        <a href="application-form">
+                                            <i class="fa-solid fa-apple-whole fa-2x"></i>
+                                            <p >Fruits</p>
+                                        </a>
 
-                                <a href="meat" class="dropdown-block-link">
-                                    <i class="fa-solid fa-drumstick-bite fa-2x"></i>
-                                    <p class="desktop-sidebar-dropdown">Meat</p>
-                                </a>
+                                        <a href="application-form">
+                                            <i class="fa-solid fa-carrot fa-2x"></i>
+                                            <p>Vegetables</p>
+                                        </a>
 
+                                        <a href="application-form">
+                                            <i class="fa-solid fa-drumstick-bite fa-2x"></i>
+                                            <p>Meat</p>
+                                        </a>
+                                    </div>
 
-                                <!--
-                                <a href="other" class="dropdown-block-link">
-                                    <img src="css/icons/package.png" class="dropdown-block-link-img">
-                                    <p class="desktop-sidebar-dropdown">Other</p>
-                                </a>
-                                -->
+                                </div>
 
                             </div>
 
@@ -186,8 +187,8 @@
                         Associates
                     </a>
 
-                    <a href="stakeholders" class="desktop-sticky-icons">
-                        Stakeholders
+                    <a href="application-form" class="desktop-sticky-icons">
+                        Apply
                     </a>
 
                     <a href="#major-contact-block" class="desktop-sticky-icons">
@@ -201,7 +202,7 @@
                     <div class="main-fruits-charts-block">
 
                         <h3 class="diff-page-labeling">
-                            <a href="application">
+                            <a href="application-form">
                                 Application Form
                             </a>    
                         </h3>
@@ -215,7 +216,9 @@
                                 <div class="alert alert-success alert-dismissible">
                                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                                     <strong>NB!</strong> Only fill in this form if you wish to become a part of Arcaderand's retailers.<br>
-                                    Information given in this section will not be given to third party companies or shared with anyone.
+                                    Information given in this section will not be given to third party companies or shared with anyone.<br> 
+                                    Please insert correct information in the block because the information will be verified and should <br>
+                                    there be incorrect information, your application will be rejected.
                                 </div>
 
                                 <div align="left" class="apply-form-container" align="left">
@@ -273,12 +276,14 @@
                                         <div class="mb-3">
                                             <label for="sel1" class="form-label">Country</label>
                                             <select class="application-form-select" aria-label="Default select example" name="Automatic Country Selection" id="Title">
-                                                <option selected>South Africa</option>
+                                                <option selected> </option>
+                                                <option value="South Africa">South Africa</option>
+                                                <option value="Other">Other</option>
                                             </select>
                                         </div>
 
                                         <div class="mb-3">
-                                            <label for="sel1" class="form-label">Province</label>
+                                            <label for="sel1" class="form-label">Province/State</label>
                                             <select class="application-form-select" aria-label="Default select example" name="Province" id="Title" required>
                                                 <option selected> </option>
                                                 <option value="Eastern Cape">Eastern Cape</option>
@@ -289,6 +294,7 @@
                                                 <option value="Mpumalanga">Mpumalanga</option>
                                                 <option value="Northern Cape">Northern Cape</option>
                                                 <option value="North West">North West</option>
+                                                <option value="Other">Other</option>
                                             </select>
                                         </div>
 
@@ -323,6 +329,24 @@
                                         <div class="mb-3">
                                             <label for="sel1" class="form-label">Business/Company Name</label>
                                             <input class="form-control" type="text" placeholder="Enter Your Business Name" name="Business Name" required>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="sel1" class="form-label">Specializes in:</label>
+                                            <select class="application-form-select" name="Specialty">
+                                                <option selected> </option>
+                                                <option value="Courier">Courier</option>
+                                                <option value="Consultation">Consultation</option>
+                                                <option value="Educator">Educator</option>
+                                                <option value="Equipment Services">Equipment Services</option>
+                                                <option value="Farming Services">Farming Services</option>
+                                                <option value="News Broadcast">News Broadcast</option>
+                                                <option value="Other">Other</option>
+                                                <option value="Supplying: Fruits & Vegetables">Supplying: Fruits & Vegetables</option>
+                                                <option value="Supplying: Meat">Supplying: Meat</option>
+
+                                                
+                                            </select>
                                         </div>
 
                                         <div class="mb-3">
@@ -451,42 +475,40 @@
                             <div class="sidenav-cover">
                                 <p class="closebtn" onclick="closeController()">&times;</p>
 
-                                <div onclick="mobileDashboardDropDownDiv()" class="mobile-stats-dropdown">
-                                    <div class="block-content">
-                                        <p class="mobile-sidebar-media-texts">Dashboard</p>
+                                <div   class="mobile-stats-dropdown">
+
+                                    <p class="drop-block">
+                                        <i class="fa-solid fa-chart-simple fa-2x"></i>
+                                        <a class="tag" data-toggle="collapse" id="color-controller" href="#dropDownMenuFirst" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                            Dashboard
+                                        </a>
+                                    </p>
+                                    <div class="collapse" id="dropDownMenuFirst">
+                                        <div class="card" id="card-background-one">
+                                            
+                                            <a href="market" class="card-dropdown-icon">
+                                                <i class="fa-solid fa-chart-area fa-2x"></i>
+                                                <p >Dashboard</p>
+                                            </a>
+            
+                                            <a href="application-form" class="card-dropdown-icon">
+                                                <i class="fa-solid fa-apple-whole fa-2x"></i>
+                                                <p >Fruits</p>
+                                            </a>
+
+                                            <a href="application-form" class="card-dropdown-icon">
+                                                <i class="fa-solid fa-carrot fa-2x"></i>
+                                                <p>Vegetables</p>
+                                            </a>
+
+                                            <a href="application-form" class="card-dropdown-icon">
+                                                <i class="fa-solid fa-drumstick-bite fa-2x"></i>
+                                                <p>Meat</p>
+                                            </a>
+
+                                        </div>
                                     </div>
 
-                                    <div class="mobile-dropdown-block" id="mobile-sidebar-dropdown-block">
-
-                                        <a href="index" class="mobile-dropdown-block-link">
-                                            <i class="fa-solid fa-chart-area fa-2x"></i>
-                                            <p >Dashboard</p>
-                                        </a>
-        
-                                        <a href="fruits" class="mobile-dropdown-block-link">
-                                            <i class="fa-solid fa-apple-whole fa-2x"></i>
-                                            <p >Fruits</p>
-                                        </a>
-        
-                                        <a href="vegetables" class="mobile-dropdown-block-link">
-                                            <i class="fa-solid fa-carrot fa-2x"></i>
-                                            <p>Vegetables</p>
-                                        </a>
-        
-                                        <a href="meat" class="mobile-dropdown-block-link">
-                                            <i class="fa-solid fa-drumstick-bite fa-2x"></i>
-                                            <p>Meat</p>
-                                        </a>
-        
-        
-                                        <!--
-                                        <a href="other" class="mobile-dropdown-block-link">
-                                            <img src="css/icons/package.png">
-                                            <p>Other</p>
-                                        </a>
-                                        -->
-        
-                                    </div>
                                 </div>  
 
                                 <a href="market" class="sidenavMain-a">
@@ -532,6 +554,17 @@
                                 <a href="help" class="sidenavMain-a">
                                     <i class="fa-solid fa-hand-holding-hand fa-2x"></i>
                                     <p class="media-texts">Help</p>
+                                </a>
+
+                                <hr>
+
+                                <a href="application-form" class="sidenavMain-a">
+                                    <i class="fa-solid fa-handshake-simple fa-2x"></i>
+                                    <p class="media-texts">
+                                        <strong>
+                                            Join Us
+                                        </strong>
+                                    </p>
                                 </a>
 
                             </div>
@@ -718,7 +751,7 @@
                                         <a href="associates" class="footer-text">Associates</a>
                                     </li>
                                     <li>
-                                        <a href="stakeholders" class="footer-text">Stakeholders</a>
+                                        <a href="Stakeholders" class="footer-text">Stakeholders</a>
                                     </li>
                                     <li>
                                         <a href="help" class="footer-text">Help</a>

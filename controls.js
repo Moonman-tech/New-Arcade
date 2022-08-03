@@ -42,3 +42,7 @@ function mobileDashboardDropDownDiv() {
         x.style.display = "block";
     }
 }
+
+function dropColorController () {
+    document.getElementById("color-controller").style.color = "#fff";
+}

@@ -1,4 +1,11 @@
 @media (prefers-color-scheme: dark) {
+
+    *{
+        box-shadow:none;
+    }
+    i {
+        color: #3791CD;
+    }
     
     .main-body-container, .bottom-right, .container-right, .link-box:hover, .link-box-active, 
     .stats-dropdown-block, .mobile-dropdown-block-link, .desktop-sticky-icons:hover, .a-tags i, .two{
@@ -22,7 +29,7 @@
     }
     .fabricated-body-div, .mobile-navigation,.left-container, .mobile-dropdown-block, .dropdown-block-link, 
     .right-container, .right-top-container, .sidenavMain, .mobile-footer, .main-device-footer, 
-    .social-media-app-link, .tiles-posts, .two{
+    .social-media-app-link, .tiles-posts, .two, .site-construction-container{
         background-color: #323639;
     }
     .desktop-sidebar-dropdown, .desktop-sidebar-nav-p, .desktop-sticky-icons:hover, .sidenavMain p, 
@@ -149,6 +156,9 @@
         color: #3791CD;
         font-weight: bold;
     }
+    .intext-link, .intext-link:hover{
+        color: #3791CD;
+    }
     .about-top-page{
         background-color: #3791CD;
     }
@@ -172,5 +182,37 @@
         background-color: #202124;
         color: #fff;
     } 
+    .desktop-dropdown-block a,.desktop-dropdown-block a:hover{
+        color: #fff;
+    }
+    .answer-block .card p{
+        color: #fff;
+    }
+    .help-page-aligner .card{
+        background-color: #202124;
+    }
+    .help-page{
+        background-color: #323639;
+    }
+    .help-page-aligner a{
+        background-color: #3791CD;
+    }
+    .intext-otherside-link{
+        color: #3791CD !important;
+        background-color: #202124 !important;
+    }
+    .intext-otherside-link:hover{
+        color: #3791CD;
+    }
+    .dropdown-elements a{
+        background-color: #323639;
+    }
+    .dropdown-elements a:hover{
+        background-color: #202124;
+    }
+    .dropdown-elements p{
+        color: #fff;
+    }
+
 
 }

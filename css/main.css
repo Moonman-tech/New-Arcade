@@ -262,6 +262,7 @@ nav{
     padding-top: 5px;
     padding-left: 5px;
     padding-right: 5px;
+    box-shadow: 0px 5px 10px -6px rgba(0,0,0,1);
 }
 .two h4{
     padding:5px;
@@ -364,6 +365,7 @@ canvas{
     background-color: #fff;
     padding: 10px;
     border-radius: 10px;
+    box-shadow: 0px 5px 10px -6px rgba(0,0,0,1);
 }
 .instruction{
     text-align: left;
@@ -478,6 +480,70 @@ select{
 }
 
 
+.help-page{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 5px 10px -6px rgba(0,0,0,1);
+}
+.help-page-aligner-container{
+    display: block;
+    width: 100%;
+}
+.help-page-aligner-container img{
+    width: 50%;
+    object-fit: scale-down;
+}
+.help-page-aligner{
+    text-align: left;
+    border-radius: 5px;
+    width: 100%;
+    margin-right: auto;
+    display: block;
+}
+.help-page-aligner a{
+    color: #fff;
+    background-color: #1a73e8;
+    border-radius: 5px;
+}
+.help-page-aligner a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+.help-page-aligner p{
+    margin: 0px;
+}
+.help-page-aligner .card{
+    margin: 0px;
+    padding: 10px;
+    background-color: #DDDCE1;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+}
+.answer-block{
+    border: solid 2px #808080;
+    border-radius: 5px; 
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.answer-block .card p{
+    color: #1E1F25;
+}
+.collapse{
+    margin-top:5px;
+}
+.intext-otherside-link{
+    color: #1a73e8 !important;
+    background-color: #DDDCE1 !important;
+    font-weight: bold;
+}
+.intext-otherside-link:hover{
+    color: #1a73e8;
+    text-decoration: none;
+}
+
 
 .breadcrumbs-bar{
     padding-top: 15px;
@@ -557,11 +623,13 @@ select{
 .sidenavMain p {
     color: #1E1F25;
 }
+
 .sidenavMain-a i{
     padding-top: 12px;
     margin-left: 20px;
-    color:#1a73e8;
+    /*color:#1a73e8;*/
 }
+
 
 
 .sidenavMain .closebtn {
@@ -573,6 +641,62 @@ select{
     color:#1a73e8;
 }
 
+
+
+.desktop-dropdown-block-container{
+    display: block;
+}
+.desktop-dropdown-block{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+.desktop-dropdown-block i{
+    padding-left: 7px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    margin-left: auto;
+}
+/*
+.desktop-dropdown-block p{
+    font-size: 18px;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+*/
+.desktop-dropdown-block a{
+    color: #1E1F25;
+    font-size: 18px;
+    padding-top: 7px;
+    padding-right: 3px;
+}
+.desktop-dropdown-block a:hover{
+    color: #1E1F25;
+    text-decoration: none;
+}
+.dropdown-elements a{
+    background-color: #DDDCE1;
+    display: flex;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 4px;
+    padding: 5px;
+}
+.dropdown-elements a:hover{
+    text-decoration: none;
+    background-color: #fff;
+}
+.dropdown-elements p{
+    color: #1E1F25;
+    font-size: 16px;
+    margin: 0px;
+    padding-top: 5px;
+}
+.dropdown-elements i{
+    margin-right: 5px;
+}
 
 
 /*Mobile Footer*/
@@ -603,7 +727,6 @@ select{
     box-shadow: 0px 5px 10px -6px rgba(0,0,0,1);
     border-radius:5px;
     padding:5px;
-    color:#1a73e8;
     background-color: #fff;
 }
 .a-tags-icon {
@@ -664,7 +787,7 @@ select{
     background-color: #DDDCE1;
 }
 .social-media-app-link i{
-    color:#1a73e8;
+    /*color:#1a73e8;*/ 
 }
 .social-media-app-link img{
     width:50px;
@@ -821,6 +944,9 @@ select{
     .account-number{
         width: 50%;
     }
+    .help-page-aligner{
+        width: 50%;
+    }
 }
 @media only screen and (min-width:900px) {
     .social-media-app-link{
@@ -838,6 +964,9 @@ select{
     }
     .chart-info{
         width:98%;
+    }
+    .help-page-aligner-container{
+        display: flex;
     }
 }
 @media only screen and (min-width:1024px) {
